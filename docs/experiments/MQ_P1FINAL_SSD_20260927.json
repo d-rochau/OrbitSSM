@@ -1,0 +1,969 @@
+{
+  "campaign": "p1final-ssd-20260927",
+  "source_git_sha": "anonymous-release",
+  "recipe": "experiments/configs/mqmkvar_baselines_20260920.build_spec (frozen baseline recipe)",
+  "anchor": "official_mamba1 N128 d256 two layers (M1), frozen baseline recipe",
+  "budget_non_embedding": 1220352,
+  "tolerance": 0.02,
+  "tiers": [
+    "hard",
+    "easy",
+    "insane"
+  ],
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "max_steps": null,
+  "collection_arms": [
+    "R2O2-complex-realgates-d248-i512",
+    "R4O4-real-d176-i384",
+    "R4O4-complex-realgates-d208-i384",
+    "R1O1-real-d296-i576"
+  ],
+  "module_defaults_rule": true,
+  "allowed_top": [
+    "d_model",
+    "d_state",
+    "mixer_kwargs",
+    "n_layers"
+  ],
+  "allowed_mixer": [
+    "O",
+    "R",
+    "expand",
+    "rows"
+  ],
+  "arm_axes": [
+    "O",
+    "R",
+    "d_inner",
+    "d_model",
+    "d_state",
+    "expand",
+    "head_subsystems",
+    "heads",
+    "ngroups",
+    "rows"
+  ],
+  "upstream_module_sha256": {},
+  "divergence_guard": {
+    "config": {
+      "check_every": 250,
+      "delta_max": 500.0,
+      "delta_sustain": 3,
+      "grad_ratio": 1000.0,
+      "grad_window": 20,
+      "grad_sustain": 5,
+      "grad_min_history": 10,
+      "abort_nonfinite": true,
+      "save_state_on_abort": true,
+      "detail_stats": true
+    }
+  },
+  "arms": [
+    {
+      "arm": "R2O2-complex-realgates-d248-i512",
+      "family": "ssd_mimo",
+      "kwargs": {
+        "d_model": 248,
+        "n_layers": 2,
+        "d_state": 128,
+        "mixer_kwargs": {
+          "R": 2,
+          "O": 2,
+          "rows": [
+            {
+              "frac": 0.5,
+              "decay": "head_dynamic",
+              "complex": true,
+              "gate": false
+            },
+            {
+              "frac": 0.5,
+              "decay": "head_dynamic",
+              "complex": false,
+              "gate": true
+            }
+          ],
+          "expand": 2.064516129032258
+        }
+      },
+      "geometry": {
+        "d_model": 248,
+        "d_inner": 512,
+        "heads": 8,
+        "P": 64,
+        "N": 128,
+        "n_layers": 2,
+        "R": 2,
+        "O": 2,
+        "G": 32,
+        "expand": 2.064516129032258,
+        "rows": [
+          {
+            "rows": 64,
+            "decay": "head_dynamic",
+            "complex": true,
+            "gate": false
+          },
+          {
+            "rows": 64,
+            "decay": "head_dynamic",
+            "complex": false,
+            "gate": true
+          }
+        ],
+        "rotation": {
+          "theta_per_head": false,
+          "learn_theta_freq": true,
+          "use_theta_h": true,
+          "omega_layout": "pair",
+          "theta_init": "kaiming"
+        },
+        "maps": {
+          "b_norm": true,
+          "c_norm": true,
+          "bias": "head_bc",
+          "gate_b": true,
+          "gate_c": true,
+          "bias_init": "spread"
+        }
+      },
+      "total": 3239560,
+      "embedding": 2031616,
+      "non_embedding": 1207944,
+      "backbone": 1207944,
+      "gap_percent": -1.0167558212712424,
+      "budget_s": 6000,
+      "supersedes": null,
+      "count_delta_vs_superseded": null,
+      "resolved_model": {
+        "vocab_size": 8192,
+        "d_model": 248,
+        "n_layers": 2,
+        "d_intermediate": 0,
+        "tie_word_embeddings": true,
+        "pad_vocab_size_multiple": 8,
+        "initialization": "hybrid_ssm.lm/v0",
+        "layers": [
+          {
+            "family": "ssd_mimo",
+            "model": {
+              "d_model": 248,
+              "expand": 2.064516129032258,
+              "d_conv": 4,
+              "out_norm": false,
+              "core": {
+                "d_inner": 512,
+                "d_state": 128,
+                "R": 2,
+                "O": 2,
+                "ngroups": 32,
+                "heads": 8,
+                "head_subsystems": 64,
+                "rows": [
+                  {
+                    "rows": 64,
+                    "decay": "head_dynamic",
+                    "complex": true,
+                    "gate": false
+                  },
+                  {
+                    "rows": 64,
+                    "decay": "head_dynamic",
+                    "complex": false,
+                    "gate": true
+                  }
+                ],
+                "rotation": {
+                  "theta_per_head": false,
+                  "learn_theta_freq": true,
+                  "use_theta_h": true,
+                  "omega_layout": "pair",
+                  "theta_init": "kaiming"
+                },
+                "maps": {
+                  "b_norm": true,
+                  "c_norm": true,
+                  "bias": "head_bc",
+                  "gate_b": true,
+                  "gate_c": true,
+                  "bias_init": "spread"
+                },
+                "r_mix": "learned",
+                "r_mix_dyn": true,
+                "dt_min": 0.001,
+                "dt_max": 0.1,
+                "dt_init_floor": 0.0001,
+                "a_proj_bias": true,
+                "trap_proj_bias": true,
+                "write_rule": "trapezoid",
+                "d_skip": true,
+                "d_skip_sharing": "input_output",
+                "pair_layout": "interleaved",
+                "proj_source": "layer_input",
+                "d_model": 248,
+                "bc_conv": false,
+                "d_conv": 4,
+                "a_dyn_per_sibling": false,
+                "a_act": "heavy_tail"
+              }
+            }
+          },
+          {
+            "family": "ssd_mimo",
+            "model": {
+              "d_model": 248,
+              "expand": 2.064516129032258,
+              "d_conv": 4,
+              "out_norm": false,
+              "core": {
+                "d_inner": 512,
+                "d_state": 128,
+                "R": 2,
+                "O": 2,
+                "ngroups": 32,
+                "heads": 8,
+                "head_subsystems": 64,
+                "rows": [
+                  {
+                    "rows": 64,
+                    "decay": "head_dynamic",
+                    "complex": true,
+                    "gate": false
+                  },
+                  {
+                    "rows": 64,
+                    "decay": "head_dynamic",
+                    "complex": false,
+                    "gate": true
+                  }
+                ],
+                "rotation": {
+                  "theta_per_head": false,
+                  "learn_theta_freq": true,
+                  "use_theta_h": true,
+                  "omega_layout": "pair",
+                  "theta_init": "kaiming"
+                },
+                "maps": {
+                  "b_norm": true,
+                  "c_norm": true,
+                  "bias": "head_bc",
+                  "gate_b": true,
+                  "gate_c": true,
+                  "bias_init": "spread"
+                },
+                "r_mix": "learned",
+                "r_mix_dyn": true,
+                "dt_min": 0.001,
+                "dt_max": 0.1,
+                "dt_init_floor": 0.0001,
+                "a_proj_bias": true,
+                "trap_proj_bias": true,
+                "write_rule": "trapezoid",
+                "d_skip": true,
+                "d_skip_sharing": "input_output",
+                "pair_layout": "interleaved",
+                "proj_source": "layer_input",
+                "d_model": 248,
+                "bc_conv": false,
+                "d_conv": 4,
+                "a_dyn_per_sibling": false,
+                "a_act": "heavy_tail"
+              }
+            }
+          }
+        ]
+      },
+      "resolved_execution": {
+        "layer_execution": [
+          {
+            "core_execution": {
+              "kernel_options": {},
+              "backend": "auto",
+              "precision": "io",
+              "m3_kernel": "native",
+              "compile_token_maps": false,
+              "chunk_size": "auto",
+              "allow_chunk_autotune": true
+            },
+            "mode": "modular",
+            "modular_checkpoint": false
+          },
+          {
+            "core_execution": {
+              "kernel_options": {},
+              "backend": "auto",
+              "precision": "io",
+              "m3_kernel": "native",
+              "compile_token_maps": false,
+              "chunk_size": "auto",
+              "allow_chunk_autotune": true
+            },
+            "mode": "modular",
+            "modular_checkpoint": false
+          }
+        ]
+      },
+      "module_default_deviations": []
+    },
+    {
+      "arm": "R4O4-real-d176-i384",
+      "family": "ssd_mimo",
+      "kwargs": {
+        "d_model": 176,
+        "n_layers": 2,
+        "d_state": 128,
+        "mixer_kwargs": {
+          "R": 4,
+          "O": 4,
+          "rows": [
+            {
+              "frac": 1.0,
+              "decay": "head_dynamic",
+              "complex": false
+            }
+          ],
+          "expand": 2.1818181818181817
+        }
+      },
+      "geometry": {
+        "d_model": 176,
+        "d_inner": 384,
+        "heads": 6,
+        "P": 64,
+        "N": 128,
+        "n_layers": 2,
+        "R": 4,
+        "O": 4,
+        "G": 16,
+        "expand": 2.1818181818181817,
+        "rows": [
+          {
+            "rows": 128,
+            "decay": "head_dynamic",
+            "complex": false,
+            "gate": true
+          }
+        ],
+        "rotation": null,
+        "maps": {
+          "b_norm": true,
+          "c_norm": true,
+          "bias": "head_bc",
+          "gate_b": true,
+          "gate_c": true,
+          "bias_init": "spread"
+        }
+      },
+      "total": 2646536,
+      "embedding": 1441792,
+      "non_embedding": 1204744,
+      "backbone": 1204744,
+      "gap_percent": -1.278975246486258,
+      "budget_s": 10500,
+      "supersedes": null,
+      "count_delta_vs_superseded": null,
+      "resolved_model": {
+        "vocab_size": 8192,
+        "d_model": 176,
+        "n_layers": 2,
+        "d_intermediate": 0,
+        "tie_word_embeddings": true,
+        "pad_vocab_size_multiple": 8,
+        "initialization": "hybrid_ssm.lm/v0",
+        "layers": [
+          {
+            "family": "ssd_mimo",
+            "model": {
+              "d_model": 176,
+              "expand": 2.1818181818181817,
+              "d_conv": 4,
+              "out_norm": false,
+              "core": {
+                "d_inner": 384,
+                "d_state": 128,
+                "R": 4,
+                "O": 4,
+                "ngroups": 16,
+                "heads": 6,
+                "head_subsystems": 64,
+                "rows": [
+                  {
+                    "rows": 128,
+                    "decay": "head_dynamic",
+                    "complex": false,
+                    "gate": true
+                  }
+                ],
+                "rotation": null,
+                "maps": {
+                  "b_norm": true,
+                  "c_norm": true,
+                  "bias": "head_bc",
+                  "gate_b": true,
+                  "gate_c": true,
+                  "bias_init": "spread"
+                },
+                "r_mix": "learned",
+                "r_mix_dyn": true,
+                "dt_min": 0.001,
+                "dt_max": 0.1,
+                "dt_init_floor": 0.0001,
+                "a_proj_bias": true,
+                "trap_proj_bias": true,
+                "write_rule": "trapezoid",
+                "d_skip": true,
+                "d_skip_sharing": "input_output",
+                "pair_layout": "interleaved",
+                "proj_source": "layer_input",
+                "d_model": 176,
+                "bc_conv": false,
+                "d_conv": 4,
+                "a_dyn_per_sibling": false,
+                "a_act": "heavy_tail"
+              }
+            }
+          },
+          {
+            "family": "ssd_mimo",
+            "model": {
+              "d_model": 176,
+              "expand": 2.1818181818181817,
+              "d_conv": 4,
+              "out_norm": false,
+              "core": {
+                "d_inner": 384,
+                "d_state": 128,
+                "R": 4,
+                "O": 4,
+                "ngroups": 16,
+                "heads": 6,
+                "head_subsystems": 64,
+                "rows": [
+                  {
+                    "rows": 128,
+                    "decay": "head_dynamic",
+                    "complex": false,
+                    "gate": true
+                  }
+                ],
+                "rotation": null,
+                "maps": {
+                  "b_norm": true,
+                  "c_norm": true,
+                  "bias": "head_bc",
+                  "gate_b": true,
+                  "gate_c": true,
+                  "bias_init": "spread"
+                },
+                "r_mix": "learned",
+                "r_mix_dyn": true,
+                "dt_min": 0.001,
+                "dt_max": 0.1,
+                "dt_init_floor": 0.0001,
+                "a_proj_bias": true,
+                "trap_proj_bias": true,
+                "write_rule": "trapezoid",
+                "d_skip": true,
+                "d_skip_sharing": "input_output",
+                "pair_layout": "interleaved",
+                "proj_source": "layer_input",
+                "d_model": 176,
+                "bc_conv": false,
+                "d_conv": 4,
+                "a_dyn_per_sibling": false,
+                "a_act": "heavy_tail"
+              }
+            }
+          }
+        ]
+      },
+      "resolved_execution": {
+        "layer_execution": [
+          {
+            "core_execution": {
+              "kernel_options": {},
+              "backend": "auto",
+              "precision": "io",
+              "m3_kernel": "native",
+              "compile_token_maps": false,
+              "chunk_size": "auto",
+              "allow_chunk_autotune": true
+            },
+            "mode": "modular",
+            "modular_checkpoint": false
+          },
+          {
+            "core_execution": {
+              "kernel_options": {},
+              "backend": "auto",
+              "precision": "io",
+              "m3_kernel": "native",
+              "compile_token_maps": false,
+              "chunk_size": "auto",
+              "allow_chunk_autotune": true
+            },
+            "mode": "modular",
+            "modular_checkpoint": false
+          }
+        ]
+      },
+      "module_default_deviations": []
+    },
+    {
+      "arm": "R4O4-complex-realgates-d208-i384",
+      "family": "ssd_mimo",
+      "kwargs": {
+        "d_model": 208,
+        "n_layers": 2,
+        "d_state": 128,
+        "mixer_kwargs": {
+          "R": 4,
+          "O": 4,
+          "rows": [
+            {
+              "frac": 0.5,
+              "decay": "head_dynamic",
+              "complex": true,
+              "gate": false
+            },
+            {
+              "frac": 0.5,
+              "decay": "head_dynamic",
+              "complex": false,
+              "gate": true
+            }
+          ],
+          "expand": 1.8461538461538463
+        }
+      },
+      "geometry": {
+        "d_model": 208,
+        "d_inner": 384,
+        "heads": 6,
+        "P": 64,
+        "N": 128,
+        "n_layers": 2,
+        "R": 4,
+        "O": 4,
+        "G": 16,
+        "expand": 1.8461538461538463,
+        "rows": [
+          {
+            "rows": 64,
+            "decay": "head_dynamic",
+            "complex": true,
+            "gate": false
+          },
+          {
+            "rows": 64,
+            "decay": "head_dynamic",
+            "complex": false,
+            "gate": true
+          }
+        ],
+        "rotation": {
+          "theta_per_head": false,
+          "learn_theta_freq": true,
+          "use_theta_h": true,
+          "omega_layout": "pair",
+          "theta_init": "kaiming"
+        },
+        "maps": {
+          "b_norm": true,
+          "c_norm": true,
+          "bias": "head_bc",
+          "gate_b": true,
+          "gate_c": true,
+          "bias_init": "spread"
+        }
+      },
+      "total": 2918184,
+      "embedding": 1703936,
+      "non_embedding": 1214248,
+      "backbone": 1214248,
+      "gap_percent": -0.5001835535976551,
+      "budget_s": 15500,
+      "supersedes": null,
+      "count_delta_vs_superseded": null,
+      "resolved_model": {
+        "vocab_size": 8192,
+        "d_model": 208,
+        "n_layers": 2,
+        "d_intermediate": 0,
+        "tie_word_embeddings": true,
+        "pad_vocab_size_multiple": 8,
+        "initialization": "hybrid_ssm.lm/v0",
+        "layers": [
+          {
+            "family": "ssd_mimo",
+            "model": {
+              "d_model": 208,
+              "expand": 1.8461538461538463,
+              "d_conv": 4,
+              "out_norm": false,
+              "core": {
+                "d_inner": 384,
+                "d_state": 128,
+                "R": 4,
+                "O": 4,
+                "ngroups": 16,
+                "heads": 6,
+                "head_subsystems": 64,
+                "rows": [
+                  {
+                    "rows": 64,
+                    "decay": "head_dynamic",
+                    "complex": true,
+                    "gate": false
+                  },
+                  {
+                    "rows": 64,
+                    "decay": "head_dynamic",
+                    "complex": false,
+                    "gate": true
+                  }
+                ],
+                "rotation": {
+                  "theta_per_head": false,
+                  "learn_theta_freq": true,
+                  "use_theta_h": true,
+                  "omega_layout": "pair",
+                  "theta_init": "kaiming"
+                },
+                "maps": {
+                  "b_norm": true,
+                  "c_norm": true,
+                  "bias": "head_bc",
+                  "gate_b": true,
+                  "gate_c": true,
+                  "bias_init": "spread"
+                },
+                "r_mix": "learned",
+                "r_mix_dyn": true,
+                "dt_min": 0.001,
+                "dt_max": 0.1,
+                "dt_init_floor": 0.0001,
+                "a_proj_bias": true,
+                "trap_proj_bias": true,
+                "write_rule": "trapezoid",
+                "d_skip": true,
+                "d_skip_sharing": "input_output",
+                "pair_layout": "interleaved",
+                "proj_source": "layer_input",
+                "d_model": 208,
+                "bc_conv": false,
+                "d_conv": 4,
+                "a_dyn_per_sibling": false,
+                "a_act": "heavy_tail"
+              }
+            }
+          },
+          {
+            "family": "ssd_mimo",
+            "model": {
+              "d_model": 208,
+              "expand": 1.8461538461538463,
+              "d_conv": 4,
+              "out_norm": false,
+              "core": {
+                "d_inner": 384,
+                "d_state": 128,
+                "R": 4,
+                "O": 4,
+                "ngroups": 16,
+                "heads": 6,
+                "head_subsystems": 64,
+                "rows": [
+                  {
+                    "rows": 64,
+                    "decay": "head_dynamic",
+                    "complex": true,
+                    "gate": false
+                  },
+                  {
+                    "rows": 64,
+                    "decay": "head_dynamic",
+                    "complex": false,
+                    "gate": true
+                  }
+                ],
+                "rotation": {
+                  "theta_per_head": false,
+                  "learn_theta_freq": true,
+                  "use_theta_h": true,
+                  "omega_layout": "pair",
+                  "theta_init": "kaiming"
+                },
+                "maps": {
+                  "b_norm": true,
+                  "c_norm": true,
+                  "bias": "head_bc",
+                  "gate_b": true,
+                  "gate_c": true,
+                  "bias_init": "spread"
+                },
+                "r_mix": "learned",
+                "r_mix_dyn": true,
+                "dt_min": 0.001,
+                "dt_max": 0.1,
+                "dt_init_floor": 0.0001,
+                "a_proj_bias": true,
+                "trap_proj_bias": true,
+                "write_rule": "trapezoid",
+                "d_skip": true,
+                "d_skip_sharing": "input_output",
+                "pair_layout": "interleaved",
+                "proj_source": "layer_input",
+                "d_model": 208,
+                "bc_conv": false,
+                "d_conv": 4,
+                "a_dyn_per_sibling": false,
+                "a_act": "heavy_tail"
+              }
+            }
+          }
+        ]
+      },
+      "resolved_execution": {
+        "layer_execution": [
+          {
+            "core_execution": {
+              "kernel_options": {},
+              "backend": "auto",
+              "precision": "io",
+              "m3_kernel": "native",
+              "compile_token_maps": false,
+              "chunk_size": "auto",
+              "allow_chunk_autotune": true
+            },
+            "mode": "modular",
+            "modular_checkpoint": false
+          },
+          {
+            "core_execution": {
+              "kernel_options": {},
+              "backend": "auto",
+              "precision": "io",
+              "m3_kernel": "native",
+              "compile_token_maps": false,
+              "chunk_size": "auto",
+              "allow_chunk_autotune": true
+            },
+            "mode": "modular",
+            "modular_checkpoint": false
+          }
+        ]
+      },
+      "module_default_deviations": []
+    },
+    {
+      "arm": "R1O1-real-d296-i576",
+      "family": "ssd_mimo",
+      "kwargs": {
+        "d_model": 296,
+        "n_layers": 2,
+        "d_state": 128,
+        "mixer_kwargs": {
+          "R": 1,
+          "O": 1,
+          "rows": [
+            {
+              "frac": 1.0,
+              "decay": "head_dynamic",
+              "complex": false
+            }
+          ],
+          "expand": 1.945945945945946
+        }
+      },
+      "geometry": {
+        "d_model": 296,
+        "d_inner": 576,
+        "heads": 9,
+        "P": 64,
+        "N": 128,
+        "n_layers": 2,
+        "R": 1,
+        "O": 1,
+        "G": 64,
+        "expand": 1.945945945945946,
+        "rows": [
+          {
+            "rows": 128,
+            "decay": "head_dynamic",
+            "complex": false,
+            "gate": true
+          }
+        ],
+        "rotation": null,
+        "maps": {
+          "b_norm": true,
+          "c_norm": true,
+          "bias": "head_bc",
+          "gate_b": false,
+          "gate_c": false,
+          "bias_init": "ones"
+        }
+      },
+      "total": 3628318,
+      "embedding": 2424832,
+      "non_embedding": 1203486,
+      "backbone": 1203486,
+      "gap_percent": -1.3820602580239094,
+      "budget_s": 4500,
+      "supersedes": null,
+      "count_delta_vs_superseded": null,
+      "resolved_model": {
+        "vocab_size": 8192,
+        "d_model": 296,
+        "n_layers": 2,
+        "d_intermediate": 0,
+        "tie_word_embeddings": true,
+        "pad_vocab_size_multiple": 8,
+        "initialization": "hybrid_ssm.lm/v0",
+        "layers": [
+          {
+            "family": "ssd_mimo",
+            "model": {
+              "d_model": 296,
+              "expand": 1.945945945945946,
+              "d_conv": 4,
+              "out_norm": false,
+              "core": {
+                "d_inner": 576,
+                "d_state": 128,
+                "R": 1,
+                "O": 1,
+                "ngroups": 64,
+                "heads": 9,
+                "head_subsystems": 64,
+                "rows": [
+                  {
+                    "rows": 128,
+                    "decay": "head_dynamic",
+                    "complex": false,
+                    "gate": true
+                  }
+                ],
+                "rotation": null,
+                "maps": {
+                  "b_norm": true,
+                  "c_norm": true,
+                  "bias": "head_bc",
+                  "gate_b": false,
+                  "gate_c": false,
+                  "bias_init": "ones"
+                },
+                "r_mix": "none",
+                "r_mix_dyn": false,
+                "dt_min": 0.001,
+                "dt_max": 0.1,
+                "dt_init_floor": 0.0001,
+                "a_proj_bias": true,
+                "trap_proj_bias": true,
+                "write_rule": "trapezoid",
+                "d_skip": true,
+                "d_skip_sharing": "input_output",
+                "pair_layout": "interleaved",
+                "proj_source": "layer_input",
+                "d_model": 296,
+                "bc_conv": false,
+                "d_conv": 4,
+                "a_dyn_per_sibling": false,
+                "a_act": "heavy_tail"
+              }
+            }
+          },
+          {
+            "family": "ssd_mimo",
+            "model": {
+              "d_model": 296,
+              "expand": 1.945945945945946,
+              "d_conv": 4,
+              "out_norm": false,
+              "core": {
+                "d_inner": 576,
+                "d_state": 128,
+                "R": 1,
+                "O": 1,
+                "ngroups": 64,
+                "heads": 9,
+                "head_subsystems": 64,
+                "rows": [
+                  {
+                    "rows": 128,
+                    "decay": "head_dynamic",
+                    "complex": false,
+                    "gate": true
+                  }
+                ],
+                "rotation": null,
+                "maps": {
+                  "b_norm": true,
+                  "c_norm": true,
+                  "bias": "head_bc",
+                  "gate_b": false,
+                  "gate_c": false,
+                  "bias_init": "ones"
+                },
+                "r_mix": "none",
+                "r_mix_dyn": false,
+                "dt_min": 0.001,
+                "dt_max": 0.1,
+                "dt_init_floor": 0.0001,
+                "a_proj_bias": true,
+                "trap_proj_bias": true,
+                "write_rule": "trapezoid",
+                "d_skip": true,
+                "d_skip_sharing": "input_output",
+                "pair_layout": "interleaved",
+                "proj_source": "layer_input",
+                "d_model": 296,
+                "bc_conv": false,
+                "d_conv": 4,
+                "a_dyn_per_sibling": false,
+                "a_act": "heavy_tail"
+              }
+            }
+          }
+        ]
+      },
+      "resolved_execution": {
+        "layer_execution": [
+          {
+            "core_execution": {
+              "kernel_options": {},
+              "backend": "auto",
+              "precision": "io",
+              "m3_kernel": "native",
+              "compile_token_maps": false,
+              "chunk_size": "auto",
+              "allow_chunk_autotune": true
+            },
+            "mode": "modular",
+            "modular_checkpoint": false
+          },
+          {
+            "core_execution": {
+              "kernel_options": {},
+              "backend": "auto",
+              "precision": "io",
+              "m3_kernel": "native",
+              "compile_token_maps": false,
+              "chunk_size": "auto",
+              "allow_chunk_autotune": true
+            },
+            "mode": "modular",
+            "modular_checkpoint": false
+          }
+        ]
+      },
+      "module_default_deviations": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "source_sha256": {
+    "hm_optimization.json": "89727391f47ff8866432fccccd8e1401f248bfdb8e611b1eaeb38b1bdba1bdfe",
+    "app_scope_fwd_ms.tex": "499e7b9816e6391e2ac6b23c6fe2b20b29e56a8ea29c2141d355744a77b33f48",
+    "app_mixer_fwd_ms.tex": "9bb717debf9024f7fd48bcbde34496ea5849c8cd9fafee5ae6254d0d5bef9888",
+    "app_mixer_eager_fb_ms.tex": "1142f734693464df74e459b2be34439b2fa98ccdd3a1e9dcb8dee39d654babdf",
+    "app_mixer_graph_fb_ms.tex": "f10dda6af26032827bc6f5687d938d27b945c8984fa41bd2b0d1ac69a777745d",
+    "app_saved_scope_mib.tex": "c2960f1f0811fbd4b8d2341a456859135a886b824dc4a323d632e0ea544a5a41",
+    "app_peak_scope_mib.tex": "460bc7fd04fe9169ab6d723acc6d7973c4f1e785458ba63cbf7bf8577f4cc79c",
+    "app_saved_mixer_mib.tex": "e27cfb5dc703d7d5d3b5018b802c83d59b6d42ce7a4f482e88369e43c4ea0d6e",
+    "app_peak_mixer_mib.tex": "677b415983483eb5dd441e6b45b51f67ab363d245ece3ee093d68335249dc2bc",
+    "table1a_m1.tex": "cf5583107bc14a877b31d7e5362b3f084544007a05a2e2c7c8d819d9f4136f31",
+    "table1a_m1_rest.tex": "5423ab02c3f4f236c91962ca7ab4b8f62e9df45b2bc706ba46859031a8569302",
+    "table1b_m2.tex": "951164da38e8ec24e6b904aaebb9dfb8aee64a3e77ba3057282ad14b95bee01d",
+    "table1b_m2_rest.tex": "b2777113fd24a8ab9068cd2f4459d4a7baa9d0b0a9598f38bf7e9ea7b2ea9bdb",
+    "table1c_m3.tex": "36150ab6ffe530fbde17c4a499eecd068ba1f8389fa81fe0a8332121d9c9447c",
+    "table1c_m3_rest.tex": "05dc2e8a0d7853a6acca59d9df7d9ce1ce829243f8f38b6d9d3b7be99644aeba",
+    "table1a_m1_detail.tex": "ad5ec6cde28447d7a13377b9147b58890159ac92f0c7ab3c652af681ccad655d",
+    "five_shape_recovery.json": "254e1fea7d3d938d3739175c2f94fb408290a26014da02a1bb70eefc4708a127",
+    "retained_memory.json": "a4d3e9a7b1d039a11bee84eadc8e3003dcb59ab0ec5664f788b3017edfb4024a",
+    "table2_main_kernel_fb_ms.tex": "927e35d42f2fcffa2a9e2a3bec9d231571e35ac6ed470c87f2b960a3e1fcd343"
+  },
+  "policy": "HM and paired Mamba 1 five-shape timings/peaks use absolute candidate campaign records; unchanged SSD/Mamba 2/3 source cells are preserved. Retained storage unchanged and verified against candidate. M1 additional LM and small/medium entries labelled earlier schedule; no extrapolation. Appendix retains explicitly labelled extra-saved metric. a=profiler metric, b=no accepted attempt, c=not remeasured."
+}

@@ -1,0 +1,314 @@
+{
+  "campaign": "p1final-hm-20260927",
+  "source_git_sha": "anonymous-release",
+  "recipe": "experiments/configs/mqmkvar_baselines_20260920.build_spec (frozen baseline recipe)",
+  "anchor": "official_mamba1 N128 d256 two layers (M1), frozen baseline recipe",
+  "budget_non_embedding": 1220352,
+  "tolerance": 0.02,
+  "tiers": [
+    "hard",
+    "easy"
+  ],
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "max_steps": null,
+  "collection_arms": [
+    "A_dyn"
+  ],
+  "module_defaults_rule": false,
+  "allowed_top": [
+    "bc_conv",
+    "d_conv",
+    "d_model",
+    "d_state",
+    "mixer_kwargs",
+    "n_layers",
+    "tie_word_embeddings"
+  ],
+  "allowed_mixer": [
+    "b_norm",
+    "backend",
+    "bc_conv",
+    "bias_gran",
+    "c_norm",
+    "ckpt",
+    "d_inner",
+    "d_skip_mode",
+    "dt_rank",
+    "expand",
+    "gate_act",
+    "gate_bias",
+    "gate_init",
+    "gate_pos",
+    "head_subsystems",
+    "out_norm",
+    "proj_source",
+    "rows",
+    "use_g_b",
+    "use_g_c",
+    "use_trap"
+  ],
+  "arm_axes": [],
+  "upstream_module_sha256": {},
+  "divergence_guard": {
+    "config": {
+      "check_every": 250,
+      "delta_max": 500.0,
+      "delta_sustain": 3,
+      "grad_ratio": 1000.0,
+      "grad_window": 20,
+      "grad_sustain": 5,
+      "grad_min_history": 10,
+      "abort_nonfinite": true,
+      "save_state_on_abort": true,
+      "detail_stats": true
+    }
+  },
+  "arms": [
+    {
+      "arm": "A_dyn",
+      "family": "hybrid_mamba",
+      "kwargs": {
+        "d_model": 256,
+        "n_layers": 2,
+        "d_state": 128,
+        "d_conv": 4,
+        "bc_conv": false,
+        "tie_word_embeddings": true,
+        "mixer_kwargs": {
+          "head_subsystems": 16,
+          "rows": [
+            {
+              "rows": 64,
+              "decay": "A",
+              "complex": false
+            },
+            {
+              "rows": 64,
+              "decay": "dyn",
+              "complex": false
+            }
+          ],
+          "proj_source": "main_branch",
+          "dt_rank": "adaptive",
+          "use_g_b": false,
+          "use_g_c": false,
+          "d_skip_mode": "head",
+          "use_trap": true,
+          "b_norm": true,
+          "c_norm": true,
+          "bc_conv": false,
+          "bias_gran": "none",
+          "out_norm": false,
+          "ckpt": true,
+          "backend": "cuda",
+          "expand": null,
+          "d_inner": 512,
+          "gate_init": "zero"
+        }
+      },
+      "geometry": {
+        "d_model": 256,
+        "d_inner": 512,
+        "heads": 32,
+        "P": 16,
+        "N": 128,
+        "n_layers": 2,
+        "rows": [
+          {
+            "rows": 64,
+            "decay": "A",
+            "complex": false,
+            "gate": true
+          },
+          {
+            "rows": 64,
+            "decay": "dyn",
+            "complex": false,
+            "gate": true
+          }
+        ],
+        "rotation": null,
+        "maps": {
+          "b_norm": true,
+          "c_norm": true,
+          "bias": "none",
+          "gate_b": false,
+          "gate_c": false,
+          "gate_act": "one_plus",
+          "gate_bias": false,
+          "gate_pos": "pre"
+        }
+      },
+      "total": 3333568,
+      "embedding": 2097152,
+      "non_embedding": 1236416,
+      "backbone": 1236416,
+      "gap_percent": 1.3163415145794,
+      "budget_s": 8500,
+      "supersedes": null,
+      "count_delta_vs_superseded": null,
+      "resolved_model": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "n_layers": 2,
+        "d_intermediate": 0,
+        "tie_word_embeddings": true,
+        "pad_vocab_size_multiple": 8,
+        "initialization": "hybrid_ssm.lm/v0",
+        "layers": [
+          {
+            "family": "hybrid_mamba",
+            "model": {
+              "d_model": 256,
+              "expand": null,
+              "d_conv": 4,
+              "out_norm": false,
+              "core": {
+                "d_inner": 512,
+                "d_state": 128,
+                "heads": 32,
+                "head_subsystems": 16,
+                "rows": [
+                  {
+                    "rows": 64,
+                    "decay": "A",
+                    "complex": false,
+                    "gate": true
+                  },
+                  {
+                    "rows": 64,
+                    "decay": "dyn",
+                    "complex": false,
+                    "gate": true
+                  }
+                ],
+                "rotation": null,
+                "maps": {
+                  "b_norm": true,
+                  "c_norm": true,
+                  "bias": "none",
+                  "gate_b": false,
+                  "gate_c": false,
+                  "gate_act": "one_plus",
+                  "gate_bias": false,
+                  "gate_pos": "pre"
+                },
+                "proj_source": "main_branch",
+                "d_model": 256,
+                "bc_conv": false,
+                "d_conv": 4,
+                "dt_rank": 16,
+                "force_dt_dense": false,
+                "dt_init": "random",
+                "dt_scale": 1.0,
+                "dt_min": 0.001,
+                "dt_max": 0.1,
+                "dt_init_floor": 0.0001,
+                "dyn_res": "n",
+                "dyn_act": "heavy_tail",
+                "mu_res": "n",
+                "a_floor": 0.0001,
+                "a_act": "heavy_tail",
+                "norm_eps": 1e-05,
+                "d_skip_mode": "head",
+                "use_trap": true,
+                "learnable_h_init": false,
+                "gate_init": "zero"
+              }
+            }
+          },
+          {
+            "family": "hybrid_mamba",
+            "model": {
+              "d_model": 256,
+              "expand": null,
+              "d_conv": 4,
+              "out_norm": false,
+              "core": {
+                "d_inner": 512,
+                "d_state": 128,
+                "heads": 32,
+                "head_subsystems": 16,
+                "rows": [
+                  {
+                    "rows": 64,
+                    "decay": "A",
+                    "complex": false,
+                    "gate": true
+                  },
+                  {
+                    "rows": 64,
+                    "decay": "dyn",
+                    "complex": false,
+                    "gate": true
+                  }
+                ],
+                "rotation": null,
+                "maps": {
+                  "b_norm": true,
+                  "c_norm": true,
+                  "bias": "none",
+                  "gate_b": false,
+                  "gate_c": false,
+                  "gate_act": "one_plus",
+                  "gate_bias": false,
+                  "gate_pos": "pre"
+                },
+                "proj_source": "main_branch",
+                "d_model": 256,
+                "bc_conv": false,
+                "d_conv": 4,
+                "dt_rank": 16,
+                "force_dt_dense": false,
+                "dt_init": "random",
+                "dt_scale": 1.0,
+                "dt_min": 0.001,
+                "dt_max": 0.1,
+                "dt_init_floor": 0.0001,
+                "dyn_res": "n",
+                "dyn_act": "heavy_tail",
+                "mu_res": "n",
+                "a_floor": 0.0001,
+                "a_act": "heavy_tail",
+                "norm_eps": 1e-05,
+                "d_skip_mode": "head",
+                "use_trap": true,
+                "learnable_h_init": false,
+                "gate_init": "zero"
+              }
+            }
+          }
+        ]
+      },
+      "resolved_execution": {
+        "layer_execution": [
+          {
+            "core_execution": {
+              "kernel_options": {},
+              "backend": "cuda",
+              "ckpt": true,
+              "m3_kernel": "native",
+              "mem": null
+            },
+            "compile_gate": false
+          },
+          {
+            "core_execution": {
+              "kernel_options": {},
+              "backend": "cuda",
+              "ckpt": true,
+              "m3_kernel": "native",
+              "mem": null
+            },
+            "compile_gate": false
+          }
+        ]
+      },
+      "module_default_deviations": null
+    }
+  ]
+}

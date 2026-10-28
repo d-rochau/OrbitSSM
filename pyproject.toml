@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orbit-ssm"
+version = "0.1.0"
+description = "SSD-MIMO and HybridMamba selective state-space models"
+readme = "README.txt"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.14",
+    "triton>=3.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+fast = ["causal-conv1d>=1.4.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["orbit_ssm*"]
+exclude = ["benchmarks*", "tests*", "tests_old*", "tools*"]
+
+[tool.setuptools.package-data]
+orbit_ssm = ["kernels/calibration_data/**/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+    "gpu: requires CUDA GPU",
+    "benchmark: benchmark construction, selection and timing semantics",
+    "paper1: Paper 1 SSD-MIMO and MH contract coverage",
+    "slow: long-running test (> 30s)",
+    "kernel_ssd: SSD-MIMO kernel tests",
+    "ssm: SSM-level tests",
+    "contract: contract parity tests",
+    "legacy: tests for deprecated/legacy code",
+    "smoke: quick smoke tests",
+    "step: step/decode function tests",
+    "nonpow2: non-power-of-2 shape tests",
+    "oracle: sequential-vs-torch reference cross-validation (skippable via SSD_SKIP_SEQ_ORACLE=1)",
+    "tier1: A10 T1 -- values/gradients vs an oracle, ABI/State (tests/_tiers.py)",
+    "tier2: A10 T2 -- envelope: served, or refused by name (tests/_tiers.py)",
+    "tier3: A10 T3 -- defaults, configuration, recipes (tests/_tiers.py)",
+]
+addopts = "-v --tb=short"
+filterwarnings = ["ignore::DeprecationWarning"]

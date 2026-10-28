@@ -1,0 +1,12 @@
+% Include OUTSIDE the adjustbox containing a table, so these notes render.
+\par\smallskip
+\noindent\begin{minipage}{\linewidth}\footnotesize
+$^\ddagger$ Official Mamba~3 MIMO at kernel scope reports summed profiler GPU-kernel
+time over three calls, excluding the TileLang wrapper's persistent host overhead;
+the other timing rows report elapsed CUDA-event time. Its eager mixer timing is
+therefore n/a; its CUDA-graph replay is reported separately.
+$^\S$ No attempt passed the per-group canary gate; these cells are n/a.
+$^\ast$ Not remeasured for the corrected real R2O2/R4O4 and complex R4O4 training configurations:
+only kernel and eager-mixer forward-and-backward times on the five paper shapes,
+and saved/peak memory at the LM shape, were recollected.
+\end{minipage}

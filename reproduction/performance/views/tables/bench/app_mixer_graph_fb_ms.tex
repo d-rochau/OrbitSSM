@@ -1,0 +1,27 @@
+% APPENDIX: full mixer, CUDA-graph replay, fwd+bwd ms, N=128 canary details are retained per record; per-group spread <=1.15; whole-run spread recorded, not gated.
+\begin{tabular}{l r r r r r }
+\toprule
+model & Bal.\ 16/4096/2048 & Long 2/2048/32768 & Wide 4/8192/4096 & Batch 128/1024/1024 & LM 6/2048/2048 \\
+\midrule
+Mamba 1 (official) & 136.1 & 133.0 & 147.5 & 151.2 & 24.49 \\
+Mamba 2 (official) & 23.91 & 18.83 & 35.98 & 18.25 & 3.67 \\
+Mamba 3 SISO (official) & 27.72 & 28.87 & 39.92 & 19.43 & 4.55 \\
+Mamba 3 MIMO R=4 (official) & 88.87 & 176.7 & 111.3 & 80.91 & 17.83 \\
+HM m1exact (P=1) & 86.37 & 96.27 & 106.7 & 77.45 & 17.14 \\
+SSD m2exact (R=O=1) & 25.40 & 20.14 & 37.99 & 18.35 & 4.01 \\
+SSD m3exact (R=O=1) & 24.01 & 21.95 & 37.28 & 16.60 & 3.84 \\
+HM-0, P=64 & 116.5 & 160.3 & 132.3 & 107.8 & 22.12 \\
+HM-75, P=64 & 124.8 & 163.0 & 141.6 & 122.6 & 24.98 \\
+HM-100, P=64 & 119.9 & 153.1 & 134.8 & 118.6 & 23.74 \\
+HM-0, P=32 & 116.3 & 159.7 & 132.8 & 107.8 & 22.10 \\
+HM-75, P=32 & 128.4 & 167.7 & 146.0 & 127.0 & 25.77 \\
+HM-100, P=32 & 125.0 & 158.9 & 140.0 & 125.9 & 24.89 \\
+SSD R1O1 real & 29.53 & 24.39 & 41.59 & 22.78 & 4.93 \\
+SSD R1O1 complex & 28.19 & 25.78 & 40.09 & 20.71 & 4.73 \\
+SSD R2O2 real & n/a$^\ast$ & n/a$^\ast$ & n/a$^\ast$ & n/a$^\ast$ & n/a$^\ast$ \\
+SSD R2O2 complex & 90.84 & 97.04 & 103.8 & 89.37 & 16.86 \\
+SSD R4O4 real & n/a$^\ast$ & n/a$^\ast$ & n/a$^\ast$ & n/a$^\ast$ & n/a$^\ast$ \\
+SSD R4O4 complex & n/a$^\ast$ & n/a$^\ast$ & n/a$^\ast$ & n/a$^\ast$ & n/a$^\ast$ \\
+\bottomrule
+\end{tabular}
+% $^\ddagger$ official Mamba-3 MIMO: tilelang re-traces on every eager call (~0.7 s host time, constant across shapes; warm-up does not prime it), so its aligned-scope row is the profiler GPU-kernel time (ms\_cuda\_self, 3 calls) and its eager mixer row is n/a -- the CUDA-graph replay row is valid.  $^\S$ no accepted attempt passed the per-group canary gate.

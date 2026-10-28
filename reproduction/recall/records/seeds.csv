@@ -1,0 +1,169 @@
+arm,table,sweep,lr,seed,status,accuracy,metric,diverged_step,diverged_kind,last_step,gpu,root,trial
+M1,main,2026-09-27,5e-4,101,complete,69.217,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba1-lr5e-4_s101
+M1,main,2026-09-27,5e-4,202,complete,61.463,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba1-lr5e-4_s202
+M1,main,2026-09-27,5e-4,303,complete,70.575,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba1-lr5e-4_s303
+M1,main,2026-09-27,1e-3,101,complete,72.793,"token accuracy (re-scored, F1)",,,,,mq-baselines-matched-20260920,matched_insane_official_mamba1_s101
+M1,main,2026-09-27,1e-3,202,complete,68.823,"token accuracy (re-scored, F1)",,,,,mq-baselines-matched-20260920,matched_insane_official_mamba1_s202
+M1,main,2026-09-27,1e-3,303,complete,67.251,"token accuracy (re-scored, F1)",,,,,mq-baselines-matched-20260920,matched_insane_official_mamba1_s303
+M1,main,2026-09-27,2e-3,101,complete,74.119,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba1-lr2e-3_s101
+M1,main,2026-09-27,2e-3,202,complete,72.580,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba1-lr2e-3_s202
+M1,main,2026-09-27,2e-3,303,diverged,,,15500,no escape (chance),,,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba1-lr2e-3_s303
+M2,main,2026-09-27,5e-4,101,complete,65.977,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba2-lr5e-4_s101
+M2,main,2026-09-27,5e-4,202,complete,30.304,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba2-lr5e-4_s202
+M2,main,2026-09-27,5e-4,303,complete,29.615,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba2-lr5e-4_s303
+M2,main,2026-09-27,1e-3,101,complete,51.960,"token accuracy (re-scored, F1)",,,,,mq-stock-above-20260922,stock_above_insane_official_mamba2_d320_i640_h64_s101
+M2,main,2026-09-27,1e-3,202,complete,29.548,"token accuracy (re-scored, F1)",,,,,mq-stock-above-20260922,stock_above_insane_official_mamba2_d320_i640_h64_s202
+M2,main,2026-09-27,1e-3,303,complete,27.759,"token accuracy (re-scored, F1)",,,,,mq-stock-above-20260922,stock_above_insane_official_mamba2_d320_i640_h64_s303
+M2,main,2026-09-27,2e-3,101,complete,46.888,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba2-lr2e-3_s101
+M2,main,2026-09-27,2e-3,202,complete,43.500,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba2-lr2e-3_s202
+M2,main,2026-09-27,2e-3,303,complete,29.379,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m12-20260927,lrsweep_m12_insane_official_mamba2-lr2e-3_s303
+M3,main,2026-09-27,1e-4,101,complete,11.175,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m3-20260927,lrsweep_m3_insane_official_mamba3-lr1e-4_s101
+M3,main,2026-09-27,1e-4,202,complete,3.435,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep-m3-20260927,lrsweep_m3_insane_official_mamba3-lr1e-4_s202
+M3,main,2026-09-27,1e-4,303,complete,74.405,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m3-20260927,lrsweep_m3_insane_official_mamba3-lr1e-4_s303
+M3,main,2026-09-27,5e-4,101,complete,48.230,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m3-20260927,lrsweep_m3_insane_official_mamba3-lr5e-4_s101
+M3,main,2026-09-27,5e-4,202,complete,14.346,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep-m3-20260927,lrsweep_m3_insane_official_mamba3-lr5e-4_s202
+M3,main,2026-09-27,5e-4,303,complete,20.971,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m3-20260927,lrsweep_m3_insane_official_mamba3-lr5e-4_s303
+M3,main,2026-09-27,1e-3,101,complete,2.791,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-m3-upstream-20260924,stock_above_insane_official_mamba3_d320_i640_h64_s101
+M3,main,2026-09-27,1e-3,202,complete,2.227,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-m3-upstream-20260924,stock_above_insane_official_mamba3_d320_i640_h64_s202
+M3,main,2026-09-27,1e-3,303,complete,31.160,"token accuracy (re-scored, F1)",,,,NVIDIA H100 PCIe,mq-m3-upstream-20260924,stock_above_insane_official_mamba3_d320_i640_h64_s303
+M3,main,2026-09-27,2e-3,101,complete,2.899,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m3-20260927,lrsweep_m3_insane_official_mamba3-lr2e-3_s101
+M3,main,2026-09-27,2e-3,202,complete,0.085,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-m3-20260927,lrsweep_m3_insane_official_mamba3-lr2e-3_s202
+M3,main,2026-09-27,2e-3,303,complete,0.173,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep-m3-20260927,lrsweep_m3_insane_official_mamba3-lr2e-3_s303
+Attn,main,2026-09-27,1e-4,101,complete,0.483,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-attn-20260927,lrsweep_attn_insane_zoology-attn-d392-lr1e-4_s101
+Attn,main,2026-09-27,1e-4,202,complete,7.718,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-attn-20260927,lrsweep_attn_insane_zoology-attn-d392-lr1e-4_s202
+Attn,main,2026-09-27,1e-4,303,complete,0.476,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-attn-20260927,lrsweep_attn_insane_zoology-attn-d392-lr1e-4_s303
+Attn,main,2026-09-27,5e-4,101,complete,0.414,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-attn-20260927,lrsweep_attn_insane_zoology-attn-d392-lr5e-4_s101
+Attn,main,2026-09-27,5e-4,202,complete,0.284,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-attn-20260927,lrsweep_attn_insane_zoology-attn-d392-lr5e-4_s202
+Attn,main,2026-09-27,5e-4,303,complete,0.682,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-attn-20260927,lrsweep_attn_insane_zoology-attn-d392-lr5e-4_s303
+Attn,main,2026-09-27,1e-3,101,complete,1.885,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-attn-ref-20260925,attn_ref_insane_zoology-attn-d392_s101
+Attn,main,2026-09-27,1e-3,202,complete,0.914,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-attn-ref-20260925,attn_ref_insane_zoology-attn-d392_s202
+Attn,main,2026-09-27,1e-3,303,complete,0.374,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-attn-ref-20260925,attn_ref_insane_zoology-attn-d392_s303
+Attn,main,2026-09-27,2e-3,101,complete,0.024,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-attn-20260927,lrsweep_attn_insane_zoology-attn-d392-lr2e-3_s101
+Attn,main,2026-09-27,2e-3,202,complete,0.011,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-attn-20260927,lrsweep_attn_insane_zoology-attn-d392-lr2e-3_s202
+Attn,main,2026-09-27,2e-3,303,complete,0.044,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep-attn-20260927,lrsweep_attn_insane_zoology-attn-d392-lr2e-3_s303
+R2O2-r,main,2026-09-27,5e-4,101,complete,80.135,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-real-d248-i448-lr5e-4_s101
+R2O2-r,main,2026-09-27,5e-4,202,complete,78.314,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-real-d248-i448-lr5e-4_s202
+R2O2-r,main,2026-09-27,5e-4,303,complete,79.947,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-real-d248-i448-lr5e-4_s303
+R2O2-r,main,2026-09-27,1e-3,101,complete,81.712,"token accuracy (re-scored, F1)",,,,NVIDIA A100-SXM4-80GB,mq-ssd-real-20260925,ssd_real_insane_R2O2-real-d248-i448_s101
+R2O2-r,main,2026-09-27,1e-3,202,complete,81.064,"token accuracy (re-scored, F1)",,,,NVIDIA A100-SXM4-80GB,mq-ssd-real-20260925,ssd_real_insane_R2O2-real-d248-i448_s202
+R2O2-r,main,2026-09-27,1e-3,303,complete,83.331,"token accuracy (re-scored, F1)",,,,NVIDIA A100-SXM4-80GB,mq-ssd-real-20260925,ssd_real_insane_R2O2-real-d248-i448_s303
+R2O2-r,main,2026-09-27,2e-3,101,complete,77.909,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-real-d248-i448-lr2e-3_s101
+R2O2-r,main,2026-09-27,2e-3,202,complete,78.956,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-real-d248-i448-lr2e-3_s202
+R2O2-r,main,2026-09-27,2e-3,303,complete,75.631,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-real-d248-i448-lr2e-3_s303
+R2O2-c,main,2026-09-27,5e-4,101,complete,80.043,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr5e-4_s101
+R2O2-c,main,2026-09-27,5e-4,202,complete,83.021,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr5e-4_s202
+R2O2-c,main,2026-09-27,5e-4,303,complete,83.632,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr5e-4_s303
+R2O2-c,main,2026-09-27,1e-3,101,complete,83.460,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-blockgates-insane-20260926,blockgates_insane_R2O2-complex-realgates-d248-i512_s101
+R2O2-c,main,2026-09-27,1e-3,202,complete,82.103,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-blockgates-insane-20260926,blockgates_insane_R2O2-complex-realgates-d248-i512_s202
+R2O2-c,main,2026-09-27,1e-3,303,complete,82.289,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-blockgates-insane-20260926,blockgates_insane_R2O2-complex-realgates-d248-i512_s303
+R2O2-c,main,2026-09-27,2e-3,101,complete,81.659,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr2e-3_s101
+R2O2-c,main,2026-09-27,2e-3,202,complete,18.547,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr2e-3_s202
+R2O2-c,main,2026-09-27,2e-3,303,complete,83.226,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr2e-3_s303
+R4O4-r,main,2026-09-27,5e-4,101,complete,78.373,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-real-d176-i384-lr5e-4_s101
+R4O4-r,main,2026-09-27,5e-4,202,complete,76.505,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-real-d176-i384-lr5e-4_s202
+R4O4-r,main,2026-09-27,5e-4,303,complete,79.747,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-real-d176-i384-lr5e-4_s303
+R4O4-r,main,2026-09-27,1e-3,101,complete,83.436,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-r4o4-insane-20260926,r4o4_insane_R4O4-real-d176-i384_s101
+R4O4-r,main,2026-09-27,1e-3,202,complete,80.916,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-r4o4-insane-20260926,r4o4_insane_R4O4-real-d176-i384_s202
+R4O4-r,main,2026-09-27,1e-3,303,complete,81.778,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-r4o4-insane-20260926,r4o4_insane_R4O4-real-d176-i384_s303
+R4O4-r,main,2026-09-27,2e-3,101,complete,3.200,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-real-d176-i384-lr2e-3_s101
+R4O4-r,main,2026-09-27,2e-3,202,complete,75.723,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-real-d176-i384-lr2e-3_s202
+R4O4-r,main,2026-09-27,2e-3,303,complete,81.929,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-real-d176-i384-lr2e-3_s303
+R4O4-c,main,2026-09-27,5e-4,101,complete,81.895,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr5e-4_s101
+R4O4-c,main,2026-09-27,5e-4,202,complete,82.658,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr5e-4_s202
+R4O4-c,main,2026-09-27,5e-4,303,complete,82.017,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr5e-4_s303
+R4O4-c,main,2026-09-27,1e-3,101,complete,82.475,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-p1final-ssd-20260927,p1final_ssd_insane_R4O4-complex-realgates-d208-i384_s101
+R4O4-c,main,2026-09-27,1e-3,202,complete,80.428,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-p1final-ssd-20260927,p1final_ssd_insane_R4O4-complex-realgates-d208-i384_s202
+R4O4-c,main,2026-09-27,1e-3,303,complete,82.657,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-p1final-ssd-20260927,p1final_ssd_insane_R4O4-complex-realgates-d208-i384_s303
+R4O4-c,main,2026-09-27,2e-3,101,complete,79.361,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr2e-3_s101
+R4O4-c,main,2026-09-27,2e-3,202,complete,80.570,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr2e-3_s202
+R4O4-c,main,2026-09-27,2e-3,303,complete,79.660,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep-ssd-20260927,lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr2e-3_s303
+HM-Adyn,main,2026-09-27,5e-4,101,complete,76.783,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-hm-20260927,lrsweep_hm_insane_A_dyn-lr5e-4_s101
+HM-Adyn,main,2026-09-27,5e-4,202,complete,80.965,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-hm-20260927,lrsweep_hm_insane_A_dyn-lr5e-4_s202
+HM-Adyn,main,2026-09-27,5e-4,303,complete,81.086,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-hm-20260927,lrsweep_hm_insane_A_dyn-lr5e-4_s303
+HM-Adyn,main,2026-09-27,1e-3,101,complete,80.611,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-screen2-20260925,hm_screen2_insane_A_dyn_s101
+HM-Adyn,main,2026-09-27,1e-3,202,complete,79.802,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-screen2-20260925,hm_screen2_insane_A_dyn_s202
+HM-Adyn,main,2026-09-27,1e-3,303,complete,81.398,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-screen2-20260925,hm_screen2_insane_A_dyn_s303
+HM-Adyn,main,2026-09-27,2e-3,101,complete,27.908,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-hm-20260927,lrsweep_hm_insane_A_dyn-lr2e-3_s101
+HM-Adyn,main,2026-09-27,2e-3,202,complete,79.466,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-hm-20260927,lrsweep_hm_insane_A_dyn-lr2e-3_s202
+HM-Adyn,main,2026-09-27,2e-3,303,complete,71.717,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep-hm-20260927,lrsweep_hm_insane_A_dyn-lr2e-3_s303
+HM-c25a,main,2026-09-28 addendum,5e-4,101,complete,26.517,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25a-lr5e-4_s101
+HM-c25a,main,2026-09-28 addendum,5e-4,202,complete,80.927,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25a-lr5e-4_s202
+HM-c25a,main,2026-09-28 addendum,5e-4,303,complete,80.560,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25a-lr5e-4_s303
+HM-c25a,main,2026-09-28 addendum,1e-3,101,complete,79.722,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-hm-mixc-insane-20260926,hm_mixc_insane_A_dyn_c25a_s101
+HM-c25a,main,2026-09-28 addendum,1e-3,202,complete,79.141,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-mixc-insane-20260926,hm_mixc_insane_A_dyn_c25a_s202
+HM-c25a,main,2026-09-28 addendum,1e-3,303,complete,80.006,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-mixc-insane-20260926,hm_mixc_insane_A_dyn_c25a_s303
+HM-c25a,main,2026-09-28 addendum,2e-3,101,complete,27.344,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25a-lr2e-3_s101
+HM-c25a,main,2026-09-28 addendum,2e-3,202,complete,81.614,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25a-lr2e-3_s202
+HM-c25a,main,2026-09-28 addendum,2e-3,303,complete,71.466,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25a-lr2e-3_s303
+HM-c25d,main,2026-09-28 addendum,5e-4,101,complete,81.518,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25d-lr5e-4_s101
+HM-c25d,main,2026-09-28 addendum,5e-4,202,complete,79.777,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25d-lr5e-4_s202
+HM-c25d,main,2026-09-28 addendum,5e-4,303,complete,80.837,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25d-lr5e-4_s303
+HM-c25d,main,2026-09-28 addendum,1e-3,101,complete,78.849,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-mixc-insane-20260926,hm_mixc_insane_A_dyn_c25d_s101
+HM-c25d,main,2026-09-28 addendum,1e-3,202,complete,80.299,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-mixc-insane-20260926,hm_mixc_insane_A_dyn_c25d_s202
+HM-c25d,main,2026-09-28 addendum,1e-3,303,complete,78.502,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-mixc-insane-20260926,hm_mixc_insane_A_dyn_c25d_s303
+HM-c25d,main,2026-09-28 addendum,2e-3,101,complete,80.825,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25d-lr2e-3_s101
+HM-c25d,main,2026-09-28 addendum,2e-3,202,complete,74.309,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25d-lr2e-3_s202
+HM-c25d,main,2026-09-28 addendum,2e-3,303,complete,39.367,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_A_dyn_c25d-lr2e-3_s303
+HM-A,main,2026-09-28 addendum,5e-4,101,complete,78.158,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_real_off-lr5e-4_s101
+HM-A,main,2026-09-28 addendum,5e-4,202,complete,80.128,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_real_off-lr5e-4_s202
+HM-A,main,2026-09-28 addendum,5e-4,303,complete,79.390,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_real_off-lr5e-4_s303
+HM-A,main,2026-09-28 addendum,1e-3,101,complete,62.105,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-20260925b,hm_gates_insane_real_off_s101
+HM-A,main,2026-09-28 addendum,1e-3,202,complete,79.976,"token accuracy (re-scored, F1)",,,,NVIDIA A100-SXM4-80GB,mq-hm-20260925b,hm_gates_insane_real_off_s202
+HM-A,main,2026-09-28 addendum,1e-3,303,complete,79.469,"token accuracy (re-scored, F1)",,,,NVIDIA A100-SXM4-80GB,mq-hm-20260925b,hm_gates_insane_real_off_s303
+HM-A,main,2026-09-28 addendum,2e-3,101,complete,74.765,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_real_off-lr2e-3_s101
+HM-A,main,2026-09-28 addendum,2e-3,202,complete,26.945,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_real_off-lr2e-3_s202
+HM-A,main,2026-09-28 addendum,2e-3,303,complete,27.782,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_real_off-lr2e-3_s303
+HM-Ac,main,2026-09-28 addendum,5e-4,101,complete,79.643,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_rot_off-lr5e-4_s101
+HM-Ac,main,2026-09-28 addendum,5e-4,202,complete,74.616,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_rot_off-lr5e-4_s202
+HM-Ac,main,2026-09-28 addendum,5e-4,303,complete,43.750,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_rot_off-lr5e-4_s303
+HM-Ac,main,2026-09-28 addendum,1e-3,101,complete,61.376,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-rot-20260925b,hm_gates_insane_rot_off_s101
+HM-Ac,main,2026-09-28 addendum,1e-3,202,complete,74.616,"token accuracy (re-scored, F1)",,,,NVIDIA A100-SXM4-80GB,mq-hm-rot-20260925b,hm_gates_insane_rot_off_s202
+HM-Ac,main,2026-09-28 addendum,1e-3,303,complete,70.974,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-hm-rot-20260925b,hm_gates_insane_rot_off_s303
+HM-Ac,main,2026-09-28 addendum,2e-3,101,complete,70.999,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_rot_off-lr2e-3_s101
+HM-Ac,main,2026-09-28 addendum,2e-3,202,complete,20.805,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_rot_off-lr2e-3_s202
+HM-Ac,main,2026-09-28 addendum,2e-3,303,complete,51.664,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-hm-20260928,lrsweep2_hm_insane_rot_off-lr2e-3_s303
+R2O2-c-ω/h,main,2026-09-28 addendum,5e-4,101,complete,80.926,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr5e-4_s101
+R2O2-c-ω/h,main,2026-09-28 addendum,5e-4,202,complete,81.741,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr5e-4_s202
+R2O2-c-ω/h,main,2026-09-28 addendum,5e-4,303,complete,83.220,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr5e-4_s303
+R2O2-c-ω/h,main,2026-09-28 addendum,1e-3,101,complete,81.974,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-p1extra-ssd-20260927,p1extra_ssd_insane_R2O2-complex-realgates-head-d248-i512_s101
+R2O2-c-ω/h,main,2026-09-28 addendum,1e-3,202,complete,78.680,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-p1extra-ssd-20260927,p1extra_ssd_insane_R2O2-complex-realgates-head-d248-i512_s202
+R2O2-c-ω/h,main,2026-09-28 addendum,1e-3,303,complete,81.884,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-p1extra-ssd-20260927,p1extra_ssd_insane_R2O2-complex-realgates-head-d248-i512_s303
+R2O2-c-ω/h,main,2026-09-28 addendum,2e-3,101,complete,81.739,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr2e-3_s101
+R2O2-c-ω/h,main,2026-09-28 addendum,2e-3,202,complete,79.378,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr2e-3_s202
+R2O2-c-ω/h,main,2026-09-28 addendum,2e-3,303,complete,81.049,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr2e-3_s303
+R2O2-r-nogate,ablation,2026-09-28 addendum,5e-4,101,complete,53.064,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr5e-4_s101
+R2O2-r-nogate,ablation,2026-09-28 addendum,5e-4,202,complete,51.023,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr5e-4_s202
+R2O2-r-nogate,ablation,2026-09-28 addendum,5e-4,303,complete,76.938,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr5e-4_s303
+R2O2-r-nogate,ablation,2026-09-28 addendum,1e-3,101,complete,68.703,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-gates-off-insane-20260926,gates_off_insane_R2O2-real-nogates-d312-i448_s101
+R2O2-r-nogate,ablation,2026-09-28 addendum,1e-3,202,complete,50.443,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-gates-off-insane-20260926,gates_off_insane_R2O2-real-nogates-d312-i448_s202
+R2O2-r-nogate,ablation,2026-09-28 addendum,1e-3,303,complete,60.480,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-gates-off-insane-20260926,gates_off_insane_R2O2-real-nogates-d312-i448_s303
+R2O2-r-nogate,ablation,2026-09-28 addendum,2e-3,101,complete,0.158,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr2e-3_s101
+R2O2-r-nogate,ablation,2026-09-28 addendum,2e-3,202,complete,3.821,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr2e-3_s202
+R2O2-r-nogate,ablation,2026-09-28 addendum,2e-3,303,complete,3.734,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr2e-3_s303
+R2O2-c-nogate,ablation,2026-09-28 addendum,5e-4,101,complete,81.988,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr5e-4_s101
+R2O2-c-nogate,ablation,2026-09-28 addendum,5e-4,202,complete,75.664,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr5e-4_s202
+R2O2-c-nogate,ablation,2026-09-28 addendum,5e-4,303,complete,79.499,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr5e-4_s303
+R2O2-c-nogate,ablation,2026-09-28 addendum,1e-3,101,complete,82.595,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-gates-off-insane-20260926,gates_off_insane_R2O2-complex-nogates-d280-i512_s101
+R2O2-c-nogate,ablation,2026-09-28 addendum,1e-3,202,complete,82.572,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-gates-off-insane-20260926,gates_off_insane_R2O2-complex-nogates-d280-i512_s202
+R2O2-c-nogate,ablation,2026-09-28 addendum,1e-3,303,complete,81.425,"token accuracy (recorded, F1 code)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-gates-off-insane-20260926,gates_off_insane_R2O2-complex-nogates-d280-i512_s303
+R2O2-c-nogate,ablation,2026-09-28 addendum,2e-3,101,complete,0.399,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr2e-3_s101
+R2O2-c-nogate,ablation,2026-09-28 addendum,2e-3,202,complete,0.372,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr2e-3_s202
+R2O2-c-nogate,ablation,2026-09-28 addendum,2e-3,303,complete,0.145,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr2e-3_s303
+R1O1-r,ablation,2026-09-28 addendum,5e-4,101,complete,63.914,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-real-d296-i576-lr5e-4_s101
+R1O1-r,ablation,2026-09-28 addendum,5e-4,202,complete,71.673,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-real-d296-i576-lr5e-4_s202
+R1O1-r,ablation,2026-09-28 addendum,5e-4,303,complete,65.446,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-real-d296-i576-lr5e-4_s303
+R1O1-r,ablation,2026-09-28 addendum,1e-3,101,complete,71.553,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-ssd-r1o1real-20260925,ssd_r1o1real_insane_R1O1-real-d296-i576_s101
+R1O1-r,ablation,2026-09-28 addendum,1e-3,202,complete,67.413,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-ssd-r1o1real-20260925,ssd_r1o1real_insane_R1O1-real-d296-i576_s202
+R1O1-r,ablation,2026-09-28 addendum,1e-3,303,complete,47.947,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-ssd-r1o1real-20260925,ssd_r1o1real_insane_R1O1-real-d296-i576_s303
+R1O1-r,ablation,2026-09-28 addendum,2e-3,101,complete,15.015,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-real-d296-i576-lr2e-3_s101
+R1O1-r,ablation,2026-09-28 addendum,2e-3,202,complete,41.118,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-real-d296-i576-lr2e-3_s202
+R1O1-r,ablation,2026-09-28 addendum,2e-3,303,complete,50.068,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-real-d296-i576-lr2e-3_s303
+R1O1-c,ablation,2026-09-28 addendum,5e-4,101,complete,67.625,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr5e-4_s101
+R1O1-c,ablation,2026-09-28 addendum,5e-4,202,complete,61.212,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr5e-4_s202
+R1O1-c,ablation,2026-09-28 addendum,5e-4,303,complete,79.252,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr5e-4_s303
+R1O1-c,ablation,2026-09-28 addendum,1e-3,101,complete,6.372,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-ssd-complex-20260925b,ssd_complex_insane_R1O1-complex-d296-i576_s101
+R1O1-c,ablation,2026-09-28 addendum,1e-3,202,complete,67.774,"token accuracy (re-scored, F1)",,,,NVIDIA A100-SXM4-80GB,mq-ssd-complex-20260925b,ssd_complex_insane_R1O1-complex-d296-i576_s202
+R1O1-c,ablation,2026-09-28 addendum,1e-3,303,complete,72.542,"token accuracy (re-scored, F1)",,,,NVIDIA RTX PRO 5000 Blackwell,mq-ssd-complex-20260925b,ssd_complex_insane_R1O1-complex-d296-i576_s303
+R1O1-c,ablation,2026-09-28 addendum,2e-3,101,complete,67.920,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr2e-3_s101
+R1O1-c,ablation,2026-09-28 addendum,2e-3,202,complete,52.359,"token accuracy (recorded, F1 code)",,,,NVIDIA H100 PCIe,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr2e-3_s202
+R1O1-c,ablation,2026-09-28 addendum,2e-3,303,complete,52.140,"token accuracy (recorded, F1 code)",,,,NVIDIA A100-SXM4-80GB,mq-lrsweep2-ssd-20260928,lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr2e-3_s303

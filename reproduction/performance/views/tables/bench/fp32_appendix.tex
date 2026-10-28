@@ -1,0 +1,27 @@
+\subsection{Baseline tracking with fp32 input and output}
+\label{app:fp32_baseline_tracking}
+Table~\ref{tab:fp32_baseline_tracking} compares the three baseline recoveries
+on H100 PCIe with fp32 input and output. It uses copied weights, output checks
+before timing, three-round medians and the first comparison-group attempt
+passing the validity and noise gates. Kernel timings use the aligned scope;
+mixer timings cover an eager forward and backward of the full module.
+The SSD recoveries here use $R=O=1$; fp32 memory is not measured.
+HM timings retain the earlier backward-buffer schedule; the buffer
+optimization was measured only in bf16.
+
+\begin{table}[!htbp]
+\centering\scriptsize
+\caption{Baseline tracking with fp32 input/output: time ratios ours/official
+($<1$ means ours is faster), geometric mean with min--max underneath over four
+Large or six LM shapes. Mamba~1 uses IEEE arithmetic, Mamba~2 uses tf32,
+and our Mamba~3 recovery uses its opt-in bf16-operand mode to match the
+official implementation's internal operand casts. The Mamba~3 row is not
+a comparison of full-fp32 scan arithmetic. PyTorch~2.14, Triton~3.8.}
+\label{tab:fp32_baseline_tracking}
+\adjustbox{max width=\linewidth}{\input{tables/bench/fp32_table_fp32_baseline}}
+\end{table}
+
+With our default tf32 operands instead, the Mamba~3 kernel forward-and-backward
+ratio is $4.03$ on Large and $3.57$ on LM, and the eager mixer ratio is $2.00$
+and $2.06$, respectively. These ratios describe the measured operand configurations; no subsequent
+fp32 tuning is included.

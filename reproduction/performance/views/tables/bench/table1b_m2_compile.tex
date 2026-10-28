@@ -1,0 +1,9 @@
+% TABLE 1b_m2_compile: SSD-MIMO m2exact (R=O=1) vs official Mamba-2, N=128; bf16 kernel / bf16 mixer; ratio = ours / official (< 1: ours faster / leaner); copied official weights, outputs gated before timing; kernel = the aligned scope (METHOD.md); group = geomean (min--max) over its shapes; memory = full mixer, one layer. canary details are retained per record; per-group spread <=1.15; whole-run spread recorded, not gated.
+\begin{tabular}{l c }
+\toprule
+set & mixer compile f+b \\
+\midrule
+Large & 1.08 (1.05--1.13) \\
+LM & 1.25 (1.10--1.63) \\
+\bottomrule
+\end{tabular}

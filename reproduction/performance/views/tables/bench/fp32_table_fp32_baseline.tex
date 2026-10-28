@@ -1,0 +1,12 @@
+% Generated directly from verified anonymous-revision-14 JSONL by appendix_fp32_baseline/build.py.
+\begin{tabular}{@{}l ccc ccc@{}}
+\toprule
+ & \multicolumn{3}{c}{Large} & \multicolumn{3}{c}{LM} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Pair (our operands) & kernel fwd & kernel f+b & mixer f+b & kernel fwd & kernel f+b & mixer f+b \\
+\midrule
+Mamba 1 (IEEE) & \shortstack{0.54\\{\tiny (0.51--0.65)}} & \shortstack{0.53\\{\tiny (0.45--0.65)}} & \shortstack{0.97\\{\tiny (0.87--1.02)}} & \shortstack{0.58\\{\tiny (0.51--0.67)}} & \shortstack{0.61\\{\tiny (0.50--0.68)}} & \shortstack{0.99\\{\tiny (0.95--1.03)}} \\
+Mamba 2 (tf32) & \shortstack{1.36\\{\tiny (1.16--1.58)}} & \shortstack{1.00\\{\tiny (0.97--1.08)}} & \shortstack{1.15\\{\tiny (1.11--1.19)}} & \shortstack{1.54\\{\tiny (1.15--1.70)}} & \shortstack{1.02\\{\tiny (0.92--1.09)}} & \shortstack{1.18\\{\tiny (1.15--1.22)}} \\
+Mamba 3 (bf16 operands) & \shortstack{0.88\\{\tiny (0.76--0.98)}} & \shortstack{0.94\\{\tiny (0.85--1.02)}} & \shortstack{0.95\\{\tiny (0.91--0.98)}} & \shortstack{0.88\\{\tiny (0.76--1.11)}} & \shortstack{0.94\\{\tiny (0.85--1.12)}} & \shortstack{0.94\\{\tiny (0.85--1.02)}} \\
+\bottomrule
+\end{tabular}

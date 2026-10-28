@@ -1,0 +1,3591 @@
+{
+  "task": "TASK_P1_MQMKVAR_FINAL_20260927.md implementation",
+  "tier": "insane",
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "lrs": [
+    "1e-4",
+    "5e-4",
+    "1e-3",
+    "2e-3"
+  ],
+  "flat_schedule_note": "peak 1e-4 = eta_min 1e-4: constant LR after warmup",
+  "best_lr_rule": "best 3-seed mean among LRs whose three seeds all completed; diverged seeds reported, never dropped (owner 2026-09-28)",
+  "rows": [
+    {
+      "abbr": "M1",
+      "label": "M1 (Mamba-1, d256, anchor)",
+      "arm": "official_mamba1",
+      "sweep_root": "mq-lrsweep-m12-20260927",
+      "baseline": true,
+      "table": "main",
+      "sweep": "2026-09-27",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 69.62231086294081,
+          "sd": 2.856497790023936,
+          "min": 67.25078905839032,
+          "max": 72.79339110283351,
+          "non_embedding": 1220352,
+          "metrics": [
+            "token accuracy (re-scored, F1)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-baselines-matched-20260920"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 72.79339110283351,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-baselines-matched-20260920",
+              "name": "matched_insane_official_mamba1_s101",
+              "gpu": null,
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 68.82275242759857,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-baselines-matched-20260920",
+              "name": "matched_insane_official_mamba1_s202",
+              "gpu": null,
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 67.25078905839032,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-baselines-matched-20260920",
+              "name": "matched_insane_official_mamba1_s303",
+              "gpu": null,
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 67.08486278851827,
+          "sd": 4.915869707011711,
+          "min": 61.462897062301636,
+          "max": 70.57474255561829,
+          "non_embedding": 1220352,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-m12-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 69.21694874763489,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba1-lr5e-4_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 61.462897062301636,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba1-lr5e-4_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 70.57474255561829,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba1-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 2,
+          "attempted": 3,
+          "completed": 2,
+          "diverged": 1,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 73.3494520187378,
+          "sd": 1.0884845096423492,
+          "min": 72.57977724075317,
+          "max": 74.11912679672241,
+          "non_embedding": 1220352,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-m12-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 74.11912679672241,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba1-lr2e-3_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 72.57977724075317,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba1-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "diverged",
+              "acc": null,
+              "metric": null,
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba1-lr2e-3_s303",
+              "gpu": null,
+              "diverged_step": 15500,
+              "diverged_kind": "no escape (chance)",
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": false,
+      "settled": true,
+      "best_lr": "1e-3",
+      "best_mean": 69.62231086294081
+    },
+    {
+      "abbr": "M2",
+      "label": "M2 (Mamba-2, d320/h64, stock-above)",
+      "arm": "official_mamba2",
+      "sweep_root": "mq-lrsweep-m12-20260927",
+      "baseline": true,
+      "table": "main",
+      "sweep": "2026-09-27",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 36.42215334745582,
+          "sd": 13.485593386063469,
+          "min": 27.758772054537438,
+          "max": 51.95967271848387,
+          "non_embedding": 1410300,
+          "metrics": [
+            "token accuracy (re-scored, F1)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-stock-above-20260922"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 51.95967271848387,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-stock-above-20260922",
+              "name": "stock_above_insane_official_mamba2_d320_i640_h64_s101",
+              "gpu": null,
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 29.548015269346145,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-stock-above-20260922",
+              "name": "stock_above_insane_official_mamba2_d320_i640_h64_s202",
+              "gpu": null,
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 27.758772054537438,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-stock-above-20260922",
+              "name": "stock_above_insane_official_mamba2_d320_i640_h64_s303",
+              "gpu": null,
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 41.965348521868385,
+          "sd": 20.797121299423186,
+          "min": 29.615259170532227,
+          "max": 65.97650051116943,
+          "non_embedding": 1410300,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-m12-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 65.97650051116943,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba2-lr5e-4_s101",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 30.304285883903503,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba2-lr5e-4_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 29.615259170532227,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba2-lr5e-4_s303",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 39.922282099723816,
+          "sd": 9.286931042966433,
+          "min": 29.378542304039,
+          "max": 46.88803851604462,
+          "non_embedding": 1410300,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-m12-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 46.88803851604462,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba2-lr2e-3_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 43.50026547908783,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba2-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 29.378542304039,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m12-20260927",
+              "name": "lrsweep_m12_insane_official_mamba2-lr2e-3_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "5e-4",
+      "best_mean": 41.965348521868385
+    },
+    {
+      "abbr": "M3",
+      "label": "M3 (Mamba-3 upstream anonymous-revision-13, d320/h64, stock-above)",
+      "arm": "official_mamba3",
+      "sweep_root": "mq-lrsweep-m3-20260927",
+      "baseline": true,
+      "table": "main",
+      "sweep": "2026-09-27",
+      "swept": [
+        "1e-4",
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 12.059390564946852,
+          "sd": 16.54407541461917,
+          "min": 2.2274460810099947,
+          "max": 31.16007577804001,
+          "non_embedding": 1438952,
+          "metrics": [
+            "token accuracy (re-scored, F1)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-m3-upstream-20260924"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 2.790649835790551,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-m3-upstream-20260924",
+              "name": "stock_above_insane_official_mamba3_d320_i640_h64_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 2.2274460810099947,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-m3-upstream-20260924",
+              "name": "stock_above_insane_official_mamba3_d320_i640_h64_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 31.16007577804001,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-m3-upstream-20260924",
+              "name": "stock_above_insane_official_mamba3_d320_i640_h64_s303",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "1e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 29.67166205247243,
+          "sd": 38.93323466482169,
+          "min": 3.4351587295532227,
+          "max": 74.40527677536011,
+          "non_embedding": 1438952,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-m3-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 11.174550652503967,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m3-20260927",
+              "name": "lrsweep_m3_insane_official_mamba3-lr1e-4_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 3.4351587295532227,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m3-20260927",
+              "name": "lrsweep_m3_insane_official_mamba3-lr1e-4_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 74.40527677536011,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m3-20260927",
+              "name": "lrsweep_m3_insane_official_mamba3-lr1e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 27.848881483078003,
+          "sd": 17.958250265685574,
+          "min": 14.346267282962799,
+          "max": 48.229506611824036,
+          "non_embedding": 1438952,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-m3-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 48.229506611824036,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m3-20260927",
+              "name": "lrsweep_m3_insane_official_mamba3-lr5e-4_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 14.346267282962799,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m3-20260927",
+              "name": "lrsweep_m3_insane_official_mamba3-lr5e-4_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 20.970870554447174,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m3-20260927",
+              "name": "lrsweep_m3_insane_official_mamba3-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 1.0525443668787677,
+          "sd": 1.599715374221134,
+          "min": 0.08519253460690379,
+          "max": 2.899034321308136,
+          "non_embedding": 1438952,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-m3-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 2.899034321308136,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m3-20260927",
+              "name": "lrsweep_m3_insane_official_mamba3-lr2e-3_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 0.08519253460690379,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m3-20260927",
+              "name": "lrsweep_m3_insane_official_mamba3-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 0.17340624472126365,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-m3-20260927",
+              "name": "lrsweep_m3_insane_official_mamba3-lr2e-3_s303",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "1e-4",
+      "best_mean": 29.67166205247243
+    },
+    {
+      "abbr": "Attn",
+      "label": "Attention (Zoology Fig.-2 layout, d392, reference)",
+      "arm": "zoology-attn-d392",
+      "sweep_root": "mq-lrsweep-attn-20260927",
+      "baseline": true,
+      "table": "main",
+      "sweep": "2026-09-27",
+      "swept": [
+        "1e-4",
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 1.0576018548796036,
+          "sd": 0.7655479622824485,
+          "min": 0.3741140864694258,
+          "max": 1.8848321296046178,
+          "non_embedding": 1236368,
+          "metrics": [
+            "token accuracy (re-scored, F1)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-attn-ref-20260925"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 1.8848321296046178,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-attn-ref-20260925",
+              "name": "attn_ref_insane_zoology-attn-d392_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 0.9138593485647668,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-attn-ref-20260925",
+              "name": "attn_ref_insane_zoology-attn-d392_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 0.3741140864694258,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-attn-ref-20260925",
+              "name": "attn_ref_insane_zoology-attn-d392_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "1e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 2.892340316126744,
+          "sd": 4.179529838332297,
+          "min": 0.4756786860525608,
+          "max": 7.718443870544434,
+          "non_embedding": 1236368,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-attn-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 0.48289839178323746,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-attn-20260927",
+              "name": "lrsweep_attn_insane_zoology-attn-d392-lr1e-4_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 7.718443870544434,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-attn-20260927",
+              "name": "lrsweep_attn_insane_zoology-attn-d392-lr1e-4_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 0.4756786860525608,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-attn-20260927",
+              "name": "lrsweep_attn_insane_zoology-attn-d392-lr1e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 0.4601063517232736,
+          "sd": 0.2031058888001749,
+          "min": 0.28423429466784,
+          "max": 0.6824066862463951,
+          "non_embedding": 1236368,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-attn-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 0.41367807425558567,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-attn-20260927",
+              "name": "lrsweep_attn_insane_zoology-attn-d392-lr5e-4_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 0.28423429466784,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-attn-20260927",
+              "name": "lrsweep_attn_insane_zoology-attn-d392-lr5e-4_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 0.6824066862463951,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-attn-20260927",
+              "name": "lrsweep_attn_insane_zoology-attn-d392-lr5e-4_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 0.026235302599767845,
+          "sd": 0.016575114725075876,
+          "min": 0.010685165761969984,
+          "max": 0.04367367073427886,
+          "non_embedding": 1236368,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-attn-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 0.02434707130305469,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-attn-20260927",
+              "name": "lrsweep_attn_insane_zoology-attn-d392-lr2e-3_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 0.010685165761969984,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-attn-20260927",
+              "name": "lrsweep_attn_insane_zoology-attn-d392-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 0.04367367073427886,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-attn-20260927",
+              "name": "lrsweep_attn_insane_zoology-attn-d392-lr2e-3_s303",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "1e-4",
+      "best_mean": 2.892340316126744
+    },
+    {
+      "abbr": "R2O2-r",
+      "label": "SSD R2O2 real (d248/i448)",
+      "arm": "R2O2-real-d248-i448",
+      "sweep_root": "mq-lrsweep-ssd-20260927",
+      "baseline": false,
+      "table": "main",
+      "sweep": "2026-09-27",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 82.0356743842738,
+          "sd": 1.167585414480102,
+          "min": 81.06377599982939,
+          "max": 83.33083050172739,
+          "non_embedding": 1217308,
+          "metrics": [
+            "token accuracy (re-scored, F1)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-ssd-real-20260925"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 81.71241665126463,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-ssd-real-20260925",
+              "name": "ssd_real_insane_R2O2-real-d248-i448_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 81.06377599982939,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-ssd-real-20260925",
+              "name": "ssd_real_insane_R2O2-real-d248-i448_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 83.33083050172739,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-ssd-real-20260925",
+              "name": "ssd_real_insane_R2O2-real-d248-i448_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 79.46533958117168,
+          "sd": 1.0018019222112944,
+          "min": 78.31364274024963,
+          "max": 80.13501167297363,
+          "non_embedding": 1217308,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-ssd-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 80.13501167297363,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-real-d248-i448-lr5e-4_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 78.31364274024963,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-real-d248-i448-lr5e-4_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 79.94736433029175,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-real-d248-i448-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 77.4986982345581,
+          "sd": 1.7002092842475838,
+          "min": 75.63082575798035,
+          "max": 78.9560854434967,
+          "non_embedding": 1217308,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-ssd-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 77.90918350219727,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-real-d248-i448-lr2e-3_s101",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 78.9560854434967,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-real-d248-i448-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 75.63082575798035,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-real-d248-i448-lr2e-3_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "1e-3",
+      "best_mean": 82.0356743842738
+    },
+    {
+      "abbr": "R2O2-c",
+      "label": "SSD R2O2 complex, new default (complex block ungated, real block gated; d248/i512)",
+      "arm": "R2O2-complex-realgates-d248-i512",
+      "sweep_root": "mq-lrsweep-ssd-20260927",
+      "baseline": false,
+      "table": "main",
+      "sweep": "2026-09-27",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 82.61749347050984,
+          "sd": 0.7356314916728375,
+          "min": 82.10294842720032,
+          "max": 83.46007466316223,
+          "non_embedding": 1207944,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-blockgates-insane-20260926"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 83.46007466316223,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-blockgates-insane-20260926",
+              "name": "blockgates_insane_R2O2-complex-realgates-d248-i512_s101",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 82.10294842720032,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-blockgates-insane-20260926",
+              "name": "blockgates_insane_R2O2-complex-realgates-d248-i512_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 82.28945732116699,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-blockgates-insane-20260926",
+              "name": "blockgates_insane_R2O2-complex-realgates-d248-i512_s303",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 82.23202228546143,
+          "sd": 1.9199248506449544,
+          "min": 80.0433099269867,
+          "max": 83.63177180290222,
+          "non_embedding": 1207944,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-ssd-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 80.0433099269867,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr5e-4_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 83.02098512649536,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr5e-4_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 83.63177180290222,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr5e-4_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 61.14397644996643,
+          "sd": 36.89837675567557,
+          "min": 18.547004461288452,
+          "max": 83.22584629058838,
+          "non_embedding": 1207944,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-ssd-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 81.65907859802246,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr2e-3_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 18.547004461288452,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 83.22584629058838,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R2O2-complex-realgates-d248-i512-lr2e-3_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "1e-3",
+      "best_mean": 82.61749347050984
+    },
+    {
+      "abbr": "R4O4-r",
+      "label": "SSD R4O4 real (d176/i384)",
+      "arm": "R4O4-real-d176-i384",
+      "sweep_root": "mq-lrsweep-ssd-20260927",
+      "baseline": false,
+      "table": "main",
+      "sweep": "2026-09-27",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 82.04337358474731,
+          "sd": 1.2808043407094412,
+          "min": 80.9161365032196,
+          "max": 83.43612551689148,
+          "non_embedding": 1204744,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-r4o4-insane-20260926"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 83.43612551689148,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-r4o4-insane-20260926",
+              "name": "r4o4_insane_R4O4-real-d176-i384_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 80.9161365032196,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-r4o4-insane-20260926",
+              "name": "r4o4_insane_R4O4-real-d176-i384_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 81.77785873413086,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-r4o4-insane-20260926",
+              "name": "r4o4_insane_R4O4-real-d176-i384_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 78.20852597554524,
+          "sd": 1.6270163593653004,
+          "min": 76.50532126426697,
+          "max": 79.74678874015808,
+          "non_embedding": 1204744,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-ssd-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 78.3734679222107,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-real-d176-i384-lr5e-4_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 76.50532126426697,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-real-d176-i384-lr5e-4_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 79.74678874015808,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-real-d176-i384-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 53.617242723703384,
+          "sd": 43.77308073925114,
+          "min": 3.199618309736252,
+          "max": 81.92927241325378,
+          "non_embedding": 1204744,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-ssd-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 3.199618309736252,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-real-d176-i384-lr2e-3_s101",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 75.72283744812012,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-real-d176-i384-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 81.92927241325378,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-real-d176-i384-lr2e-3_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "1e-3",
+      "best_mean": 82.04337358474731
+    },
+    {
+      "abbr": "R4O4-c",
+      "label": "SSD R4O4 complex, new default (d208/i384)",
+      "arm": "R4O4-complex-realgates-d208-i384",
+      "sweep_root": "mq-lrsweep-ssd-20260927",
+      "baseline": false,
+      "table": "main",
+      "sweep": "2026-09-27",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 81.8533976872762,
+          "sd": 1.238148845648097,
+          "min": 80.42757511138916,
+          "max": 82.65733122825623,
+          "non_embedding": 1214248,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-p1final-ssd-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 82.47528672218323,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-p1final-ssd-20260927",
+              "name": "p1final_ssd_insane_R4O4-complex-realgates-d208-i384_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 80.42757511138916,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-p1final-ssd-20260927",
+              "name": "p1final_ssd_insane_R4O4-complex-realgates-d208-i384_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 82.65733122825623,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-p1final-ssd-20260927",
+              "name": "p1final_ssd_insane_R4O4-complex-realgates-d208-i384_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 82.19012419382732,
+          "sd": 0.41007273760588187,
+          "min": 81.89482092857361,
+          "max": 82.65833258628845,
+          "non_embedding": 1214248,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-ssd-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 81.89482092857361,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr5e-4_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 82.65833258628845,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr5e-4_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 82.01721906661987,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 79.86361583073933,
+          "sd": 0.6293578089489412,
+          "min": 79.3611228466034,
+          "max": 80.56952357292175,
+          "non_embedding": 1214248,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-ssd-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 79.3611228466034,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr2e-3_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 80.56952357292175,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr2e-3_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 79.66020107269287,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-ssd-20260927",
+              "name": "lrsweep_ssd_insane_R4O4-complex-realgates-d208-i384-lr2e-3_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "5e-4",
+      "best_mean": 82.19012419382732
+    },
+    {
+      "abbr": "HM-Adyn",
+      "label": "HM A_dyn (64 A + 64 dyn real rows, no gates, d_inner 512)",
+      "arm": "A_dyn",
+      "sweep_root": "mq-lrsweep-hm-20260927",
+      "baseline": false,
+      "table": "main",
+      "sweep": "2026-09-27",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 80.60370589180421,
+          "sd": 0.798032719584953,
+          "min": 79.8022822269929,
+          "max": 81.39830387989252,
+          "non_embedding": 1236416,
+          "metrics": [
+            "token accuracy (re-scored, F1)",
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-hm-screen2-20260925"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 80.61053156852722,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-hm-screen2-20260925",
+              "name": "hm_screen2_insane_A_dyn_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 79.8022822269929,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-hm-screen2-20260925",
+              "name": "hm_screen2_insane_A_dyn_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 81.39830387989252,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-hm-screen2-20260925",
+              "name": "hm_screen2_insane_A_dyn_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 79.6112318833669,
+          "sd": 2.4503654237264714,
+          "min": 76.78266763687134,
+          "max": 81.08641505241394,
+          "non_embedding": 1236416,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-hm-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 76.78266763687134,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-hm-20260927",
+              "name": "lrsweep_hm_insane_A_dyn-lr5e-4_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 80.96461296081543,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-hm-20260927",
+              "name": "lrsweep_hm_insane_A_dyn-lr5e-4_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 81.08641505241394,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-hm-20260927",
+              "name": "lrsweep_hm_insane_A_dyn-lr5e-4_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 59.69727238019308,
+          "sd": 27.801401168055637,
+          "min": 27.90825366973877,
+          "max": 79.46626543998718,
+          "non_embedding": 1236416,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep-hm-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 27.90825366973877,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-hm-20260927",
+              "name": "lrsweep_hm_insane_A_dyn-lr2e-3_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 79.46626543998718,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-hm-20260927",
+              "name": "lrsweep_hm_insane_A_dyn-lr2e-3_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 71.71729803085327,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep-hm-20260927",
+              "name": "lrsweep_hm_insane_A_dyn-lr2e-3_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "1e-3",
+      "best_mean": 80.60370589180421
+    },
+    {
+      "abbr": "HM-c25a",
+      "label": "HM A_dyn_c25a",
+      "arm": "A_dyn_c25a",
+      "sweep_root": "mq-lrsweep2-hm-20260928",
+      "baseline": false,
+      "table": "main",
+      "sweep": "2026-09-28 addendum",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 79.62289452552795,
+          "sd": 0.4408404181282233,
+          "min": 79.14093732833862,
+          "max": 80.00574707984924,
+          "non_embedding": 1237472,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-hm-mixc-insane-20260926"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 79.721999168396,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-hm-mixc-insane-20260926",
+              "name": "hm_mixc_insane_A_dyn_c25a_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 79.14093732833862,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-hm-mixc-insane-20260926",
+              "name": "hm_mixc_insane_A_dyn_c25a_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 80.00574707984924,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-hm-mixc-insane-20260926",
+              "name": "hm_mixc_insane_A_dyn_c25a_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 62.668133775393166,
+          "sd": 31.30850694640459,
+          "min": 26.516804099082947,
+          "max": 80.92718124389648,
+          "non_embedding": 1237472,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-hm-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 26.516804099082947,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25a-lr5e-4_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 80.92718124389648,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25a-lr5e-4_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 80.56041598320007,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25a-lr5e-4_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 60.14140645662943,
+          "sd": 28.85330286423761,
+          "min": 27.343672513961792,
+          "max": 81.61418437957764,
+          "non_embedding": 1237472,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-hm-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 27.343672513961792,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25a-lr2e-3_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 81.61418437957764,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25a-lr2e-3_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 71.46636247634888,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25a-lr2e-3_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "1e-3",
+      "best_mean": 79.62289452552795
+    },
+    {
+      "abbr": "HM-c25d",
+      "label": "HM A_dyn_c25d",
+      "arm": "A_dyn_c25d",
+      "sweep_root": "mq-lrsweep2-hm-20260928",
+      "baseline": false,
+      "table": "main",
+      "sweep": "2026-09-28 addendum",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 79.2165756225586,
+          "sd": 0.9533324278686514,
+          "min": 78.50164771080017,
+          "max": 80.29895424842834,
+          "non_embedding": 1237472,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-hm-mixc-insane-20260926"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 78.84912490844727,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-hm-mixc-insane-20260926",
+              "name": "hm_mixc_insane_A_dyn_c25d_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 80.29895424842834,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-hm-mixc-insane-20260926",
+              "name": "hm_mixc_insane_A_dyn_c25d_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 78.50164771080017,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-hm-mixc-insane-20260926",
+              "name": "hm_mixc_insane_A_dyn_c25d_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 80.71072896321614,
+          "sd": 0.8774105933337728,
+          "min": 79.77688908576965,
+          "max": 81.51795268058777,
+          "non_embedding": 1237472,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-hm-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 81.51795268058777,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25d-lr5e-4_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 79.77688908576965,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25d-lr5e-4_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 80.83734512329102,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25d-lr5e-4_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 64.83367582162221,
+          "sd": 22.29415064611177,
+          "min": 39.36690390110016,
+          "max": 80.8246374130249,
+          "non_embedding": 1237472,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-hm-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 80.8246374130249,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25d-lr2e-3_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 74.30948615074158,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25d-lr2e-3_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 39.36690390110016,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_A_dyn_c25d-lr2e-3_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "5e-4",
+      "best_mean": 80.71072896321614
+    },
+    {
+      "abbr": "HM-A",
+      "label": "HM real_off (128 A real rows, no gates, d_inner 512)",
+      "arm": "real_off",
+      "sweep_root": "mq-lrsweep2-hm-20260928",
+      "baseline": false,
+      "table": "main",
+      "sweep": "2026-09-28 addendum",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 73.85013399775367,
+          "sd": 10.174613636174698,
+          "min": 62.10515980209562,
+          "max": 79.97648819255868,
+          "non_embedding": 1236416,
+          "metrics": [
+            "token accuracy (re-scored, F1)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-hm-20260925b"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 62.10515980209562,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-hm-20260925b",
+              "name": "hm_gates_insane_real_off_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 79.97648819255868,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-hm-20260925b",
+              "name": "hm_gates_insane_real_off_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 79.46875399860672,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-hm-20260925b",
+              "name": "hm_gates_insane_real_off_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 79.22531962394714,
+          "sd": 0.995541438038915,
+          "min": 78.15778851509094,
+          "max": 80.12838959693909,
+          "non_embedding": 1236416,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-hm-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 78.15778851509094,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_real_off-lr5e-4_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 80.12838959693909,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_real_off-lr5e-4_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 79.3897807598114,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_real_off-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 43.163819114367165,
+          "sd": 27.370317169681034,
+          "min": 26.944610476493835,
+          "max": 74.76463913917542,
+          "non_embedding": 1236416,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-hm-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 74.76463913917542,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_real_off-lr2e-3_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 26.944610476493835,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_real_off-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 27.78220772743225,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_real_off-lr2e-3_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "5e-4",
+      "best_mean": 79.22531962394714
+    },
+    {
+      "abbr": "HM-Ac",
+      "label": "HM rot_off (128 A complex rows, no gates, d_inner 496)",
+      "arm": "rot_off",
+      "sweep_root": "mq-lrsweep2-hm-20260928",
+      "baseline": false,
+      "table": "main",
+      "sweep": "2026-09-28 addendum",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 68.98832436460658,
+          "sd": 6.839522428050523,
+          "min": 61.37579172412813,
+          "max": 74.61560060849908,
+          "non_embedding": 1200922,
+          "metrics": [
+            "token accuracy (re-scored, F1)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-hm-rot-20260925b"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 61.37579172412813,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-hm-rot-20260925b",
+              "name": "hm_gates_insane_rot_off_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 74.61560060849908,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-hm-rot-20260925b",
+              "name": "hm_gates_insane_rot_off_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 70.97358076119255,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-hm-rot-20260925b",
+              "name": "hm_gates_insane_rot_off_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 66.00325405597687,
+          "sd": 19.43499689525982,
+          "min": 43.750110268592834,
+          "max": 79.64324951171875,
+          "non_embedding": 1200922,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-hm-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 79.64324951171875,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_rot_off-lr5e-4_s101",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 74.61640238761902,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_rot_off-lr5e-4_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 43.750110268592834,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_rot_off-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 47.822560369968414,
+          "sd": 25.31678367508211,
+          "min": 20.804528892040253,
+          "max": 70.99899649620056,
+          "non_embedding": 1200922,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-hm-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 70.99899649620056,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_rot_off-lr2e-3_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 20.804528892040253,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_rot_off-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 51.66415572166443,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-hm-20260928",
+              "name": "lrsweep2_hm_insane_rot_off-lr2e-3_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "1e-3",
+      "best_mean": 68.98832436460658
+    },
+    {
+      "abbr": "R2O2-c-\u03c9/h",
+      "label": "SSD R2O2 complex, new default, per-head \u03c9 (omega_layout head, theta_init small; d248/i512)",
+      "arm": "R2O2-complex-realgates-head-d248-i512",
+      "sweep_root": "mq-lrsweep2-ssd-20260928",
+      "baseline": false,
+      "table": "main",
+      "sweep": "2026-09-28 addendum",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 80.84601561228435,
+          "sd": 1.8760909401901902,
+          "min": 78.68031859397888,
+          "max": 81.97396993637085,
+          "non_embedding": 1195992,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-p1extra-ssd-20260927"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 81.97396993637085,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-p1extra-ssd-20260927",
+              "name": "p1extra_ssd_insane_R2O2-complex-realgates-head-d248-i512_s101",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 78.68031859397888,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-p1extra-ssd-20260927",
+              "name": "p1extra_ssd_insane_R2O2-complex-realgates-head-d248-i512_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 81.8837583065033,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-p1extra-ssd-20260927",
+              "name": "p1extra_ssd_insane_R2O2-complex-realgates-head-d248-i512_s303",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 81.96231524149577,
+          "sd": 1.1630698476271355,
+          "min": 80.92586994171143,
+          "max": 83.22017788887024,
+          "non_embedding": 1195992,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-ssd-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 80.92586994171143,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr5e-4_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 81.74089789390564,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr5e-4_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 83.22017788887024,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 80.72168628374736,
+          "sd": 1.214008450054827,
+          "min": 79.37767505645752,
+          "max": 81.73871636390686,
+          "non_embedding": 1195992,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-ssd-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 81.73871636390686,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr2e-3_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 79.37767505645752,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 81.04866743087769,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-realgates-head-d248-i512-lr2e-3_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "5e-4",
+      "best_mean": 81.96231524149577
+    },
+    {
+      "abbr": "R2O2-r-nogate",
+      "label": "R2O2 real, gates off (d312/i448)",
+      "arm": "R2O2-real-nogates-d312-i448",
+      "sweep_root": "mq-lrsweep2-ssd-20260928",
+      "baseline": false,
+      "table": "ablation",
+      "sweep": "2026-09-28 addendum",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 59.87535913785299,
+          "sd": 9.145052778163782,
+          "min": 50.44320225715637,
+          "max": 68.7033474445343,
+          "non_embedding": 1206492,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-gates-off-insane-20260926"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 68.7033474445343,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-gates-off-insane-20260926",
+              "name": "gates_off_insane_R2O2-real-nogates-d312-i448_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 50.44320225715637,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-gates-off-insane-20260926",
+              "name": "gates_off_insane_R2O2-real-nogates-d312-i448_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 60.479527711868286,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-gates-off-insane-20260926",
+              "name": "gates_off_insane_R2O2-real-nogates-d312-i448_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 60.34155289332072,
+          "sd": 14.409229331758624,
+          "min": 51.022619009017944,
+          "max": 76.9381046295166,
+          "non_embedding": 1206492,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-ssd-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 53.06393504142761,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr5e-4_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 51.022619009017944,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr5e-4_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 76.9381046295166,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 2.571296583240231,
+          "sd": 2.090208936186579,
+          "min": 0.15825596638023853,
+          "max": 3.821401670575142,
+          "non_embedding": 1206492,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-ssd-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 0.15825596638023853,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr2e-3_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 3.821401670575142,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 3.734232112765312,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-real-nogates-d312-i448-lr2e-3_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "5e-4",
+      "best_mean": 60.34155289332072
+    },
+    {
+      "abbr": "R2O2-c-nogate",
+      "label": "R2O2 complex, gates off (d280/i512)",
+      "arm": "R2O2-complex-nogates-d280-i512",
+      "sweep_root": "mq-lrsweep2-ssd-20260928",
+      "baseline": false,
+      "table": "ablation",
+      "sweep": "2026-09-28 addendum",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 82.19724893569946,
+          "sd": 0.6690201140536528,
+          "min": 81.42485022544861,
+          "max": 82.59519934654236,
+          "non_embedding": 1217256,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-gates-off-insane-20260926"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 82.59519934654236,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-gates-off-insane-20260926",
+              "name": "gates_off_insane_R2O2-complex-nogates-d280-i512_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 82.57169723510742,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-gates-off-insane-20260926",
+              "name": "gates_off_insane_R2O2-complex-nogates-d280-i512_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 81.42485022544861,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-gates-off-insane-20260926",
+              "name": "gates_off_insane_R2O2-complex-nogates-d280-i512_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 79.0503442287445,
+          "sd": 3.18555981329498,
+          "min": 75.66407918930054,
+          "max": 81.9875419139862,
+          "non_embedding": 1217256,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-ssd-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 81.9875419139862,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr5e-4_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 75.66407918930054,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr5e-4_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 79.49941158294678,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 0.30547134423007566,
+          "sd": 0.1393302379775182,
+          "min": 0.14534934889525175,
+          "max": 0.3990831784904003,
+          "non_embedding": 1217256,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-ssd-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 0.3990831784904003,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr2e-3_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 0.37198150530457497,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr2e-3_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 0.14534934889525175,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R2O2-complex-nogates-d280-i512-lr2e-3_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "1e-3",
+      "best_mean": 82.19724893569946
+    },
+    {
+      "abbr": "R1O1-r",
+      "label": "R1O1 real (d296/i576)",
+      "arm": "R1O1-real-d296-i576",
+      "sweep_root": "mq-lrsweep2-ssd-20260928",
+      "baseline": false,
+      "table": "ablation",
+      "sweep": "2026-09-28 addendum",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 62.30461622853785,
+          "sd": 12.604869685794949,
+          "min": 47.94735967556194,
+          "max": 71.55317880347471,
+          "non_embedding": 1203486,
+          "metrics": [
+            "token accuracy (re-scored, F1)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-ssd-r1o1real-20260925"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 71.55317880347471,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-ssd-r1o1real-20260925",
+              "name": "ssd_r1o1real_insane_R1O1-real-d296-i576_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 67.41331020657691,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-ssd-r1o1real-20260925",
+              "name": "ssd_r1o1real_insane_R1O1-real-d296-i576_s202",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 47.94735967556194,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-ssd-r1o1real-20260925",
+              "name": "ssd_r1o1real_insane_R1O1-real-d296-i576_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 67.01087951660156,
+          "sd": 4.109456557789851,
+          "min": 63.91370892524719,
+          "max": 71.6728687286377,
+          "non_embedding": 1203486,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-ssd-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 63.91370892524719,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-real-d296-i576-lr5e-4_s101",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 71.6728687286377,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-real-d296-i576-lr5e-4_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 65.4460608959198,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-real-d296-i576-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 35.400339464346565,
+          "sd": 18.212678723384848,
+          "min": 15.014968812465668,
+          "max": 50.06842017173767,
+          "non_embedding": 1203486,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-ssd-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 15.014968812465668,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-real-d296-i576-lr2e-3_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 41.117629408836365,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-real-d296-i576-lr2e-3_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 50.06842017173767,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-real-d296-i576-lr2e-3_s303",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "5e-4",
+      "best_mean": 67.01087951660156
+    },
+    {
+      "abbr": "R1O1-c",
+      "label": "R1O1 complex (d296/i576; no gates at R = 1)",
+      "arm": "R1O1-complex-d296-i576",
+      "sweep_root": "mq-lrsweep2-ssd-20260928",
+      "baseline": false,
+      "table": "ablation",
+      "sweep": "2026-09-28 addendum",
+      "swept": [
+        "5e-4",
+        "2e-3"
+      ],
+      "cells": {
+        "1e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 48.895999497656526,
+          "sd": 36.903727846624996,
+          "min": 6.372246292847292,
+          "max": 72.54176766851018,
+          "non_embedding": 1223070,
+          "metrics": [
+            "token accuracy (re-scored, F1)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-ssd-complex-20260925b"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 6.372246292847292,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-ssd-complex-20260925b",
+              "name": "ssd_complex_insane_R1O1-complex-d296-i576_s101",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 67.7739845316121,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-ssd-complex-20260925b",
+              "name": "ssd_complex_insane_R1O1-complex-d296-i576_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 72.54176766851018,
+              "metric": "token accuracy (re-scored, F1)",
+              "origin": "mq-ssd-complex-20260925b",
+              "name": "ssd_complex_insane_R1O1-complex-d296-i576_s303",
+              "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "5e-4": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 69.36283906300862,
+          "sd": 9.14494669155653,
+          "min": 61.21165156364441,
+          "max": 79.25209403038025,
+          "non_embedding": 1223070,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-ssd-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 67.62477159500122,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr5e-4_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 61.21165156364441,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr5e-4_s202",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 79.25209403038025,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr5e-4_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        },
+        "2e-3": {
+          "tier": "insane",
+          "n": 3,
+          "attempted": 3,
+          "completed": 3,
+          "diverged": 0,
+          "failed": 0,
+          "interrupted": 0,
+          "mean": 57.47292240460714,
+          "sd": 9.04772689704546,
+          "min": 52.14036703109741,
+          "max": 67.9195761680603,
+          "non_embedding": 1223070,
+          "metrics": [
+            "token accuracy (recorded, F1 code)"
+          ],
+          "non_token": [],
+          "roots": [
+            "mq-lrsweep2-ssd-20260928"
+          ],
+          "seeds": {
+            "101": {
+              "status": "complete",
+              "acc": 67.9195761680603,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr2e-3_s101",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "202": {
+              "status": "complete",
+              "acc": 52.358824014663696,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr2e-3_s202",
+              "gpu": "NVIDIA H100 PCIe",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            },
+            "303": {
+              "status": "complete",
+              "acc": 52.14036703109741,
+              "metric": "token accuracy (recorded, F1 code)",
+              "origin": "mq-lrsweep2-ssd-20260928",
+              "name": "lrsweep2_ssd_insane_R1O1-complex-d296-i576-lr2e-3_s303",
+              "gpu": "NVIDIA A100-SXM4-80GB",
+              "diverged_step": null,
+              "diverged_kind": null,
+              "last_step": null
+            }
+          }
+        }
+      },
+      "complete": true,
+      "settled": true,
+      "best_lr": "5e-4",
+      "best_mean": 69.36283906300862
+    }
+  ],
+  "reporting_rule": {
+    "evaluable": true,
+    "arms": [
+      "M1",
+      "M2",
+      "M3",
+      "Attn",
+      "R2O2-r",
+      "R2O2-c",
+      "R4O4-r",
+      "R4O4-c",
+      "HM-Adyn",
+      "HM-c25a",
+      "HM-c25d",
+      "HM-A",
+      "HM-Ac",
+      "R2O2-c-\u03c9/h"
+    ],
+    "ranking_1e3": [
+      "R2O2-c",
+      "R4O4-r",
+      "R2O2-r",
+      "R4O4-c",
+      "R2O2-c-\u03c9/h",
+      "HM-Adyn",
+      "HM-c25a",
+      "HM-c25d",
+      "HM-A",
+      "M1",
+      "HM-Ac",
+      "M2",
+      "M3",
+      "Attn"
+    ],
+    "baseline_best_lr_changes_ranking": [],
+    "report_best_per_arm_for_every_arm": false,
+    "ranking_best_per_arm": [
+      "R2O2-c",
+      "R4O4-c",
+      "R4O4-r",
+      "R2O2-r",
+      "R2O2-c-\u03c9/h",
+      "HM-c25d",
+      "HM-Adyn",
+      "HM-c25a",
+      "HM-A",
+      "M1",
+      "HM-Ac",
+      "M2",
+      "M3",
+      "Attn"
+    ],
+    "original_nine": {
+      "evaluable": true,
+      "arms": [
+        "M1",
+        "M2",
+        "M3",
+        "Attn",
+        "R2O2-r",
+        "R2O2-c",
+        "R4O4-r",
+        "R4O4-c",
+        "HM-Adyn"
+      ],
+      "ranking_1e3": [
+        "R2O2-c",
+        "R4O4-r",
+        "R2O2-r",
+        "R4O4-c",
+        "HM-Adyn",
+        "M1",
+        "M2",
+        "M3",
+        "Attn"
+      ],
+      "baseline_best_lr_changes_ranking": [],
+      "report_best_per_arm_for_every_arm": false,
+      "ranking_best_per_arm": [
+        "R2O2-c",
+        "R4O4-c",
+        "R4O4-r",
+        "R2O2-r",
+        "HM-Adyn",
+        "M1",
+        "M2",
+        "M3",
+        "Attn"
+      ]
+    }
+  }
+}

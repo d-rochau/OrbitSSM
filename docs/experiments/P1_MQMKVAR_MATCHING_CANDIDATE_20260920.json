@@ -1,0 +1,37 @@
+{
+  "arms": [
+    {
+      "family": "official_mamba1",
+      "kwargs": {
+        "d_model": 256,
+        "n_layers": 2,
+        "d_state": 128,
+        "expand_factor": 2,
+        "headdim": 64
+      },
+      "role": "matched"
+    },
+    {
+      "family": "official_mamba2",
+      "kwargs": {
+        "d_model": 296,
+        "n_layers": 2,
+        "d_state": 128,
+        "expand_factor": 2,
+        "headdim": 16
+      },
+      "role": "matched"
+    },
+    {
+      "family": "official_mamba3",
+      "kwargs": {
+        "d_model": 288,
+        "n_layers": 2,
+        "d_state": 128,
+        "expand_factor": 2,
+        "headdim": 32
+      },
+      "role": "matched"
+    }
+  ]
+}

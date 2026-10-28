@@ -1,0 +1,2078 @@
+{
+  "source_package": "./local-data",
+  "source_sha256": {
+    "README.txt": "f9354c7120153329e513ad32226c930789ee879e7f3983f5542e2f07ab806564",
+    "installed_versions.json": "2c4e016c70259eae571ab03bd45fc7dd68500c865fcb4bf5f2bf7418b5aa7e07",
+    "peak_consistency.json": "e58961f42ee32cbc86f8a5fc075f168a8fa58aab4560522e2b7ea17c6187f119",
+    "ratios.json": "0f63bafd24e8e1ed1c7524be56a76ceff24f5f8ebc57b5f008edd0ad5125741b",
+    "raw/failed_9395513.json": "25fd3934038b2c431de4eb02e39055eb82b0db80d54b3ffcd8208c39fa4bd803",
+    "raw/failed_9395576.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "raw/mixers_9395313.jsonl": "73acf45bb07b07cdef0ec9c6c83378269a9897a2eef05c864bb0616448f17490",
+    "raw/mixers_9395513.jsonl": "2a9b780ca6bafd960c34f441a40e6cb10d7e7fb85aab4a47bd6fcce7e267a7f2",
+    "raw/mixers_9395576.jsonl": "7b059dec0c3f8867a763003ec8538384b904a1cda43c635bb95d6b90e174768c",
+    "raw/reference_9395569.log": "d241936b20b835c1bb16ca5d09f206db6db470a2a17a8b777c0fba1eb42d77a1",
+    "raw/reference_finish_9395576.log": "3796069169c5248d7c12ef718fa5f38b7f0af0b5ae57c0e088e471c7b1e52e9c",
+    "raw/resume_9395513.log": "e8568967c5825c2107b1c4842309f4a26d553b91d9b7e5852729cd8411a5352e",
+    "raw/witness_9395524.log": "879650a09c8d8295273be2a8f9622ae85de3d5b71ef2e72840e1a2a1188be814",
+    "reference_scope.patch": "41adb9d32f4497444910882e1d432f81ea6e7e651ea56bbde366379fdb12be7a",
+    "scripts/collector_witness.py": "c1f5561418d5c4f95dbfacd6ce4d370c3e1cd3b9d809690a326a03d79d4bc601",
+    "scripts/memory_campaign.py": "773e78e41507366ac7bee6f288c9978dce5fc82d4ff707c50afdfcc98d29914a",
+    "scripts/memory_cell.py": "90d4aaa5fdb4b65193d7ae534a30fdfe04511c1c114b672cf41f128fdc9a1f12",
+    "scripts/memory_cell_fixedref.py": "c7f815f73f1311c3051fd2d61714844e4a5d30e9b4ee48dd6fd1ddcde3ea7dc0",
+    "scripts/memory_reference_finish.py": "9212d05e63db6ddc2b5bbc1d145291d31b6898dae3f6a3eea54cfd7d845c7893",
+    "scripts/memory_resume.py": "14ac03ecd25fc020d45b194039dbb7fb2078579f3c21f73b00e869ccc6f2dcbb",
+    "scripts/mixer_cells.json": "61071c6d081b4076ec0a902d882c996a31e70335e3ba550683cdb4c9b04ed9e3",
+    "scripts/mixers_total.sh": "6c464cfa09a15ea7883b4bc3129f00e2f7901eecee36cb445cfd974af503f25d",
+    "scripts/package_memory.py": "8af2b30914b743301186f1521a1f619be6205cd8336e82c700ad4acebbf36782",
+    "scripts/reference_finish.sh": "a8ca672d1f5a2355d5166f606dd3377ad8c59ed875cf380e2dcc0452a59083fd",
+    "scripts/reference_finish_cells.json": "cea5af7c3a324af4efd8bf2c49e6db41973f69dedca7fd8edbf77a682df25808",
+    "scripts/reference_probe.py": "2d4ada6dac854216837ed5240b089d155d09127f10dc24f5b5d10e48e838a147",
+    "scripts/reference_scope_fix.py": "a05d03361ec838ae6407500827d2af09d918ff9210da4e5c4e82a94eeb008e12",
+    "scripts/resume_cells.json": "381b4d947a03581e103e724e167d4f62303aba89c2c7cce99aa6b1e7712b7e3b",
+    "scripts/resume_total.sh": "39e18dd357cd2303a5c33548592491480d0001d6ba8c2e0cc89816655cdfbf95",
+    "scripts/retained_total.py": "fa9438c85194d326f85ae42485b2f06c5d82bcc221309df521219016cecfe2cc",
+    "source_integrity.json": "79f88a5dc0badc9b7543a7a0e76d58cd82fc06970fbb7f337b65488a935695e5",
+    "table3_kernel.csv": "7712bad5677156621c9e3a0b3cccc060f26a0c57d1a64177414cde224ad0445b",
+    "table3_kernel.json": "5d3928794fb89f6d634c3412f1232f2a1ba5aa757313d3c140e478636310a7b2",
+    "table3_mixer.csv": "371224394a727b7d5c7c7fb48aadd6342ec76e0aac79ad10692d47d181c08170",
+    "table3_mixer.json": "2801828a8375135a735a7f926344cb28738fcfd328faeeb6a0a38c5b57d36c13",
+    "table4_scope.csv": "143ffa0c0fd8f21d060af9fc6d7a317a832ae51bcf756178aeb490c045465d86",
+    "table4_scope.json": "f8f7704961c7952ad14f0746bbaf799e05e3d40b7c79db501286a0fe6bc7d14c",
+    "validation.json": "b5403d175b6a7a4f9dc947d68a7fcdf476e9ff718a059b4088cbf18bee7287e1"
+  },
+  "definition": "Unique nonparameter CUDA backing storages held for backward, including saved caller inputs/output; aliases deduplicated, no unpacking. Distinct from extra allocator growth and peak allocation.",
+  "source_sha": "anonymous-revision-09",
+  "policy": "Additional memory-only runs. Retained storage only is integrated; historical timing and peak figures unchanged. Do not use original performance-oracle Mamba2 fp64 sum-bound metadata as accuracy evidence.",
+  "table4_scope": [
+    {
+      "arm": "official_m1",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 2048,
+        "P": 1,
+        "N": 128,
+        "entry": "selective_scan_fn",
+        "family": "mamba1"
+      },
+      "total_retained_nonparameter_bytes": 121634816,
+      "peak_bytes": 186654720,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 1
+      }
+    },
+    {
+      "arm": "official_m2",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "chunk": 256,
+        "entry": "mamba_chunk_scan_combined",
+        "family": "mamba2"
+      },
+      "total_retained_nonparameter_bytes": 109314304,
+      "peak_bytes": 250616832,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 2
+      }
+    },
+    {
+      "arm": "official_m3_siso",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "chunk": 64,
+        "entry": "mamba3_siso_combined",
+        "family": "mamba3"
+      },
+      "total_retained_nonparameter_bytes": 532537380,
+      "peak_bytes": 797602304,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 3
+      }
+    },
+    {
+      "arm": "official_m3_mimo",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 4,
+        "chunk": 16,
+        "entry": "mamba3_mimo",
+        "family": "mamba3"
+      },
+      "total_retained_nonparameter_bytes": 213516288,
+      "peak_bytes": 1697546752,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 27
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 2048,
+        "P": 1,
+        "N": 128,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 210764416,
+      "peak_bytes": 300999168,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 28
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "on",
+        "bc_conv_fed": true,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 62128128,
+      "peak_bytes": 584633856,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 29
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 481296512,
+      "peak_bytes": 766546432,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 30
+      }
+    },
+    {
+      "arm": "HM-0",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 288885376,
+      "peak_bytes": 910197248,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -3072,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 31
+      }
+    },
+    {
+      "arm": "HM-75",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 465337728,
+      "peak_bytes": 2233529856,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -3584,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 32
+      }
+    },
+    {
+      "arm": "HM-100",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 303884416,
+      "peak_bytes": 2516903424,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -2048,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 33
+      }
+    },
+    {
+      "arm": "HM-0@P32",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 64,
+        "P": 32,
+        "N": 128,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 298322560,
+      "peak_bytes": 922812928,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -3072,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 34
+      }
+    },
+    {
+      "arm": "HM-75@P32",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 64,
+        "P": 32,
+        "N": 128,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 478555520,
+      "peak_bytes": 2247173632,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -3584,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 35
+      }
+    },
+    {
+      "arm": "HM-100@P32",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 64,
+        "P": 32,
+        "N": 128,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 314116224,
+      "peak_bytes": 2528183808,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -2048,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 36
+      }
+    },
+    {
+      "arm": "SSD-R1O1-re",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "on",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 131334272,
+      "peak_bytes": 648892928,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 37
+      }
+    },
+    {
+      "arm": "SSD-R1O1-cx",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 539501056,
+      "peak_bytes": 814797824,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 38
+      }
+    },
+    {
+      "arm": "SSD-R2O2-re",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 2,
+        "O": 2,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 286392576,
+      "peak_bytes": 1101367296,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 39
+      }
+    },
+    {
+      "arm": "SSD-R2O2-cx",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 2,
+        "O": 2,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 491668096,
+      "peak_bytes": 1511984128,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 40
+      }
+    },
+    {
+      "arm": "SSD-R4O4-re",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 4,
+        "O": 4,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 670564864,
+      "peak_bytes": 2447247360,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 41
+      }
+    },
+    {
+      "arm": "SSD-R4O4-cx",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 4,
+        "O": 4,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 1080329088,
+      "peak_bytes": 3277523968,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 42
+      }
+    }
+  ],
+  "table3_kernel": [
+    {
+      "arm": "official_m1",
+      "level": "scope",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "H": 4096,
+        "P": 1,
+        "N": 16,
+        "entry": "selective_scan_fn",
+        "family": "mamba1"
+      },
+      "total_retained_nonparameter_bytes": 547880960,
+      "peak_bytes": 820789248,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 3
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "scope",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "H": 4096,
+        "P": 1,
+        "N": 16,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 608174160,
+      "peak_bytes": 896549376,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 4
+      }
+    },
+    {
+      "arm": "official_m2",
+      "level": "scope",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "H": 64,
+        "P": 64,
+        "N": 128,
+        "chunk": 256,
+        "entry": "mamba_chunk_scan_combined",
+        "family": "mamba2"
+      },
+      "total_retained_nonparameter_bytes": 566231552,
+      "peak_bytes": 1195410432,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 5
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "scope",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "H": 64,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "on",
+        "bc_conv_fed": true,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 306184192,
+      "peak_bytes": 3062120960,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 6
+      }
+    },
+    {
+      "arm": "official_m3_siso",
+      "level": "scope",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "H": 64,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "chunk": 64,
+        "entry": "mamba3_siso_combined",
+        "family": "mamba3"
+      },
+      "total_retained_nonparameter_bytes": 2806382628,
+      "peak_bytes": 4211544576,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 7
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "scope",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "H": 64,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 2531262720,
+      "peak_bytes": 4018213376,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 8
+      }
+    },
+    {
+      "arm": "official_m1",
+      "level": "scope",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "H": 2048,
+        "P": 1,
+        "N": 16,
+        "entry": "selective_scan_fn",
+        "family": "mamba1"
+      },
+      "total_retained_nonparameter_bytes": 549715968,
+      "peak_bytes": 826679296,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 9
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "scope",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "H": 2048,
+        "P": 1,
+        "N": 16,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 608305232,
+      "peak_bytes": 911738880,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 10
+      }
+    },
+    {
+      "arm": "official_m2",
+      "level": "scope",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "chunk": 256,
+        "entry": "mamba_chunk_scan_combined",
+        "family": "mamba2"
+      },
+      "total_retained_nonparameter_bytes": 583008512,
+      "peak_bytes": 1214284800,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 11
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "scope",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "on",
+        "bc_conv_fed": true,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 331350016,
+      "peak_bytes": 3072606720,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 12
+      }
+    },
+    {
+      "arm": "official_m3_siso",
+      "level": "scope",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "chunk": 64,
+        "entry": "mamba3_siso_combined",
+        "family": "mamba3"
+      },
+      "total_retained_nonparameter_bytes": 2840199204,
+      "peak_bytes": 4245328384,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 13
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "scope",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 2566914176,
+      "peak_bytes": 4037054976,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 14
+      }
+    },
+    {
+      "arm": "official_m1",
+      "level": "scope",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "H": 8192,
+        "P": 1,
+        "N": 16,
+        "entry": "selective_scan_fn",
+        "family": "mamba1"
+      },
+      "total_retained_nonparameter_bytes": 547356672,
+      "peak_bytes": 818446336,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 15
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "scope",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "H": 8192,
+        "P": 1,
+        "N": 16,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 606077008,
+      "peak_bytes": 886212608,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 16
+      }
+    },
+    {
+      "arm": "official_m2",
+      "level": "scope",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "H": 128,
+        "P": 64,
+        "N": 128,
+        "chunk": 256,
+        "entry": "mamba_chunk_scan_combined",
+        "family": "mamba2"
+      },
+      "total_retained_nonparameter_bytes": 557843456,
+      "peak_bytes": 1153467392,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 17
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "scope",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "H": 128,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "on",
+        "bc_conv_fed": true,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 293601280,
+      "peak_bytes": 3024372224,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 18
+      }
+    },
+    {
+      "arm": "official_m3_siso",
+      "level": "scope",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "H": 128,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "chunk": 64,
+        "entry": "mamba3_siso_combined",
+        "family": "mamba3"
+      },
+      "total_retained_nonparameter_bytes": 2789474340,
+      "peak_bytes": 4194701824,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 19
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "scope",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "H": 128,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 2513437184,
+      "peak_bytes": 3976335872,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 20
+      }
+    },
+    {
+      "arm": "official_m1",
+      "level": "scope",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "H": 1024,
+        "P": 1,
+        "N": 16,
+        "entry": "selective_scan_fn",
+        "family": "mamba1"
+      },
+      "total_retained_nonparameter_bytes": 562167808,
+      "peak_bytes": 847450112,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 21
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "scope",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "H": 1024,
+        "P": 1,
+        "N": 16,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 616562768,
+      "peak_bytes": 935924224,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 22
+      }
+    },
+    {
+      "arm": "official_m2",
+      "level": "scope",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "H": 16,
+        "P": 64,
+        "N": 128,
+        "chunk": 256,
+        "entry": "mamba_chunk_scan_combined",
+        "family": "mamba2"
+      },
+      "total_retained_nonparameter_bytes": 616562816,
+      "peak_bytes": 1535149056,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 1
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "scope",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "H": 16,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "on",
+        "bc_conv_fed": true,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 381681664,
+      "peak_bytes": 3221504512,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 2
+      }
+    },
+    {
+      "arm": "official_m3_siso",
+      "level": "scope",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "H": 16,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "chunk": 64,
+        "entry": "mamba3_siso_combined",
+        "family": "mamba3"
+      },
+      "total_retained_nonparameter_bytes": 2907832356,
+      "peak_bytes": 4312945152,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 23
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "scope",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "H": 16,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 2638217280,
+      "peak_bytes": 4202713600,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 24
+      }
+    },
+    {
+      "arm": "official_m1",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 2048,
+        "P": 1,
+        "N": 16,
+        "entry": "selective_scan_fn",
+        "family": "mamba1"
+      },
+      "total_retained_nonparameter_bytes": 103284736,
+      "peak_bytes": 155328512,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 25
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 2048,
+        "P": 1,
+        "N": 16,
+        "regen": "amag,delta,out,x",
+        "family": "hybrid_mamba"
+      },
+      "total_retained_nonparameter_bytes": 114425936,
+      "peak_bytes": 169665024,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 26
+      }
+    },
+    {
+      "arm": "official_m2",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "chunk": 256,
+        "entry": "mamba_chunk_scan_combined",
+        "family": "mamba2"
+      },
+      "total_retained_nonparameter_bytes": 109314304,
+      "peak_bytes": 250616832,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 2
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "on",
+        "bc_conv_fed": true,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 62128128,
+      "peak_bytes": 584633856,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 29
+      }
+    },
+    {
+      "arm": "official_m3_siso",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "chunk": 64,
+        "entry": "mamba3_siso_combined",
+        "family": "mamba3"
+      },
+      "total_retained_nonparameter_bytes": 532537380,
+      "peak_bytes": 797602304,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 3
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "scope",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "H": 32,
+        "P": 64,
+        "N": 128,
+        "R": 1,
+        "O": 1,
+        "regen": "off",
+        "bc_conv_fed": false,
+        "family": "ssd_mimo",
+        "precision": "io"
+      },
+      "total_retained_nonparameter_bytes": 481296512,
+      "peak_bytes": 766546432,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 30
+      }
+    }
+  ],
+  "table3_mixer": [
+    {
+      "arm": "official_mamba1",
+      "level": "mixer",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "N": 16
+      },
+      "total_retained_nonparameter_bytes": 1013710848,
+      "peak_bytes": 3332407296,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 43
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "mixer",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "N": 16
+      },
+      "total_retained_nonparameter_bytes": 1074266192,
+      "peak_bytes": 2855305728,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 44
+      }
+    },
+    {
+      "arm": "official_mamba2",
+      "level": "mixer",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 1012269568,
+      "peak_bytes": 3977692160,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 45
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "mixer",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 1045839872,
+      "peak_bytes": 5048287744,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 46
+      }
+    },
+    {
+      "arm": "official_mamba3",
+      "level": "mixer",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 3271819292,
+      "peak_bytes": 5922689024,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 47
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "mixer",
+      "shape_tag": "large_balanced",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 16,
+        "L": 2048,
+        "d_inner": 4096,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 3523100928,
+      "peak_bytes": 5997957120,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 48
+      }
+    },
+    {
+      "arm": "official_mamba1",
+      "level": "mixer",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "N": 16
+      },
+      "total_retained_nonparameter_bytes": 978190336,
+      "peak_bytes": 3285467136,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 49
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "mixer",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "N": 16
+      },
+      "total_retained_nonparameter_bytes": 1036910672,
+      "peak_bytes": 2820941312,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 50
+      }
+    },
+    {
+      "arm": "official_mamba2",
+      "level": "mixer",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 990707968,
+      "peak_bytes": 4008551424,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 51
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "mixer",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 1049436160,
+      "peak_bytes": 5040603648,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 52
+      }
+    },
+    {
+      "arm": "official_mamba3",
+      "level": "mixer",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 3268804636,
+      "peak_bytes": 5923835904,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 53
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "mixer",
+      "shape_tag": "large_long",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 2,
+        "L": 32768,
+        "d_inner": 2048,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 3519815808,
+      "peak_bytes": 5984014336,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 54
+      }
+    },
+    {
+      "arm": "official_mamba1",
+      "level": "mixer",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "N": 16
+      },
+      "total_retained_nonparameter_bytes": 1169686528,
+      "peak_bytes": 3541630976,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 55
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "mixer",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "N": 16
+      },
+      "total_retained_nonparameter_bytes": 1228931152,
+      "peak_bytes": 3051554304,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 56
+      }
+    },
+    {
+      "arm": "official_mamba2",
+      "level": "mixer",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 1156645888,
+      "peak_bytes": 4063364096,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 57
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "mixer",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 1177649152,
+      "peak_bytes": 5197152768,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 58
+      }
+    },
+    {
+      "arm": "official_mamba3",
+      "level": "mixer",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 3408396316,
+      "peak_bytes": 6102323200,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 59
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "mixer",
+      "shape_tag": "large_wide",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 4,
+        "L": 4096,
+        "d_inner": 8192,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 3659825664,
+      "peak_bytes": 6152458240,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 60
+      }
+    },
+    {
+      "arm": "official_mamba1",
+      "level": "mixer",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "N": 16
+      },
+      "total_retained_nonparameter_bytes": 984940544,
+      "peak_bytes": 3297124352,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 61
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "mixer",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "N": 16
+      },
+      "total_retained_nonparameter_bytes": 1039401040,
+      "peak_bytes": 2836210176,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 62
+      }
+    },
+    {
+      "arm": "official_mamba2",
+      "level": "mixer",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 1014775936,
+      "peak_bytes": 4265399296,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 63
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "mixer",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 1123831808,
+      "peak_bytes": 5243970048,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 64
+      }
+    },
+    {
+      "arm": "official_mamba3",
+      "level": "mixer",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 3330752540,
+      "peak_bytes": 6016176128,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 65
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "mixer",
+      "shape_tag": "large_batch",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 128,
+        "L": 1024,
+        "d_inner": 1024,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 3581235264,
+      "peak_bytes": 6174388224,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 66
+      }
+    },
+    {
+      "arm": "official_mamba1",
+      "level": "mixer",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "N": 16
+      },
+      "total_retained_nonparameter_bytes": 194379776,
+      "peak_bytes": 630734848,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 67
+      }
+    },
+    {
+      "arm": "HMM:m1exact",
+      "level": "mixer",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "N": 16
+      },
+      "total_retained_nonparameter_bytes": 205652048,
+      "peak_bytes": 541917696,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": -1024,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 68
+      }
+    },
+    {
+      "arm": "official_mamba2",
+      "level": "mixer",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 196460800,
+      "peak_bytes": 768670720,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 69
+      }
+    },
+    {
+      "arm": "PM:m2exact",
+      "level": "mixer",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 207478784,
+      "peak_bytes": 966184448,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 70
+      }
+    },
+    {
+      "arm": "official_mamba3",
+      "level": "mixer",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 623763484,
+      "peak_bytes": 1128427520,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 1
+      }
+    },
+    {
+      "arm": "PM:m3exact",
+      "level": "mixer",
+      "shape_tag": "lm",
+      "dtype": "bf16",
+      "git_sha": "anonymous-revision-09",
+      "gpu": "NVIDIA H100 PCIe",
+      "geometry": {
+        "B": 6,
+        "L": 2048,
+        "d_inner": 2048,
+        "N": 128
+      },
+      "total_retained_nonparameter_bytes": 670834816,
+      "peak_bytes": 1144311808,
+      "total_release_residual_bytes": 0,
+      "unattributed_bytes": 0,
+      "raw_source": {
+        "file": "./local-data",
+        "line": 2
+      }
+    }
+  ]
+}

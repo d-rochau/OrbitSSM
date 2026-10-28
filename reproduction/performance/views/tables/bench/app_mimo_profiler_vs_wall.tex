@@ -1,0 +1,12 @@
+% APPENDIX: official Mamba-3 MIMO (R=4) vs SISO, aligned scope, same harness group: wall (ms_median) and profiler GPU-kernel sum (ms_cuda_self, 3 calls); ratio = profiler / wall per arm
+\begin{tabular}{l r r r r r r}
+\toprule
+shape & MIMO wall & MIMO prof & MIMO prof/wall & SISO wall & SISO prof & SISO prof/wall \\
+\midrule
+Bal.\ 16/4096/2048 & 710.1 & 65.76 & 0.093 & 10.91 & 10.74 & 0.985 \\
+Long 2/2048/32768 & 721.7 & 148.9 & 0.206 & 17.54 & 17.13 & 0.977 \\
+Wide 4/8192/4096 & 729.2 & 73.92 & 0.101 & 11.65 & 11.52 & 0.989 \\
+Batch 128/1024/1024 & 721.9 & 65.82 & 0.091 & 10.99 & 10.83 & 0.986 \\
+LM 6/2048/2048 & 719.5 & 14.27 & 0.020 & 2.49 & 2.36 & 0.949 \\
+\bottomrule
+\end{tabular}
