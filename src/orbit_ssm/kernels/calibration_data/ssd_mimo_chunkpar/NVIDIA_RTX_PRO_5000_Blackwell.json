@@ -1,243 +1,252 @@
 {
-  "family": "ssd_mimo_chunkpar",
-  "kernels": {},
-  "provenance": {
-    "code_hash": "f31f88ef5667b722",
-    "driver": "610.57.04",
-    "dropped_shapes": {},
-    "fixed_basis": "pass1",
-    "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-    "notes": null,
-    "rounds": 5,
-    "shapes": [
-      "small_balanced",
-      "small_long",
-      "small_wide",
-      "small_batch",
-      "medium_balanced",
-      "medium_long",
-      "medium_wide",
-      "medium_batch",
-      "large_balanced",
-      "large_long",
-      "large_wide",
-      "large_batch",
-      "lm_b6_d2048_l2048",
-      "lm_b32_d2048_l2048",
-      "lm_b2_d2048_l16384",
-      "lm_b6_d4096_l2048",
-      "lm_b1_d4096_l32768",
-      "lm_b8_d512_l8192"
-    ],
-    "sms": 110,
-    "torch": "2.14.0+cu130",
-    "triton": "3.8.0"
+ "family": "ssd_mimo_chunkpar",
+ "kernels": {},
+ "provenance": {
+  "code_hash": "f31f88ef5667b722",
+  "date": "2026-10-06",
+  "driver": "610.57.04",
+  "dropped_shapes": {},
+  "fixed_basis": "pass1",
+  "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+  "notes": null,
+  "rounds": 5,
+  "shapes": [
+   "small_balanced",
+   "small_long",
+   "small_wide",
+   "small_batch",
+   "medium_balanced",
+   "medium_long",
+   "medium_wide",
+   "medium_batch",
+   "large_balanced",
+   "large_long",
+   "large_wide",
+   "large_batch",
+   "lm_b6_d2048_l2048",
+   "lm_b32_d2048_l2048",
+   "lm_b2_d2048_l16384",
+   "lm_b6_d4096_l2048",
+   "lm_b1_d4096_l32768",
+   "lm_b8_d512_l8192"
+  ],
+  "sms": 110,
+  "torch": "2.14.0+cu130",
+  "triton": "3.8.0",
+  "restamped": [
+   {
+    "from_hash": "3c4c4db1d6b6061b",
+    "to_hash": "f31f88ef5667b722",
+    "date": "2026-10-13",
+    "note": "hash normalization (docstrings + assert messages excluded); normalized kernel source unchanged"
+   }
+  ]
+ },
+ "schema": 1,
+ "thresholds": {
+  "fwd": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 1000000
   },
-  "schema": 1,
-  "thresholds": {
-    "fwd": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 1000000
-    },
-    "fwd_fp32": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 1000000
-    },
-    "fwd_fp32|ncpw": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 0
-    },
-    "fwd_nograd": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 100
-    },
-    "fwd_nograd_fp32": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 1000000
-    },
-    "fwd_nograd_fp32|ncpw": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 0
-    },
-    "fwd_nograd|ncpw": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 4800
-    },
-    "fwd|ksub": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 8
-    },
-    "fwd|ncpw": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 0
-    },
-    "ka": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 50
-    },
-    "ka_fp32": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 50
-    },
-    "ka_fp32|ncpw": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 0
-    },
-    "ka_serial|warps|wb0": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 4
-    },
-    "ka_serial|warps|wb2": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 4
-    },
-    "ka_serial|warps|wb3": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 4
-    },
-    "ka_serial|warps|wb4": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 4
-    },
-    "ka_serial|warps|wb5": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 2
-    },
-    "ka_serial|warps|wb6": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 4
-    },
-    "ka_serial|warps|wb7": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 4
-    },
-    "ka_serial|warps|wb8": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 8
-    },
-    "ka_serial|warps|wb9": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 8
-    },
-    "ka|ksub": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 16
-    },
-    "ka|ncpw": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 4800
-    },
-    "kbc|sched": {
-      "evidence": "tools/cp_calibrate.py",
-      "value": 0
-    },
-    "rank|cx|R2O2|T|fwd_only": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|cx|R2O2|T|fwd_only|fp32": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|cx|R2O2|T|train_bwd": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|cx|R2O2|T|train_bwd|fp32": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|cx|R2O2|T|train_fwd": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|cx|R2O2|T|train_fwd|fp32": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|cx|R4O4|T|fwd_only": {
-      "evidence": "tools/calibrate_rank.py screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (16)",
-      "value": 32
-    },
-    "rank|cx|R4O4|T|fwd_only|fp32": {
-      "evidence": "tools/calibrate_rank.py screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (16)",
-      "value": 32
-    },
-    "rank|cx|R4O4|T|train_bwd": {
-      "evidence": "tools/calibrate_rank.py screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|cx|R4O4|T|train_bwd|fp32": {
-      "evidence": "tools/calibrate_rank.py screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 16
-    },
-    "rank|cx|R4O4|T|train_fwd": {
-      "evidence": "tools/calibrate_rank.py screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|cx|R4O4|T|train_fwd|fp32": {
-      "evidence": "tools/calibrate_rank.py screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 16
-    },
-    "rank|real|R2O2|T|fwd_only": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|real|R2O2|T|fwd_only|fp32": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|real|R2O2|T|train_bwd": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|real|R2O2|T|train_bwd|fp32": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|real|R2O2|T|train_fwd": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|real|R2O2|T|train_fwd|fp32": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|real|R4O4|T|fwd_only": {
-      "evidence": "tools/calibrate_rank.py screen over 4 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (16)",
-      "value": 16
-    },
-    "rank|real|R4O4|T|train_bwd": {
-      "evidence": "tools/calibrate_rank.py screen over 4 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 32
-    },
-    "rank|real|R4O4|T|train_fwd": {
-      "evidence": "tools/calibrate_rank.py screen over 4 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
-      "value": 16
-    },
-    "real_r1o1|T|fwd_only": {
-      "evidence": "tools/calibrate_real.py (screen: (T_fwd, T_bwd) in {32,64}^2)",
-      "value": 32
-    },
-    "real_r1o1|T|fwd_only|fp32": {
-      "evidence": "tools/calibrate_real.py --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
-      "value": 32
-    },
-    "real_r1o1|T|train_bwd": {
-      "evidence": "tools/calibrate_real.py (screen: (T_fwd, T_bwd) in {32,64}^2)",
-      "value": 64
-    },
-    "real_r1o1|T|train_bwd|fp32": {
-      "evidence": "tools/calibrate_real.py --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
-      "value": 32
-    },
-    "real_r1o1|T|train_fwd": {
-      "evidence": "tools/calibrate_real.py (screen: (T_fwd, T_bwd) in {32,64}^2)",
-      "value": 64
-    },
-    "real_r1o1|T|train_fwd|fp32": {
-      "evidence": "tools/calibrate_real.py --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
-      "value": 32
-    }
+  "fwd_fp32": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 1000000
+  },
+  "fwd_fp32|ncpw": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 0
+  },
+  "fwd_nograd": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 100
+  },
+  "fwd_nograd_fp32": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 1000000
+  },
+  "fwd_nograd_fp32|ncpw": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 0
+  },
+  "fwd_nograd|ncpw": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 4800
+  },
+  "fwd|ksub": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 8
+  },
+  "fwd|ncpw": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 0
+  },
+  "ka": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 50
+  },
+  "ka_fp32": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 50
+  },
+  "ka_fp32|ncpw": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 0
+  },
+  "ka_serial|warps|wb0": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 4
+  },
+  "ka_serial|warps|wb2": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 4
+  },
+  "ka_serial|warps|wb3": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 4
+  },
+  "ka_serial|warps|wb4": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 4
+  },
+  "ka_serial|warps|wb5": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 2
+  },
+  "ka_serial|warps|wb6": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 4
+  },
+  "ka_serial|warps|wb7": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 4
+  },
+  "ka_serial|warps|wb8": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 8
+  },
+  "ka_serial|warps|wb9": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 8
+  },
+  "ka|ksub": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 16
+  },
+  "ka|ncpw": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 4800
+  },
+  "kbc|sched": {
+   "evidence": "tools/cp_calibrate.py",
+   "value": 0
+  },
+  "rank|cx|R2O2|T|fwd_only": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|cx|R2O2|T|fwd_only|fp32": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|cx|R2O2|T|train_bwd": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|cx|R2O2|T|train_bwd|fp32": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|cx|R2O2|T|train_fwd": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|cx|R2O2|T|train_fwd|fp32": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|cx|R4O4|T|fwd_only": {
+   "evidence": "the per-rank screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (16)",
+   "value": 32
+  },
+  "rank|cx|R4O4|T|fwd_only|fp32": {
+   "evidence": "the per-rank screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (16)",
+   "value": 32
+  },
+  "rank|cx|R4O4|T|train_bwd": {
+   "evidence": "the per-rank screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|cx|R4O4|T|train_bwd|fp32": {
+   "evidence": "the per-rank screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 16
+  },
+  "rank|cx|R4O4|T|train_fwd": {
+   "evidence": "the per-rank screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|cx|R4O4|T|train_fwd|fp32": {
+   "evidence": "the per-rank screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 16
+  },
+  "rank|real|R2O2|T|fwd_only": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|real|R2O2|T|fwd_only|fp32": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|real|R2O2|T|train_bwd": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|real|R2O2|T|train_bwd|fp32": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|real|R2O2|T|train_fwd": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|real|R2O2|T|train_fwd|fp32": {
+   "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|real|R4O4|T|fwd_only": {
+   "evidence": "the per-rank screen over 4 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (16)",
+   "value": 16
+  },
+  "rank|real|R4O4|T|train_bwd": {
+   "evidence": "the per-rank screen over 4 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 32
+  },
+  "rank|real|R4O4|T|train_fwd": {
+   "evidence": "the per-rank screen over 4 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+   "value": 16
+  },
+  "real_r1o1|T|fwd_only": {
+   "evidence": "the real-decay screen (screen: (T_fwd, T_bwd) in {32,64}^2)",
+   "value": 32
+  },
+  "real_r1o1|T|fwd_only|fp32": {
+   "evidence": "the real-decay screen at --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
+   "value": 32
+  },
+  "real_r1o1|T|train_bwd": {
+   "evidence": "the real-decay screen (screen: (T_fwd, T_bwd) in {32,64}^2)",
+   "value": 64
+  },
+  "real_r1o1|T|train_bwd|fp32": {
+   "evidence": "the real-decay screen at --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
+   "value": 32
+  },
+  "real_r1o1|T|train_fwd": {
+   "evidence": "the real-decay screen (screen: (T_fwd, T_bwd) in {32,64}^2)",
+   "value": 64
+  },
+  "real_r1o1|T|train_fwd|fp32": {
+   "evidence": "the real-decay screen at --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
+   "value": 32
   }
+ }
 }

@@ -1,898 +1,907 @@
 {
-  "family": "ssd_mimo_levers",
-  "kernels": {},
-  "provenance": {
-    "code_hash": "6842dd3fc5aad269",
-    "driver": "610.57.04",
-    "dropped_shapes": {},
-    "fixed_basis": "pass1",
-    "gpu": "NVIDIA H100 PCIe",
-    "notes": {
-      "real_R1O1": "units `real_*` (levers.REAL_UNITS) are measured by tools/calibrate_real.py (leave-one-out at the calibrated chunk structure, fp64 oracle eligibility); tools/calibrate_levers.py carries them over unchanged when it rewrites the file; their kernels (fused_bwd_kernel, chunkpar, gate_epilogue, gluon_kbc_hb) are hashed by the ssd_mimo_fused / ssd_mimo_chunkpar files, so re-run calibrate_real.py whenever those are recalibrated"
-    },
-    "rounds": 5,
-    "shapes": [
-      "cx_small_balanced",
-      "cx_small_long",
-      "cx_small_wide",
-      "cx_small_batch",
-      "cx_medium_balanced",
-      "cx_medium_long",
-      "cx_medium_wide",
-      "cx_medium_batch",
-      "cx_large_balanced",
-      "cx_large_long",
-      "cx_large_wide",
-      "cx_large_batch",
-      "cx_lm_b6_d2048_l2048",
-      "cx_lm_b32_d2048_l2048",
-      "cx_lm_b2_d2048_l16384",
-      "cx_lm_b6_d4096_l2048",
-      "cx_lm_b1_d4096_l32768",
-      "cx_lm_b8_d512_l8192"
-    ],
-    "sms": 114,
-    "torch": "2.14.0+cu130",
-    "triton": "3.8.0"
+ "family": "ssd_mimo_levers",
+ "kernels": {},
+ "provenance": {
+  "code_hash": "a49cf80124c9af3e",
+  "date": "2026-10-07",
+  "driver": "610.57.04",
+  "dropped_shapes": {},
+  "fixed_basis": "pass1",
+  "gpu": "NVIDIA H100 PCIe",
+  "notes": {
+   "real_R1O1": "units `real_*` (levers.REAL_UNITS) are measured by the real-decay calibration (leave-one-out at the calibrated chunk structure, fp64 oracle eligibility); tools/calibrate_levers.py carries them over unchanged when it rewrites the file; their kernels (fused_bwd_kernel, chunkpar, gate_epilogue, gluon_kbc_hb) are hashed by the ssd_mimo_fused / ssd_mimo_chunkpar files, so re-run the real-decay calibration whenever those are recalibrated"
   },
-  "schema": 1,
-  "thresholds": {
-    "lever|adj_static_real|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.018839519127635,
-        "per_shape": {
-          "cx_large_balanced": 1.0330576428614582,
-          "cx_large_batch": 1.0244828715889953,
-          "cx_large_long": 1.0186492176383162,
-          "cx_large_wide": 1.022381905884262,
-          "cx_lm_b1_d4096_l32768": 1.0201924182561528,
-          "cx_lm_b2_d2048_l16384": 1.0223073621656384,
-          "cx_lm_b32_d2048_l2048": 1.020403437715048,
-          "cx_lm_b6_d2048_l2048": 1.0287120536457828,
-          "cx_lm_b6_d4096_l2048": 1.0250414026152277,
-          "cx_lm_b8_d512_l8192": 1.0218034508865408,
-          "cx_medium_balanced": 1.0299756792957124,
-          "cx_medium_batch": 1.0269706730858423,
-          "cx_medium_long": 1.0150183159664874,
-          "cx_medium_wide": 1.028495660586248,
-          "cx_small_balanced": 0.9986475509450012,
-          "cx_small_batch": 0.9991613282984823,
-          "cx_small_long": 1.000830867820997,
-          "cx_small_wide": 1.0039891369659528
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 0.9986475509450012
-      },
-      "value": 1
+  "rounds": 5,
+  "shapes": [
+   "cx_small_balanced",
+   "cx_small_long",
+   "cx_small_wide",
+   "cx_small_batch",
+   "cx_medium_balanced",
+   "cx_medium_long",
+   "cx_medium_wide",
+   "cx_medium_batch",
+   "cx_large_balanced",
+   "cx_large_long",
+   "cx_large_wide",
+   "cx_large_batch",
+   "cx_lm_b6_d2048_l2048",
+   "cx_lm_b32_d2048_l2048",
+   "cx_lm_b2_d2048_l16384",
+   "cx_lm_b6_d4096_l2048",
+   "cx_lm_b1_d4096_l32768",
+   "cx_lm_b8_d512_l8192"
+  ],
+  "sms": 114,
+  "torch": "2.14.0+cu130",
+  "triton": "3.8.0",
+  "restamped": [
+   {
+    "from_hash": "0c1ff23484161e8c",
+    "to_hash": "a49cf80124c9af3e",
+    "date": "2026-10-13",
+    "note": "hash normalization (docstrings + assert messages excluded); normalized kernel source unchanged"
+   }
+  ]
+ },
+ "schema": 1,
+ "thresholds": {
+  "lever|adj_static_real|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.018839519127635,
+    "per_shape": {
+     "cx_large_balanced": 1.0330576428614582,
+     "cx_large_batch": 1.0244828715889953,
+     "cx_large_long": 1.0186492176383162,
+     "cx_large_wide": 1.022381905884262,
+     "cx_lm_b1_d4096_l32768": 1.0201924182561528,
+     "cx_lm_b2_d2048_l16384": 1.0223073621656384,
+     "cx_lm_b32_d2048_l2048": 1.020403437715048,
+     "cx_lm_b6_d2048_l2048": 1.0287120536457828,
+     "cx_lm_b6_d4096_l2048": 1.0250414026152277,
+     "cx_lm_b8_d512_l8192": 1.0218034508865408,
+     "cx_medium_balanced": 1.0299756792957124,
+     "cx_medium_batch": 1.0269706730858423,
+     "cx_medium_long": 1.0150183159664874,
+     "cx_medium_wide": 1.028495660586248,
+     "cx_small_balanced": 0.9986475509450012,
+     "cx_small_batch": 0.9991613282984823,
+     "cx_small_long": 1.000830867820997,
+     "cx_small_wide": 1.0039891369659528
     },
-    "lever|gl_cfg_maxnreg|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "method": "sisosweep measurement (H100, mixer fwd+bwd, 6 LM + medium_balanced + medium_wide, production defaults, SPLIT2 on); the Gluon sm_90 SISO backward launch config is the best of its measured neighbours: WN=1 0.705x, STAGES=3 0.655x (and the body declines the call), PREG 24/32/40/56/64 0.991/0.993/1.004/1.004/0.982x, launch maxnreg 168 0.999x (184..248 do not launch), Triton siso_fwd 27-config grid best <= 0.999x -- no setting reaches the 2 % / no-cell->1 %-worse bar",
-        "note": "launch register cap, 0 = none"
-      },
-      "value": 0
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
     },
-    "lever|gl_cfg_preg_prep|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "method": "sisosweep measurement (H100, mixer fwd+bwd, 6 LM + medium_balanced + medium_wide, production defaults, SPLIT2 on); the Gluon sm_90 SISO backward launch config is the best of its measured neighbours: WN=1 0.705x, STAGES=3 0.655x (and the body declines the call), PREG 24/32/40/56/64 0.991/0.993/1.004/1.004/0.982x, launch maxnreg 168 0.999x (184..248 do not launch), Triton siso_fwd 27-config grid best <= 0.999x -- no setting reaches the 2 % / no-cell->1 %-worse bar",
-        "note": "producer register request with the preparation phase"
-      },
-      "value": 48
+    "worst_shape_gain": 0.9986475509450012
+   },
+   "value": 1
+  },
+  "lever|gl_cfg_maxnreg|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "method": "sisosweep (H100, mixer fwd+bwd, 6 LM + medium_balanced + medium_wide, production defaults, SPLIT2 on); the Gluon sm_90 SISO backward launch config is the best of its measured neighbours: WN=1 0.705x, STAGES=3 0.655x (and the body declines the call), PREG 24/32/40/56/64 0.991/0.993/1.004/1.004/0.982x, launch maxnreg 168 0.999x (184..248 do not launch), Triton siso_fwd 27-config grid best <= 0.999x -- no setting reaches the 2 % / no-cell->1 %-worse bar",
+    "note": "launch register cap, 0 = none"
+   },
+   "value": 0
+  },
+  "lever|gl_cfg_preg_prep|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "method": "sisosweep (H100, mixer fwd+bwd, 6 LM + medium_balanced + medium_wide, production defaults, SPLIT2 on); the Gluon sm_90 SISO backward launch config is the best of its measured neighbours: WN=1 0.705x, STAGES=3 0.655x (and the body declines the call), PREG 24/32/40/56/64 0.991/0.993/1.004/1.004/0.982x, launch maxnreg 168 0.999x (184..248 do not launch), Triton siso_fwd 27-config grid best <= 0.999x -- no setting reaches the 2 % / no-cell->1 %-worse bar",
+    "note": "producer register request with the preparation phase"
+   },
+   "value": 48
+  },
+  "lever|gl_cfg_preg|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "method": "sisosweep (H100, mixer fwd+bwd, 6 LM + medium_balanced + medium_wide, production defaults, SPLIT2 on); the Gluon sm_90 SISO backward launch config is the best of its measured neighbours: WN=1 0.705x, STAGES=3 0.655x (and the body declines the call), PREG 24/32/40/56/64 0.991/0.993/1.004/1.004/0.982x, launch maxnreg 168 0.999x (184..248 do not launch), Triton siso_fwd 27-config grid best <= 0.999x -- no setting reaches the 2 % / no-cell->1 %-worse bar",
+    "note": "producer register request without it"
+   },
+   "value": 24
+  },
+  "lever|gl_cfg_stages|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "method": "sisosweep (H100, mixer fwd+bwd, 6 LM + medium_balanced + medium_wide, production defaults, SPLIT2 on); the Gluon sm_90 SISO backward launch config is the best of its measured neighbours: WN=1 0.705x, STAGES=3 0.655x (and the body declines the call), PREG 24/32/40/56/64 0.991/0.993/1.004/1.004/0.982x, launch maxnreg 168 0.999x (184..248 do not launch), Triton siso_fwd 27-config grid best <= 0.999x -- no setting reaches the 2 % / no-cell->1 %-worse bar",
+    "note": "TMA pipeline depth"
+   },
+   "value": 2
+  },
+  "lever|gl_cfg_wn|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "method": "sisosweep (H100, mixer fwd+bwd, 6 LM + medium_balanced + medium_wide, production defaults, SPLIT2 on); the Gluon sm_90 SISO backward launch config is the best of its measured neighbours: WN=1 0.705x, STAGES=3 0.655x (and the body declines the call), PREG 24/32/40/56/64 0.991/0.993/1.004/1.004/0.982x, launch maxnreg 168 0.999x (184..248 do not launch), Triton siso_fwd 27-config grid best <= 0.999x -- no setting reaches the 2 % / no-cell->1 %-worse bar",
+    "note": "consumer warp multiple (num_warps = 4 * wn)"
+   },
+   "value": 2
+  },
+  "lever|gl_dth_store_vec16|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 0.990381412913599,
+    "per_shape": {
+     "cx_large_balanced": 1.002466542287458,
+     "cx_large_batch": 0.9982275616090143,
+     "cx_large_long": 0.9705488315582924,
+     "cx_large_wide": 1.0002686444501645,
+     "cx_lm_b1_d4096_l32768": 0.9720122940790731,
+     "cx_lm_b2_d2048_l16384": 0.9745711195382718,
+     "cx_lm_b32_d2048_l2048": 0.9987621114979434,
+     "cx_lm_b6_d2048_l2048": 0.9958694397713433,
+     "cx_lm_b6_d4096_l2048": 1.0001848443524621,
+     "cx_lm_b8_d512_l8192": 0.9772518642109689,
+     "cx_medium_balanced": 0.9950408360988863,
+     "cx_medium_batch": 1.0049910715942192,
+     "cx_medium_long": 0.9837980592244574,
+     "cx_medium_wide": 0.9950467596268682,
+     "cx_small_balanced": 0.9979150937079685,
+     "cx_small_batch": 0.9987389444276006,
+     "cx_small_long": 0.9609593015223937,
+     "cx_small_wide": 1.0017780297707934
     },
-    "lever|gl_cfg_preg|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "method": "sisosweep measurement (H100, mixer fwd+bwd, 6 LM + medium_balanced + medium_wide, production defaults, SPLIT2 on); the Gluon sm_90 SISO backward launch config is the best of its measured neighbours: WN=1 0.705x, STAGES=3 0.655x (and the body declines the call), PREG 24/32/40/56/64 0.991/0.993/1.004/1.004/0.982x, launch maxnreg 168 0.999x (184..248 do not launch), Triton siso_fwd 27-config grid best <= 0.999x -- no setting reaches the 2 % / no-cell->1 %-worse bar",
-        "note": "producer register request without it"
-      },
-      "value": 24
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
     },
-    "lever|gl_cfg_stages|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "method": "sisosweep measurement (H100, mixer fwd+bwd, 6 LM + medium_balanced + medium_wide, production defaults, SPLIT2 on); the Gluon sm_90 SISO backward launch config is the best of its measured neighbours: WN=1 0.705x, STAGES=3 0.655x (and the body declines the call), PREG 24/32/40/56/64 0.991/0.993/1.004/1.004/0.982x, launch maxnreg 168 0.999x (184..248 do not launch), Triton siso_fwd 27-config grid best <= 0.999x -- no setting reaches the 2 % / no-cell->1 %-worse bar",
-        "note": "TMA pipeline depth"
-      },
-      "value": 2
+    "worst_shape_gain": 0.9609593015223937
+   },
+   "value": 0
+  },
+  "lever|gl_dy_tmajor|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.0365650289727106,
+    "per_shape": {
+     "cx_large_balanced": 1.0452228014087062,
+     "cx_large_batch": 1.035241292278171,
+     "cx_large_long": 1.0415363582036812,
+     "cx_large_wide": 1.0392484288458474,
+     "cx_lm_b1_d4096_l32768": 1.043357485964375,
+     "cx_lm_b2_d2048_l16384": 1.0437623387580663,
+     "cx_lm_b32_d2048_l2048": 1.0356507639932397,
+     "cx_lm_b6_d2048_l2048": 1.0396791689552132,
+     "cx_lm_b6_d4096_l2048": 1.039044961369727,
+     "cx_lm_b8_d512_l8192": 1.0422302673111388,
+     "cx_medium_balanced": 1.0474271482783728,
+     "cx_medium_batch": 1.0429733446503775,
+     "cx_medium_long": 1.0465373769177069,
+     "cx_medium_wide": 1.0383552831197957,
+     "cx_small_balanced": 0.9991538548936936,
+     "cx_small_batch": 1.0032486874239228,
+     "cx_small_long": 1.0778551503287173,
+     "cx_small_wide": 1.0005737332744913
     },
-    "lever|gl_cfg_wn|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "method": "sisosweep measurement (H100, mixer fwd+bwd, 6 LM + medium_balanced + medium_wide, production defaults, SPLIT2 on); the Gluon sm_90 SISO backward launch config is the best of its measured neighbours: WN=1 0.705x, STAGES=3 0.655x (and the body declines the call), PREG 24/32/40/56/64 0.991/0.993/1.004/1.004/0.982x, launch maxnreg 168 0.999x (184..248 do not launch), Triton siso_fwd 27-config grid best <= 0.999x -- no setting reaches the 2 % / no-cell->1 %-worse bar",
-        "note": "consumer warp multiple (num_warps = 4 * wn)"
-      },
-      "value": 2
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
     },
-    "lever|gl_dth_store_vec16|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 0.990381412913599,
-        "per_shape": {
-          "cx_large_balanced": 1.002466542287458,
-          "cx_large_batch": 0.9982275616090143,
-          "cx_large_long": 0.9705488315582924,
-          "cx_large_wide": 1.0002686444501645,
-          "cx_lm_b1_d4096_l32768": 0.9720122940790731,
-          "cx_lm_b2_d2048_l16384": 0.9745711195382718,
-          "cx_lm_b32_d2048_l2048": 0.9987621114979434,
-          "cx_lm_b6_d2048_l2048": 0.9958694397713433,
-          "cx_lm_b6_d4096_l2048": 1.0001848443524621,
-          "cx_lm_b8_d512_l8192": 0.9772518642109689,
-          "cx_medium_balanced": 0.9950408360988863,
-          "cx_medium_batch": 1.0049910715942192,
-          "cx_medium_long": 0.9837980592244574,
-          "cx_medium_wide": 0.9950467596268682,
-          "cx_small_balanced": 0.9979150937079685,
-          "cx_small_batch": 0.9987389444276006,
-          "cx_small_long": 0.9609593015223937,
-          "cx_small_wide": 1.0017780297707934
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 0.9609593015223937
-      },
-      "value": 0
-    },
-    "lever|gl_dy_tmajor|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.0365650289727106,
-        "per_shape": {
-          "cx_large_balanced": 1.0452228014087062,
-          "cx_large_batch": 1.035241292278171,
-          "cx_large_long": 1.0415363582036812,
-          "cx_large_wide": 1.0392484288458474,
-          "cx_lm_b1_d4096_l32768": 1.043357485964375,
-          "cx_lm_b2_d2048_l16384": 1.0437623387580663,
-          "cx_lm_b32_d2048_l2048": 1.0356507639932397,
-          "cx_lm_b6_d2048_l2048": 1.0396791689552132,
-          "cx_lm_b6_d4096_l2048": 1.039044961369727,
-          "cx_lm_b8_d512_l8192": 1.0422302673111388,
-          "cx_medium_balanced": 1.0474271482783728,
-          "cx_medium_batch": 1.0429733446503775,
-          "cx_medium_long": 1.0465373769177069,
-          "cx_medium_wide": 1.0383552831197957,
-          "cx_small_balanced": 0.9991538548936936,
-          "cx_small_batch": 1.0032486874239228,
-          "cx_small_long": 1.0778551503287173,
-          "cx_small_wide": 1.0005737332744913
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 0.9991538548936936
-      },
-      "value": 1
-    },
-    "lever|gl_narrow_dth_off|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "phase": "bwd",
-        "reason": "the set without this unit does not launch on this device (shared memory): out of resource: shared memory, Required: 247944, Hardware limit: 232448. Reducing block sizes or `num_stages` may help.",
-        "required": true,
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        }
-      },
-      "value": 1
-    },
-    "lever|gl_packed_x|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.2018330266745831,
-        "per_shape": {
-          "cx_large_balanced": 1.3116718944159178,
-          "cx_large_batch": 1.3034530320809024,
-          "cx_large_long": 1.2578292615234816,
-          "cx_large_wide": 1.2819572346052575,
-          "cx_lm_b1_d4096_l32768": 1.2653819824297161,
-          "cx_lm_b2_d2048_l16384": 1.2476198764348139,
-          "cx_lm_b32_d2048_l2048": 1.3092827751790286,
-          "cx_lm_b6_d2048_l2048": 1.2724857671821312,
-          "cx_lm_b6_d4096_l2048": 1.2881143272334268,
-          "cx_lm_b8_d512_l8192": 1.2256934713716725,
-          "cx_medium_balanced": 1.2541516628383276,
-          "cx_medium_batch": 1.2531538607818036,
-          "cx_medium_long": 1.1281088439630913,
-          "cx_medium_wide": 1.2300413350104369,
-          "cx_small_balanced": 1.016026636561327,
-          "cx_small_batch": 1.015558959377243,
-          "cx_small_long": 1.0451069567573525,
-          "cx_small_wide": 1.0163793806691723
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 1.015558959377243
-      },
-      "value": 1
-    },
-    "lever|gl_split2|complex_R1O1": {
-      "evidence": {
-        "eligibility": "fp64 route-A stress (reset/large_phase/euler_limit x5) with SPLIT2=1 identical worst errors to SPLIT2=0; C10 +-theta_h passed; gradients bit-identical at 2 of 3 shapes (measurement), third not comparable (route not served by the Gluon body at that call)",
-        "eligible": true,
-        "geomean_gain": 1.020750212604639,
-        "method": "sisosweep measurement (H100, 12 interleaved rounds x10 calls, production defaults, mixer fwd+bwd, 6 LM cells + medium_balanced + medium_wide); first pass 9376641 gave 1.021 / 1.008",
-        "min_gain": 1.0061180255995192,
-        "per_shape": {
-          "lm_b1_d4096_l32768": 1.016771018498778,
-          "lm_b2_d2048_l16384": 1.0138917081112229,
-          "lm_b32_d2048_l2048": 1.0382240215432215,
-          "lm_b6_d2048_l2048": 1.0061180255995192,
-          "lm_b6_d4096_l2048": 1.0267595378177863,
-          "lm_b8_d512_l8192": 1.012974373424366,
-          "medium_balanced": 1.0288969537256605,
-          "medium_wide": 1.0227323978618303
-        },
-        "phase": "bwd",
-        "worst_shape_gain": 1.0061180255995192
-      },
-      "value": 1
-    },
-    "lever|gl_ws_prep|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.0537224629160407,
-        "per_shape": {
-          "cx_large_balanced": 1.0437363626979292,
-          "cx_large_batch": 1.0350306292267328,
-          "cx_large_long": 1.0922857911805781,
-          "cx_large_wide": 1.043765916563499,
-          "cx_lm_b1_d4096_l32768": 1.090295847575281,
-          "cx_lm_b2_d2048_l16384": 1.0920629028023827,
-          "cx_lm_b32_d2048_l2048": 1.0317477222455191,
-          "cx_lm_b6_d2048_l2048": 1.053446826452917,
-          "cx_lm_b6_d4096_l2048": 1.053582798478888,
-          "cx_lm_b8_d512_l8192": 1.0888116738849045,
-          "cx_medium_balanced": 1.0524851448029973,
-          "cx_medium_batch": 1.0500654208641769,
-          "cx_medium_long": 1.0982449670060503,
-          "cx_medium_wide": 1.0498034150297357,
-          "cx_small_balanced": 0.9988749266835487,
-          "cx_small_batch": 0.9983371795163726,
-          "cx_small_long": 1.0938572029678861,
-          "cx_small_wide": 1.0092546634734374
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 0.9983371795163726
-      },
-      "value": 1
-    },
-    "lever|gl_ws_producer|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.0776586279496838,
-        "per_shape": {
-          "cx_large_balanced": 1.0997232769893068,
-          "cx_large_batch": 1.0964251005326253,
-          "cx_large_long": 1.0841258417174082,
-          "cx_large_wide": 1.095069686068798,
-          "cx_lm_b1_d4096_l32768": 1.0842428878196153,
-          "cx_lm_b2_d2048_l16384": 1.0863772801916478,
-          "cx_lm_b32_d2048_l2048": 1.0927601100164566,
-          "cx_lm_b6_d2048_l2048": 1.0870226830956125,
-          "cx_lm_b6_d4096_l2048": 1.0973916530079333,
-          "cx_lm_b8_d512_l8192": 1.089362605178099,
-          "cx_medium_balanced": 1.09991229308137,
-          "cx_medium_batch": 1.1161622001447096,
-          "cx_medium_long": 1.0888621772056393,
-          "cx_medium_wide": 1.0880769158004218,
-          "cx_small_balanced": 0.9924525924204666,
-          "cx_small_batch": 0.9943712033099347,
-          "cx_small_long": 1.1151619727360615,
-          "cx_small_wide": 1.0026722534911914
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 0.9924525924204666
-      },
-      "value": 1
-    },
-    "lever|phase_law_active_k|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.0092088922590556,
-        "per_shape": {
-          "cx_large_balanced": 1.0149091043823475,
-          "cx_large_batch": 1.0095702371854853,
-          "cx_large_long": 1.0053914165178173,
-          "cx_large_wide": 1.0061726692625415,
-          "cx_lm_b1_d4096_l32768": 1.00594859128492,
-          "cx_lm_b2_d2048_l16384": 1.0069171942655597,
-          "cx_lm_b32_d2048_l2048": 1.0100663705437096,
-          "cx_lm_b6_d2048_l2048": 1.0175473907565014,
-          "cx_lm_b6_d4096_l2048": 1.0120676032846085,
-          "cx_lm_b8_d512_l8192": 1.0120799413871389,
-          "cx_medium_balanced": 1.0111326313893798,
-          "cx_medium_batch": 1.0129040973265802,
-          "cx_medium_long": 1.009115610443494,
-          "cx_medium_wide": 1.0119602594460209,
-          "cx_small_balanced": 0.9992031021734711,
-          "cx_small_batch": 1.0018433708520702,
-          "cx_small_long": 1.0073597744048792,
-          "cx_small_wide": 1.0117433790775183
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 0.9992031021734711
-      },
-      "value": 0
-    },
-    "lever|phase_law_active_k|complex_R4O4": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.1241101408113796,
-        "method": "isolated phase_law at R = 4: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
-        "oracle_worst_on_over_base": 1.0093170000696283,
-        "phase": "bwd",
-        "worst_shape_gain": 1.1144112505000434
-      },
-      "value": 1
-    },
-    "lever|phase_law_active_k|complex_ROgt1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.0909456766009746,
-        "method": "isolated phase_law at R = 2: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
-        "oracle_worst_on_over_base": 1.009670114971242,
-        "phase": "bwd",
-        "worst_shape_gain": 0.9964045778147835
-      },
-      "value": 1
-    },
-    "lever|phase_law_fwd_active_k|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.0542087687644996,
-        "per_shape": {
-          "cx_large_balanced": 1.0230047726868015,
-          "cx_large_batch": 1.0157444819582864,
-          "cx_large_long": 1.1136714541996848,
-          "cx_large_wide": 1.0766506064190349,
-          "cx_lm_b1_d4096_l32768": 1.1130638885598476,
-          "cx_lm_b2_d2048_l16384": 1.1118230121412385,
-          "cx_lm_b32_d2048_l2048": 1.0239054198323192,
-          "cx_lm_b6_d2048_l2048": 1.0067918019734945,
-          "cx_lm_b6_d4096_l2048": 1.024816323935164,
-          "cx_lm_b8_d512_l8192": 1.1023931830672784,
-          "cx_medium_balanced": 1.0334336976848912,
-          "cx_medium_batch": 1.0625436361598373,
-          "cx_medium_long": 1.1108897313543304,
-          "cx_medium_wide": 1.030258074615948,
-          "cx_small_balanced": 1.000158334883479,
-          "cx_small_batch": 0.9989698543229723,
-          "cx_small_long": 1.1397132394357372,
-          "cx_small_wide": 1.0064316913250702
-        },
-        "phase": "fwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 0.9989698543229723
-      },
-      "value": 1
-    },
-    "lever|phase_law_fwd_active_k|complex_R4O4": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.1444145189299981,
-        "method": "isolated phase_law at R = 4: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
-        "oracle_worst_on_over_base": 1.0,
-        "phase": "fwd",
-        "worst_shape_gain": 0.9273689124361085
-      },
-      "value": 0
-    },
-    "lever|phase_law_fwd_active_k|complex_ROgt1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.3021557334155698,
-        "method": "isolated phase_law at R = 2: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
-        "oracle_worst_on_over_base": 1.0051898483070039,
-        "phase": "fwd",
-        "worst_shape_gain": 1.0127752546332425
-      },
-      "value": 1
-    },
-    "lever|phase_law_headpar|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.0128865359204393,
-        "per_shape": {
-          "cx_large_balanced": 1.006939990643008,
-          "cx_large_batch": 1.000874030889218,
-          "cx_large_long": 1.0004337755580657,
-          "cx_large_wide": 1.0182130041619217,
-          "cx_lm_b1_d4096_l32768": 1.0020622238567065,
-          "cx_lm_b2_d2048_l16384": 1.0022143149934362,
-          "cx_lm_b32_d2048_l2048": 1.0080844743424597,
-          "cx_lm_b6_d2048_l2048": 1.027855836726393,
-          "cx_lm_b6_d4096_l2048": 1.0284531732270692,
-          "cx_lm_b8_d512_l8192": 1.002280772301299,
-          "cx_medium_balanced": 1.0166829728229767,
-          "cx_medium_batch": 1.0035856941429657,
-          "cx_medium_long": 1.0072324123898742,
-          "cx_medium_wide": 1.1121375702843255,
-          "cx_small_balanced": 0.9985831802098025,
-          "cx_small_batch": 0.9983526706304076,
-          "cx_small_long": 1.000588267605644,
-          "cx_small_wide": 1.0029381982629346
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 0.9983526706304076
-      },
-      "value": 0
-    },
-    "lever|phase_law_headpar|complex_R4O4": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.0980957423525397,
-        "method": "isolated phase_law at R = 4: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
-        "oracle_worst_on_over_base": 1.0,
-        "phase": "bwd",
-        "worst_shape_gain": 0.9670932698885858
-      },
-      "value": 0
-    },
-    "lever|phase_law_headpar|complex_ROgt1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.164257677598624,
-        "method": "isolated phase_law at R = 2: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
-        "oracle_worst_on_over_base": 1.0,
-        "phase": "bwd",
-        "worst_shape_gain": 0.9280067545185479
-      },
-      "value": 0
-    },
-    "lever|phase_law_suffix|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.0242321879000709,
-        "per_shape": {
-          "cx_large_balanced": 1.0117983204504561,
-          "cx_large_batch": 1.0091701001852649,
-          "cx_large_long": 1.0441538443029217,
-          "cx_large_wide": 1.0120248184084146,
-          "cx_lm_b1_d4096_l32768": 1.0441941622302522,
-          "cx_lm_b2_d2048_l16384": 1.0296995631006884,
-          "cx_lm_b32_d2048_l2048": 1.0075889614324531,
-          "cx_lm_b6_d2048_l2048": 1.0244186340652424,
-          "cx_lm_b6_d4096_l2048": 1.0160619792611227,
-          "cx_lm_b8_d512_l8192": 1.0347588542432904,
-          "cx_medium_balanced": 1.015985776414025,
-          "cx_medium_batch": 1.016105406207677,
-          "cx_medium_long": 1.0382683784002482,
-          "cx_medium_wide": 1.0154671216995594,
-          "cx_small_balanced": 1.0262027661393727,
-          "cx_small_batch": 1.0267983004956978,
-          "cx_small_long": 1.0345702998911894,
-          "cx_small_wide": 1.0300667108131294
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 1.0075889614324531
-      },
-      "value": 1
-    },
-    "lever|phase_law_suffix|complex_R4O4": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.215371557607629,
-        "method": "isolated phase_law at R = 4: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
-        "oracle_worst_on_over_base": 1.0,
-        "phase": "bwd",
-        "worst_shape_gain": 1.1057430857213022
-      },
-      "value": 1
-    },
-    "lever|phase_law_suffix|complex_ROgt1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.3704055572205318,
-        "method": "isolated phase_law at R = 2: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
-        "oracle_worst_on_over_base": 1.0,
-        "phase": "bwd",
-        "worst_shape_gain": 1.0779199569302598
-      },
-      "value": 1
-    },
-    "lever|real_cp_g_lo|real_R1O1": {
-      "evidence": {
-        "dtype": "bf16",
-        "eligible": true,
-        "geomean_gain": 1.025255585338473,
-        "per_shape": {
-          "large_balanced@T32_32": 1.0628268998004695,
-          "large_batch@T32_32": 1.070732552135539,
-          "large_long@T32_32": 1.0558127347839434,
-          "large_wide@T32_32": 1.0482804183243737,
-          "lm_b1_d4096_l32768@T32_32": 1.0576196835498453,
-          "lm_b2_d2048_l16384@T32_32": 1.0625189140409357,
-          "lm_b32_d2048_l2048@T32_32": 1.0662474801511357,
-          "lm_b6_d2048_l2048@T32_32": 0.9984613267151667,
-          "lm_b6_d4096_l2048@T32_32": 1.0482480104605965,
-          "lm_b8_d512_l8192@T32_32": 0.9928633466798403,
-          "medium_balanced@T32_32": 0.9953958469648568,
-          "medium_batch@T32_32": 1.016048013779073,
-          "medium_long@T32_32": 0.9974431424667567,
-          "medium_wide@T32_32": 1.0015914913949129,
-          "small_balanced@T32_32": 0.9941703694642647,
-          "small_batch@T32_32": 0.9948239227284486,
-          "small_long@T32_32": 1.0016834061046322,
-          "small_wide@T32_32": 0.9980110401381073
-        },
-        "phase": "fwd",
-        "verify": {
-          "bwd": {
-            "final_over_base": 0.759124933942241,
-            "worst_shape": 1.0054058289763688
-          },
-          "fwd": {
-            "final_over_base": 0.9742480771624951,
-            "worst_shape": 1.0084141850555557
-          }
-        },
-        "worst_shape_gain": 0.9928633466798403
-      },
-      "value": 1
-    },
-    "lever|real_dg_lo|real_R1O1": {
-      "evidence": {
-        "dtype": "bf16",
-        "eligible": true,
-        "geomean_gain": 1.136580358204249,
-        "per_shape": {
-          "large_balanced@T32_32": 1.1858135091487896,
-          "large_batch@T32_32": 1.2084773958699184,
-          "large_long@T32_32": 1.1947004826298964,
-          "large_wide@T32_32": 1.1909292477808555,
-          "lm_b1_d4096_l32768@T32_32": 1.1860879712968113,
-          "lm_b2_d2048_l16384@T32_32": 1.172523738523378,
-          "lm_b32_d2048_l2048@T32_32": 1.188469825669009,
-          "lm_b6_d2048_l2048@T32_32": 1.0890653868760098,
-          "lm_b6_d4096_l2048@T32_32": 1.1979007479042156,
-          "lm_b8_d512_l8192@T32_32": 1.1507397380314681,
-          "medium_balanced@T32_32": 1.2169050060891868,
-          "medium_batch@T32_32": 1.1398453285880434,
-          "medium_long@T32_32": 1.1674884755921693,
-          "medium_wide@T32_32": 1.2079923490640765,
-          "small_balanced@T32_32": 1.0030712394166932,
-          "small_batch@T32_32": 0.9991184476489198,
-          "small_long@T32_32": 1.004592464466453,
-          "small_wide@T32_32": 1.0054628871002949
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_base": 0.759124933942241,
-            "worst_shape": 1.0054058289763688
-          },
-          "fwd": {
-            "final_over_base": 0.9742480771624951,
-            "worst_shape": 1.0084141850555557
-          }
-        },
-        "worst_shape_gain": 0.9991184476489198
-      },
-      "value": 1
-    },
-    "lever|real_gate_dy_io|real_R1O1": {
-      "evidence": {
-        "dtype": "bf16",
-        "eligible": true,
-        "geomean_gain": 1.0481594662291314,
-        "per_shape": {
-          "large_balanced@T32_32": 1.0694190800951,
-          "large_batch@T32_32": 1.071602316066823,
-          "large_long@T32_32": 1.0690987333563355,
-          "large_wide@T32_32": 1.062636046159685,
-          "lm_b1_d4096_l32768@T32_32": 1.0663353030927436,
-          "lm_b2_d2048_l16384@T32_32": 1.0711139748746719,
-          "lm_b32_d2048_l2048@T32_32": 1.074213954872067,
-          "lm_b6_d2048_l2048@T32_32": 0.9976012091620332,
-          "lm_b6_d4096_l2048@T32_32": 1.0854827375815232,
-          "lm_b8_d512_l8192@T32_32": 1.0535841503156547,
-          "medium_balanced@T32_32": 1.081605563772431,
-          "medium_batch@T32_32": 1.0519425925451469,
-          "medium_long@T32_32": 1.0613152016673655,
-          "medium_wide@T32_32": 1.0770450324792045,
-          "small_balanced@T32_32": 0.9965803813013928,
-          "small_batch@T32_32": 0.9954035162104921,
-          "small_long@T32_32": 0.9955396817937151,
-          "small_wide@T32_32": 0.9961618542692093
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_base": 0.759124933942241,
-            "worst_shape": 1.0054058289763688
-          },
-          "fwd": {
-            "final_over_base": 0.9742480771624951,
-            "worst_shape": 1.0084141850555557
-          }
-        },
-        "worst_shape_gain": 0.9954035162104921
-      },
-      "value": 1
-    },
-    "lever|real_gluon_kbc|real_R1O1": {
-      "evidence": {
-        "applicable": false,
-        "dtype": "bf16",
-        "eligible": true,
-        "phase": "bwd",
-        "reason": "the Gluon Kbc body exists only at T_bwd = 64",
-        "verify": {
-          "bwd": {
-            "final_over_base": 0.759124933942241,
-            "worst_shape": 1.0054058289763688
-          },
-          "fwd": {
-            "final_over_base": 0.9742480771624951,
-            "worst_shape": 1.0084141850555557
-          }
-        }
-      },
-      "value": 0
-    },
-    "lever|real_kc_shared_cb|real_R1O1": {
-      "evidence": {
-        "dtype": "bf16",
-        "eligible": true,
-        "geomean_gain": 0.9736085060672228,
-        "per_shape": {
-          "large_balanced@T32_32": 0.9985193953234747,
-          "large_batch@T32_32": 0.9847578628272075,
-          "large_long@T32_32": 0.9871397298769108,
-          "large_wide@T32_32": 0.9990251322793392,
-          "lm_b1_d4096_l32768@T32_32": 0.9924156394036491,
-          "lm_b2_d2048_l16384@T32_32": 0.986657761005139,
-          "lm_b32_d2048_l2048@T32_32": 0.991996431012167,
-          "lm_b6_d2048_l2048@T32_32": 0.9360103788762146,
-          "lm_b6_d4096_l2048@T32_32": 0.9988965820451524,
-          "lm_b8_d512_l8192@T32_32": 0.969648913195433,
-          "medium_balanced@T32_32": 0.990552675751977,
-          "medium_batch@T32_32": 0.9718943120636875,
-          "medium_long@T32_32": 0.9715213502698428,
-          "medium_wide@T32_32": 0.9969286490594617,
-          "small_balanced@T32_32": 0.9386840561960277,
-          "small_batch@T32_32": 0.9367338158325257,
-          "small_long@T32_32": 0.9411740228944159,
-          "small_wide@T32_32": 0.9377193939822486
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_base": 0.759124933942241,
-            "worst_shape": 1.0054058289763688
-          },
-          "fwd": {
-            "final_over_base": 0.9742480771624951,
-            "worst_shape": 1.0084141850555557
-          }
-        },
-        "worst_shape_gain": 0.9360103788762146
-      },
-      "value": 0
-    },
-    "lever|real_kc_shared_cb|real_R1O1_fp32": {
-      "evidence": {
-        "dtype": "fp32",
-        "eligible": true,
-        "geomean_gain": 1.0214364994849545,
-        "per_shape": {
-          "large_balanced@T64_64": 1.0494531162957008,
-          "large_batch@T64_64": 1.0650247170615461,
-          "large_long@T64_64": 1.0460325539981736,
-          "large_wide@T64_64": 1.0466725267431183,
-          "lm_b1_d4096_l32768@T64_64": 1.048663800587021,
-          "lm_b2_d2048_l16384@T64_64": 1.0364512937171901,
-          "lm_b32_d2048_l2048@T64_64": 1.0487192273010204,
-          "lm_b6_d2048_l2048@T64_64": 0.9391516217620679,
-          "lm_b6_d4096_l2048@T64_64": 1.0276172081731687,
-          "lm_b8_d512_l8192@T64_64": 1.022236862683756,
-          "medium_balanced@T64_64": 1.020671183551231,
-          "medium_batch@T64_64": 1.0320133667954474,
-          "medium_long@T64_64": 1.0265221703364806,
-          "medium_wide@T64_64": 1.0206538956934257,
-          "small_balanced@T64_64": 0.9891611597461732,
-          "small_batch@T64_64": 0.9889662028459983,
-          "small_long@T64_64": 0.9958010113892527,
-          "small_wide@T64_64": 0.9902021261759356
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_base": 1.0169933160793019,
-            "worst_shape": 1.07122725897308
-          },
-          "fwd": {
-            "final_over_base": 0.9522205443115123,
-            "worst_shape": 1.4435621786740456
-          }
-        },
-        "worst_shape_gain": 0.9391516217620679
-      },
-      "value": 0
-    },
-    "lever|rot_ka_bwd|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.0215990557270502,
-        "per_shape": {
-          "cx_large_balanced": 1.0313023790189781,
-          "cx_large_batch": 1.0303429778934954,
-          "cx_large_long": 1.023308308285212,
-          "cx_large_wide": 1.0323096875630509,
-          "cx_lm_b1_d4096_l32768": 1.0217605792219662,
-          "cx_lm_b2_d2048_l16384": 1.0232334404374046,
-          "cx_lm_b32_d2048_l2048": 1.0271864231897865,
-          "cx_lm_b6_d2048_l2048": 1.0265815452616254,
-          "cx_lm_b6_d4096_l2048": 1.0293100408343852,
-          "cx_lm_b8_d512_l8192": 1.024485145764572,
-          "cx_medium_balanced": 1.0274322219461238,
-          "cx_medium_batch": 1.0300957774438324,
-          "cx_medium_long": 1.0287553189681473,
-          "cx_medium_wide": 1.0257969628055152,
-          "cx_small_balanced": 0.9939842876029964,
-          "cx_small_batch": 0.9953963779838996,
-          "cx_small_long": 1.0202699436796907,
-          "cx_small_wide": 0.998506569898395
-        },
-        "phase": "bwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 0.9939842876029964
-      },
-      "value": 1
-    },
-    "lever|rot_ka_fwd|complex_R1O1": {
-      "evidence": {
-        "eligible": true,
-        "geomean_gain": 1.1393526339389657,
-        "per_shape": {
-          "cx_large_balanced": 1.2149871027844625,
-          "cx_large_batch": 1.1035944060980953,
-          "cx_large_long": 1.147239499902866,
-          "cx_large_wide": 1.2271690307673944,
-          "cx_lm_b1_d4096_l32768": 1.1681255670855393,
-          "cx_lm_b2_d2048_l16384": 1.142391247900597,
-          "cx_lm_b32_d2048_l2048": 1.1982275181352444,
-          "cx_lm_b6_d2048_l2048": 1.1489596524442995,
-          "cx_lm_b6_d4096_l2048": 1.239330872740886,
-          "cx_lm_b8_d512_l8192": 1.111946174270905,
-          "cx_medium_balanced": 1.1734213900408252,
-          "cx_medium_batch": 1.1874138113345223,
-          "cx_medium_long": 1.1566054151082226,
-          "cx_medium_wide": 1.1700096060114122,
-          "cx_small_balanced": 0.9998952701553947,
-          "cx_small_batch": 1.0034535853973476,
-          "cx_small_long": 1.1585079619828347,
-          "cx_small_wide": 0.9993236983501917
-        },
-        "phase": "fwd",
-        "verify": {
-          "bwd": {
-            "final_over_allon": 1.0158843709226146,
-            "final_over_base": 0.7460213327935741
-          },
-          "fwd": {
-            "final_over_allon": 0.996691877784157,
-            "final_over_base": 0.8320657270507207
-          }
-        },
-        "worst_shape_gain": 0.9993236983501917
-      },
-      "value": 1
+    "worst_shape_gain": 0.9991538548936936
+   },
+   "value": 1
+  },
+  "lever|gl_narrow_dth_off|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "phase": "bwd",
+    "reason": "the set without this unit does not launch on this device (shared memory): out of resource: shared memory, Required: 247944, Hardware limit: 232448. Reducing block sizes or `num_stages` may help.",
+    "required": true,
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
     }
+   },
+   "value": 1
+  },
+  "lever|gl_packed_x|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.2018330266745831,
+    "per_shape": {
+     "cx_large_balanced": 1.3116718944159178,
+     "cx_large_batch": 1.3034530320809024,
+     "cx_large_long": 1.2578292615234816,
+     "cx_large_wide": 1.2819572346052575,
+     "cx_lm_b1_d4096_l32768": 1.2653819824297161,
+     "cx_lm_b2_d2048_l16384": 1.2476198764348139,
+     "cx_lm_b32_d2048_l2048": 1.3092827751790286,
+     "cx_lm_b6_d2048_l2048": 1.2724857671821312,
+     "cx_lm_b6_d4096_l2048": 1.2881143272334268,
+     "cx_lm_b8_d512_l8192": 1.2256934713716725,
+     "cx_medium_balanced": 1.2541516628383276,
+     "cx_medium_batch": 1.2531538607818036,
+     "cx_medium_long": 1.1281088439630913,
+     "cx_medium_wide": 1.2300413350104369,
+     "cx_small_balanced": 1.016026636561327,
+     "cx_small_batch": 1.015558959377243,
+     "cx_small_long": 1.0451069567573525,
+     "cx_small_wide": 1.0163793806691723
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
+    },
+    "worst_shape_gain": 1.015558959377243
+   },
+   "value": 1
+  },
+  "lever|gl_split2|complex_R1O1": {
+   "evidence": {
+    "eligibility": "fp64 route-A stress (reset/large_phase/euler_limit x5) with SPLIT2=1 identical worst errors to SPLIT2=0; C10 +-theta_h passed; gradients bit-identical at 2 of 3 shapes, third not comparable (route not served by the Gluon body at that call)",
+    "eligible": true,
+    "geomean_gain": 1.020750212604639,
+    "method": "sisosweep (H100, 12 interleaved rounds x10 calls, production defaults, mixer fwd+bwd, 6 LM cells + medium_balanced + medium_wide); first pass gave 1.021 / 1.008",
+    "min_gain": 1.0061180255995192,
+    "per_shape": {
+     "lm_b1_d4096_l32768": 1.016771018498778,
+     "lm_b2_d2048_l16384": 1.0138917081112229,
+     "lm_b32_d2048_l2048": 1.0382240215432215,
+     "lm_b6_d2048_l2048": 1.0061180255995192,
+     "lm_b6_d4096_l2048": 1.0267595378177863,
+     "lm_b8_d512_l8192": 1.012974373424366,
+     "medium_balanced": 1.0288969537256605,
+     "medium_wide": 1.0227323978618303
+    },
+    "phase": "bwd",
+    "worst_shape_gain": 1.0061180255995192
+   },
+   "value": 1
+  },
+  "lever|gl_ws_prep|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.0537224629160407,
+    "per_shape": {
+     "cx_large_balanced": 1.0437363626979292,
+     "cx_large_batch": 1.0350306292267328,
+     "cx_large_long": 1.0922857911805781,
+     "cx_large_wide": 1.043765916563499,
+     "cx_lm_b1_d4096_l32768": 1.090295847575281,
+     "cx_lm_b2_d2048_l16384": 1.0920629028023827,
+     "cx_lm_b32_d2048_l2048": 1.0317477222455191,
+     "cx_lm_b6_d2048_l2048": 1.053446826452917,
+     "cx_lm_b6_d4096_l2048": 1.053582798478888,
+     "cx_lm_b8_d512_l8192": 1.0888116738849045,
+     "cx_medium_balanced": 1.0524851448029973,
+     "cx_medium_batch": 1.0500654208641769,
+     "cx_medium_long": 1.0982449670060503,
+     "cx_medium_wide": 1.0498034150297357,
+     "cx_small_balanced": 0.9988749266835487,
+     "cx_small_batch": 0.9983371795163726,
+     "cx_small_long": 1.0938572029678861,
+     "cx_small_wide": 1.0092546634734374
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
+    },
+    "worst_shape_gain": 0.9983371795163726
+   },
+   "value": 1
+  },
+  "lever|gl_ws_producer|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.0776586279496838,
+    "per_shape": {
+     "cx_large_balanced": 1.0997232769893068,
+     "cx_large_batch": 1.0964251005326253,
+     "cx_large_long": 1.0841258417174082,
+     "cx_large_wide": 1.095069686068798,
+     "cx_lm_b1_d4096_l32768": 1.0842428878196153,
+     "cx_lm_b2_d2048_l16384": 1.0863772801916478,
+     "cx_lm_b32_d2048_l2048": 1.0927601100164566,
+     "cx_lm_b6_d2048_l2048": 1.0870226830956125,
+     "cx_lm_b6_d4096_l2048": 1.0973916530079333,
+     "cx_lm_b8_d512_l8192": 1.089362605178099,
+     "cx_medium_balanced": 1.09991229308137,
+     "cx_medium_batch": 1.1161622001447096,
+     "cx_medium_long": 1.0888621772056393,
+     "cx_medium_wide": 1.0880769158004218,
+     "cx_small_balanced": 0.9924525924204666,
+     "cx_small_batch": 0.9943712033099347,
+     "cx_small_long": 1.1151619727360615,
+     "cx_small_wide": 1.0026722534911914
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
+    },
+    "worst_shape_gain": 0.9924525924204666
+   },
+   "value": 1
+  },
+  "lever|phase_law_active_k|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.0092088922590556,
+    "per_shape": {
+     "cx_large_balanced": 1.0149091043823475,
+     "cx_large_batch": 1.0095702371854853,
+     "cx_large_long": 1.0053914165178173,
+     "cx_large_wide": 1.0061726692625415,
+     "cx_lm_b1_d4096_l32768": 1.00594859128492,
+     "cx_lm_b2_d2048_l16384": 1.0069171942655597,
+     "cx_lm_b32_d2048_l2048": 1.0100663705437096,
+     "cx_lm_b6_d2048_l2048": 1.0175473907565014,
+     "cx_lm_b6_d4096_l2048": 1.0120676032846085,
+     "cx_lm_b8_d512_l8192": 1.0120799413871389,
+     "cx_medium_balanced": 1.0111326313893798,
+     "cx_medium_batch": 1.0129040973265802,
+     "cx_medium_long": 1.009115610443494,
+     "cx_medium_wide": 1.0119602594460209,
+     "cx_small_balanced": 0.9992031021734711,
+     "cx_small_batch": 1.0018433708520702,
+     "cx_small_long": 1.0073597744048792,
+     "cx_small_wide": 1.0117433790775183
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
+    },
+    "worst_shape_gain": 0.9992031021734711
+   },
+   "value": 0
+  },
+  "lever|phase_law_active_k|complex_R4O4": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.1241101408113796,
+    "method": "isolated phase_law at R = 4: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
+    "oracle_worst_on_over_base": 1.0093170000696283,
+    "phase": "bwd",
+    "worst_shape_gain": 1.1144112505000434
+   },
+   "value": 1
+  },
+  "lever|phase_law_active_k|complex_ROgt1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.0909456766009746,
+    "method": "isolated phase_law at R = 2: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
+    "oracle_worst_on_over_base": 1.009670114971242,
+    "phase": "bwd",
+    "worst_shape_gain": 0.9964045778147835
+   },
+   "value": 1
+  },
+  "lever|phase_law_fwd_active_k|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.0542087687644996,
+    "per_shape": {
+     "cx_large_balanced": 1.0230047726868015,
+     "cx_large_batch": 1.0157444819582864,
+     "cx_large_long": 1.1136714541996848,
+     "cx_large_wide": 1.0766506064190349,
+     "cx_lm_b1_d4096_l32768": 1.1130638885598476,
+     "cx_lm_b2_d2048_l16384": 1.1118230121412385,
+     "cx_lm_b32_d2048_l2048": 1.0239054198323192,
+     "cx_lm_b6_d2048_l2048": 1.0067918019734945,
+     "cx_lm_b6_d4096_l2048": 1.024816323935164,
+     "cx_lm_b8_d512_l8192": 1.1023931830672784,
+     "cx_medium_balanced": 1.0334336976848912,
+     "cx_medium_batch": 1.0625436361598373,
+     "cx_medium_long": 1.1108897313543304,
+     "cx_medium_wide": 1.030258074615948,
+     "cx_small_balanced": 1.000158334883479,
+     "cx_small_batch": 0.9989698543229723,
+     "cx_small_long": 1.1397132394357372,
+     "cx_small_wide": 1.0064316913250702
+    },
+    "phase": "fwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
+    },
+    "worst_shape_gain": 0.9989698543229723
+   },
+   "value": 1
+  },
+  "lever|phase_law_fwd_active_k|complex_R4O4": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.1444145189299981,
+    "method": "isolated phase_law at R = 4: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
+    "oracle_worst_on_over_base": 1.0,
+    "phase": "fwd",
+    "worst_shape_gain": 0.9273689124361085
+   },
+   "value": 0
+  },
+  "lever|phase_law_fwd_active_k|complex_ROgt1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.3021557334155698,
+    "method": "isolated phase_law at R = 2: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
+    "oracle_worst_on_over_base": 1.0051898483070039,
+    "phase": "fwd",
+    "worst_shape_gain": 1.0127752546332425
+   },
+   "value": 1
+  },
+  "lever|phase_law_headpar|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.0128865359204393,
+    "per_shape": {
+     "cx_large_balanced": 1.006939990643008,
+     "cx_large_batch": 1.000874030889218,
+     "cx_large_long": 1.0004337755580657,
+     "cx_large_wide": 1.0182130041619217,
+     "cx_lm_b1_d4096_l32768": 1.0020622238567065,
+     "cx_lm_b2_d2048_l16384": 1.0022143149934362,
+     "cx_lm_b32_d2048_l2048": 1.0080844743424597,
+     "cx_lm_b6_d2048_l2048": 1.027855836726393,
+     "cx_lm_b6_d4096_l2048": 1.0284531732270692,
+     "cx_lm_b8_d512_l8192": 1.002280772301299,
+     "cx_medium_balanced": 1.0166829728229767,
+     "cx_medium_batch": 1.0035856941429657,
+     "cx_medium_long": 1.0072324123898742,
+     "cx_medium_wide": 1.1121375702843255,
+     "cx_small_balanced": 0.9985831802098025,
+     "cx_small_batch": 0.9983526706304076,
+     "cx_small_long": 1.000588267605644,
+     "cx_small_wide": 1.0029381982629346
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
+    },
+    "worst_shape_gain": 0.9983526706304076
+   },
+   "value": 0
+  },
+  "lever|phase_law_headpar|complex_R4O4": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.0980957423525397,
+    "method": "isolated phase_law at R = 4: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
+    "oracle_worst_on_over_base": 1.0,
+    "phase": "bwd",
+    "worst_shape_gain": 0.9670932698885858
+   },
+   "value": 0
+  },
+  "lever|phase_law_headpar|complex_ROgt1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.164257677598624,
+    "method": "isolated phase_law at R = 2: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
+    "oracle_worst_on_over_base": 1.0,
+    "phase": "bwd",
+    "worst_shape_gain": 0.9280067545185479
+   },
+   "value": 0
+  },
+  "lever|phase_law_suffix|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.0242321879000709,
+    "per_shape": {
+     "cx_large_balanced": 1.0117983204504561,
+     "cx_large_batch": 1.0091701001852649,
+     "cx_large_long": 1.0441538443029217,
+     "cx_large_wide": 1.0120248184084146,
+     "cx_lm_b1_d4096_l32768": 1.0441941622302522,
+     "cx_lm_b2_d2048_l16384": 1.0296995631006884,
+     "cx_lm_b32_d2048_l2048": 1.0075889614324531,
+     "cx_lm_b6_d2048_l2048": 1.0244186340652424,
+     "cx_lm_b6_d4096_l2048": 1.0160619792611227,
+     "cx_lm_b8_d512_l8192": 1.0347588542432904,
+     "cx_medium_balanced": 1.015985776414025,
+     "cx_medium_batch": 1.016105406207677,
+     "cx_medium_long": 1.0382683784002482,
+     "cx_medium_wide": 1.0154671216995594,
+     "cx_small_balanced": 1.0262027661393727,
+     "cx_small_batch": 1.0267983004956978,
+     "cx_small_long": 1.0345702998911894,
+     "cx_small_wide": 1.0300667108131294
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
+    },
+    "worst_shape_gain": 1.0075889614324531
+   },
+   "value": 1
+  },
+  "lever|phase_law_suffix|complex_R4O4": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.215371557607629,
+    "method": "isolated phase_law at R = 4: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
+    "oracle_worst_on_over_base": 1.0,
+    "phase": "bwd",
+    "worst_shape_gain": 1.1057430857213022
+   },
+   "value": 1
+  },
+  "lever|phase_law_suffix|complex_ROgt1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.3704055572205318,
+    "method": "isolated phase_law at R = 2: BOTH arms vs the fp64 oracle, tol16 rule (5 draws, signed-bias check), lever not worse than base beyond noise",
+    "oracle_worst_on_over_base": 1.0,
+    "phase": "bwd",
+    "worst_shape_gain": 1.0779199569302598
+   },
+   "value": 1
+  },
+  "lever|real_cp_g_lo|real_R1O1": {
+   "evidence": {
+    "dtype": "bf16",
+    "eligible": true,
+    "geomean_gain": 1.025255585338473,
+    "per_shape": {
+     "large_balanced@T32_32": 1.0628268998004695,
+     "large_batch@T32_32": 1.070732552135539,
+     "large_long@T32_32": 1.0558127347839434,
+     "large_wide@T32_32": 1.0482804183243737,
+     "lm_b1_d4096_l32768@T32_32": 1.0576196835498453,
+     "lm_b2_d2048_l16384@T32_32": 1.0625189140409357,
+     "lm_b32_d2048_l2048@T32_32": 1.0662474801511357,
+     "lm_b6_d2048_l2048@T32_32": 0.9984613267151667,
+     "lm_b6_d4096_l2048@T32_32": 1.0482480104605965,
+     "lm_b8_d512_l8192@T32_32": 0.9928633466798403,
+     "medium_balanced@T32_32": 0.9953958469648568,
+     "medium_batch@T32_32": 1.016048013779073,
+     "medium_long@T32_32": 0.9974431424667567,
+     "medium_wide@T32_32": 1.0015914913949129,
+     "small_balanced@T32_32": 0.9941703694642647,
+     "small_batch@T32_32": 0.9948239227284486,
+     "small_long@T32_32": 1.0016834061046322,
+     "small_wide@T32_32": 0.9980110401381073
+    },
+    "phase": "fwd",
+    "verify": {
+     "bwd": {
+      "final_over_base": 0.759124933942241,
+      "worst_shape": 1.0054058289763688
+     },
+     "fwd": {
+      "final_over_base": 0.9742480771624951,
+      "worst_shape": 1.0084141850555557
+     }
+    },
+    "worst_shape_gain": 0.9928633466798403
+   },
+   "value": 1
+  },
+  "lever|real_dg_lo|real_R1O1": {
+   "evidence": {
+    "dtype": "bf16",
+    "eligible": true,
+    "geomean_gain": 1.136580358204249,
+    "per_shape": {
+     "large_balanced@T32_32": 1.1858135091487896,
+     "large_batch@T32_32": 1.2084773958699184,
+     "large_long@T32_32": 1.1947004826298964,
+     "large_wide@T32_32": 1.1909292477808555,
+     "lm_b1_d4096_l32768@T32_32": 1.1860879712968113,
+     "lm_b2_d2048_l16384@T32_32": 1.172523738523378,
+     "lm_b32_d2048_l2048@T32_32": 1.188469825669009,
+     "lm_b6_d2048_l2048@T32_32": 1.0890653868760098,
+     "lm_b6_d4096_l2048@T32_32": 1.1979007479042156,
+     "lm_b8_d512_l8192@T32_32": 1.1507397380314681,
+     "medium_balanced@T32_32": 1.2169050060891868,
+     "medium_batch@T32_32": 1.1398453285880434,
+     "medium_long@T32_32": 1.1674884755921693,
+     "medium_wide@T32_32": 1.2079923490640765,
+     "small_balanced@T32_32": 1.0030712394166932,
+     "small_batch@T32_32": 0.9991184476489198,
+     "small_long@T32_32": 1.004592464466453,
+     "small_wide@T32_32": 1.0054628871002949
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_base": 0.759124933942241,
+      "worst_shape": 1.0054058289763688
+     },
+     "fwd": {
+      "final_over_base": 0.9742480771624951,
+      "worst_shape": 1.0084141850555557
+     }
+    },
+    "worst_shape_gain": 0.9991184476489198
+   },
+   "value": 1
+  },
+  "lever|real_gate_dy_io|real_R1O1": {
+   "evidence": {
+    "dtype": "bf16",
+    "eligible": true,
+    "geomean_gain": 1.0481594662291314,
+    "per_shape": {
+     "large_balanced@T32_32": 1.0694190800951,
+     "large_batch@T32_32": 1.071602316066823,
+     "large_long@T32_32": 1.0690987333563355,
+     "large_wide@T32_32": 1.062636046159685,
+     "lm_b1_d4096_l32768@T32_32": 1.0663353030927436,
+     "lm_b2_d2048_l16384@T32_32": 1.0711139748746719,
+     "lm_b32_d2048_l2048@T32_32": 1.074213954872067,
+     "lm_b6_d2048_l2048@T32_32": 0.9976012091620332,
+     "lm_b6_d4096_l2048@T32_32": 1.0854827375815232,
+     "lm_b8_d512_l8192@T32_32": 1.0535841503156547,
+     "medium_balanced@T32_32": 1.081605563772431,
+     "medium_batch@T32_32": 1.0519425925451469,
+     "medium_long@T32_32": 1.0613152016673655,
+     "medium_wide@T32_32": 1.0770450324792045,
+     "small_balanced@T32_32": 0.9965803813013928,
+     "small_batch@T32_32": 0.9954035162104921,
+     "small_long@T32_32": 0.9955396817937151,
+     "small_wide@T32_32": 0.9961618542692093
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_base": 0.759124933942241,
+      "worst_shape": 1.0054058289763688
+     },
+     "fwd": {
+      "final_over_base": 0.9742480771624951,
+      "worst_shape": 1.0084141850555557
+     }
+    },
+    "worst_shape_gain": 0.9954035162104921
+   },
+   "value": 1
+  },
+  "lever|real_gluon_kbc|real_R1O1": {
+   "evidence": {
+    "applicable": false,
+    "dtype": "bf16",
+    "eligible": true,
+    "phase": "bwd",
+    "reason": "the Gluon Kbc body exists only at T_bwd = 64",
+    "verify": {
+     "bwd": {
+      "final_over_base": 0.759124933942241,
+      "worst_shape": 1.0054058289763688
+     },
+     "fwd": {
+      "final_over_base": 0.9742480771624951,
+      "worst_shape": 1.0084141850555557
+     }
+    }
+   },
+   "value": 0
+  },
+  "lever|real_kc_shared_cb|real_R1O1": {
+   "evidence": {
+    "dtype": "bf16",
+    "eligible": true,
+    "geomean_gain": 0.9736085060672228,
+    "per_shape": {
+     "large_balanced@T32_32": 0.9985193953234747,
+     "large_batch@T32_32": 0.9847578628272075,
+     "large_long@T32_32": 0.9871397298769108,
+     "large_wide@T32_32": 0.9990251322793392,
+     "lm_b1_d4096_l32768@T32_32": 0.9924156394036491,
+     "lm_b2_d2048_l16384@T32_32": 0.986657761005139,
+     "lm_b32_d2048_l2048@T32_32": 0.991996431012167,
+     "lm_b6_d2048_l2048@T32_32": 0.9360103788762146,
+     "lm_b6_d4096_l2048@T32_32": 0.9988965820451524,
+     "lm_b8_d512_l8192@T32_32": 0.969648913195433,
+     "medium_balanced@T32_32": 0.990552675751977,
+     "medium_batch@T32_32": 0.9718943120636875,
+     "medium_long@T32_32": 0.9715213502698428,
+     "medium_wide@T32_32": 0.9969286490594617,
+     "small_balanced@T32_32": 0.9386840561960277,
+     "small_batch@T32_32": 0.9367338158325257,
+     "small_long@T32_32": 0.9411740228944159,
+     "small_wide@T32_32": 0.9377193939822486
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_base": 0.759124933942241,
+      "worst_shape": 1.0054058289763688
+     },
+     "fwd": {
+      "final_over_base": 0.9742480771624951,
+      "worst_shape": 1.0084141850555557
+     }
+    },
+    "worst_shape_gain": 0.9360103788762146
+   },
+   "value": 0
+  },
+  "lever|real_kc_shared_cb|real_R1O1_fp32": {
+   "evidence": {
+    "dtype": "fp32",
+    "eligible": true,
+    "geomean_gain": 1.0214364994849545,
+    "per_shape": {
+     "large_balanced@T64_64": 1.0494531162957008,
+     "large_batch@T64_64": 1.0650247170615461,
+     "large_long@T64_64": 1.0460325539981736,
+     "large_wide@T64_64": 1.0466725267431183,
+     "lm_b1_d4096_l32768@T64_64": 1.048663800587021,
+     "lm_b2_d2048_l16384@T64_64": 1.0364512937171901,
+     "lm_b32_d2048_l2048@T64_64": 1.0487192273010204,
+     "lm_b6_d2048_l2048@T64_64": 0.9391516217620679,
+     "lm_b6_d4096_l2048@T64_64": 1.0276172081731687,
+     "lm_b8_d512_l8192@T64_64": 1.022236862683756,
+     "medium_balanced@T64_64": 1.020671183551231,
+     "medium_batch@T64_64": 1.0320133667954474,
+     "medium_long@T64_64": 1.0265221703364806,
+     "medium_wide@T64_64": 1.0206538956934257,
+     "small_balanced@T64_64": 0.9891611597461732,
+     "small_batch@T64_64": 0.9889662028459983,
+     "small_long@T64_64": 0.9958010113892527,
+     "small_wide@T64_64": 0.9902021261759356
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_base": 1.0169933160793019,
+      "worst_shape": 1.07122725897308
+     },
+     "fwd": {
+      "final_over_base": 0.9522205443115123,
+      "worst_shape": 1.4435621786740456
+     }
+    },
+    "worst_shape_gain": 0.9391516217620679
+   },
+   "value": 0
+  },
+  "lever|rot_ka_bwd|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.0215990557270502,
+    "per_shape": {
+     "cx_large_balanced": 1.0313023790189781,
+     "cx_large_batch": 1.0303429778934954,
+     "cx_large_long": 1.023308308285212,
+     "cx_large_wide": 1.0323096875630509,
+     "cx_lm_b1_d4096_l32768": 1.0217605792219662,
+     "cx_lm_b2_d2048_l16384": 1.0232334404374046,
+     "cx_lm_b32_d2048_l2048": 1.0271864231897865,
+     "cx_lm_b6_d2048_l2048": 1.0265815452616254,
+     "cx_lm_b6_d4096_l2048": 1.0293100408343852,
+     "cx_lm_b8_d512_l8192": 1.024485145764572,
+     "cx_medium_balanced": 1.0274322219461238,
+     "cx_medium_batch": 1.0300957774438324,
+     "cx_medium_long": 1.0287553189681473,
+     "cx_medium_wide": 1.0257969628055152,
+     "cx_small_balanced": 0.9939842876029964,
+     "cx_small_batch": 0.9953963779838996,
+     "cx_small_long": 1.0202699436796907,
+     "cx_small_wide": 0.998506569898395
+    },
+    "phase": "bwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
+    },
+    "worst_shape_gain": 0.9939842876029964
+   },
+   "value": 1
+  },
+  "lever|rot_ka_fwd|complex_R1O1": {
+   "evidence": {
+    "eligible": true,
+    "geomean_gain": 1.1393526339389657,
+    "per_shape": {
+     "cx_large_balanced": 1.2149871027844625,
+     "cx_large_batch": 1.1035944060980953,
+     "cx_large_long": 1.147239499902866,
+     "cx_large_wide": 1.2271690307673944,
+     "cx_lm_b1_d4096_l32768": 1.1681255670855393,
+     "cx_lm_b2_d2048_l16384": 1.142391247900597,
+     "cx_lm_b32_d2048_l2048": 1.1982275181352444,
+     "cx_lm_b6_d2048_l2048": 1.1489596524442995,
+     "cx_lm_b6_d4096_l2048": 1.239330872740886,
+     "cx_lm_b8_d512_l8192": 1.111946174270905,
+     "cx_medium_balanced": 1.1734213900408252,
+     "cx_medium_batch": 1.1874138113345223,
+     "cx_medium_long": 1.1566054151082226,
+     "cx_medium_wide": 1.1700096060114122,
+     "cx_small_balanced": 0.9998952701553947,
+     "cx_small_batch": 1.0034535853973476,
+     "cx_small_long": 1.1585079619828347,
+     "cx_small_wide": 0.9993236983501917
+    },
+    "phase": "fwd",
+    "verify": {
+     "bwd": {
+      "final_over_allon": 1.0158843709226146,
+      "final_over_base": 0.7460213327935741
+     },
+     "fwd": {
+      "final_over_allon": 0.996691877784157,
+      "final_over_base": 0.8320657270507207
+     }
+    },
+    "worst_shape_gain": 0.9993236983501917
+   },
+   "value": 1
   }
+ }
 }

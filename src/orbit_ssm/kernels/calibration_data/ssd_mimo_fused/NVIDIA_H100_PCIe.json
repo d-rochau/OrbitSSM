@@ -14320,13 +14320,15 @@
     }
   },
   "provenance": {
-    "code_hash": "b364e3e094ce1d04",
+    "code_hash": "65971f8c45ed8895",
+    "date": "2026-10-05",
     "driver": null,
     "dropped_shapes": {},
     "fixed_basis": "pass1",
     "gpu": "NVIDIA H100 PCIe",
     "merged": [
       {
+        "date": "2026-10-05",
         "dropped_shapes": {},
         "fixed_basis": "pass1",
         "groups": [
@@ -14438,6 +14440,7 @@
         ]
       },
       {
+        "date": "2026-10-06",
         "dropped_shapes": {},
         "fixed_basis": "pass1",
         "groups": [
@@ -14549,6 +14552,7 @@
         ]
       },
       {
+        "date": "2026-10-06",
         "dropped_shapes": {},
         "fixed_basis": "pass1",
         "groups": [
@@ -14594,6 +14598,7 @@
         ]
       },
       {
+        "date": "2026-10-07",
         "dropped_shapes": {},
         "fixed_basis": "pass1",
         "groups": [
@@ -14639,6 +14644,7 @@
         ]
       },
       {
+        "date": "2026-10-07",
         "dropped_shapes": {},
         "fixed_basis": "pass1",
         "groups": [
@@ -14681,9 +14687,16 @@
     },
     "restamped": [
       {
+        "date": "2026-10-05",
         "from_hash": "57f985e76fe86551",
-        "note": "2026-10-05 redacted-fp32-fast: fused_bwd_kernel._ka_prune_inner (host-side launch-config prune, hashed by its name) no longer applies the 16-bit serial-Ka warps verdict to fp32-operand calls (MMA_IO = 0); no kernel body changed, and every 16-bit (MMA_IO = 1) call's config space is unchanged, so every entry of this file stays valid",
+        "note": "fused_bwd_kernel._ka_prune_inner (host-side launch-config prune, hashed by its name) no longer applies the 16-bit serial-Ka warps verdict to fp32-operand calls (MMA_IO = 0); no kernel body changed, and every 16-bit (MMA_IO = 1) call's config space is unchanged, so every entry of this file stays valid",
         "to_hash": "fccb7816bd5d0356"
+      },
+      {
+        "from_hash": "fccb7816bd5d0356",
+        "to_hash": "65971f8c45ed8895",
+        "date": "2026-10-13",
+        "note": "hash normalization (docstrings + assert messages excluded); normalized kernel source unchanged"
       }
     ],
     "rounds": 5,
@@ -14790,14 +14803,12 @@
     "triton": "3.8.0",
     "targeted_updates": [
       {
-        "source_job": "9392995",
-        "source_sha": "anonymous-revision-11",
+        "date": "2026-10-07",
         "groups": [
           "real_R2O2_t32",
           "real_R4O4_t16"
         ],
-        "workload": "production LM-contract mixer, bf16 N=128; two representative shapes per rank, five rounds; not a full recalibration",
-        "raw": "./local-data"
+        "workload": "production LM-contract mixer, bf16 N=128; two representative shapes per rank, five rounds; not a full recalibration"
       }
     ]
   },

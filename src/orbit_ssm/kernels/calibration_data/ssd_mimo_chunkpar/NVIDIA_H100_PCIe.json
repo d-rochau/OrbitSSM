@@ -3,6 +3,7 @@
   "kernels": {},
   "provenance": {
     "code_hash": "f31f88ef5667b722",
+    "date": "2026-10-07",
     "driver": "610.57.04",
     "dropped_shapes": {},
     "fixed_basis": "pass1",
@@ -34,6 +35,7 @@
     "triton": "3.8.0",
     "targeted_updates": [
       {
+        "date": "2026-10-07",
         "keys": [
           "rank|real|R2O2|T|fwd_only",
           "rank|real|R2O2|T|train_bwd",
@@ -42,10 +44,15 @@
           "rank|real|R4O4|T|train_bwd",
           "rank|real|R4O4|T|train_fwd"
         ],
-        "source_job": "9392770",
-        "source_sha": "anonymous-revision-10",
-        "source_results": "./local-data",
         "workload": "production LM-contract mixer, bf16, N=128; complete real R2 18-shape and R4 6-LM-shape chunk screens"
+      }
+    ],
+    "restamped": [
+      {
+        "from_hash": "3c4c4db1d6b6061b",
+        "to_hash": "f31f88ef5667b722",
+        "date": "2026-10-13",
+        "note": "hash normalization (docstrings + assert messages excluded); normalized kernel source unchanged"
       }
     ]
   },
@@ -152,83 +159,83 @@
       "value": 27
     },
     "rank|cx|R2O2|T|fwd_only": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+      "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
       "value": 32
     },
     "rank|cx|R2O2|T|train_bwd": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+      "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
       "value": 32
     },
     "rank|cx|R2O2|T|train_fwd": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+      "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
       "value": 32
     },
     "rank|cx|R4O4|T|fwd_only": {
-      "evidence": "tools/calibrate_rank.py screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (16)",
+      "evidence": "the per-rank screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (16)",
       "value": 32
     },
     "rank|cx|R4O4|T|train_bwd": {
       "value": 16,
       "kernel_width": 16,
-      "evidence": "2026-10-07 H100 N128 production complex R4O4 mixer: three alternating rounds, 10 calls/round, T16 vs T32, calibration enabled: T32 uses its calibrated group; T16 uses generic light runtime tuning during warmup (~uncal:16). LM ratio 0.907683; large_balanced ratio 0.963201. Short fp64 output/input-gradient check passed. measurement; redacted/p1_rgt1_quick_20261007/complex_tune. Only training chunks changed; inference and all other ranks/dtypes preserved."
+      "evidence": "H100 N128 production complex R4O4 mixer: three alternating rounds, 10 calls/round, T16 vs T32, calibration enabled: T32 uses its calibrated group; T16 uses generic light runtime tuning during warmup (~uncal:16). LM ratio 0.907683; large_balanced ratio 0.963201. Short fp64 output/input-gradient check passed. Only training chunks changed; inference and all other ranks/dtypes preserved."
     },
     "rank|cx|R4O4|T|train_fwd": {
       "value": 16,
       "kernel_width": 16,
-      "evidence": "2026-10-07 H100 N128 production complex R4O4 mixer: three alternating rounds, 10 calls/round, T16 vs T32, calibration enabled: T32 uses its calibrated group; T16 uses generic light runtime tuning during warmup (~uncal:16). LM ratio 0.907683; large_balanced ratio 0.963201. Short fp64 output/input-gradient check passed. measurement; redacted/p1_rgt1_quick_20261007/complex_tune. Only training chunks changed; inference and all other ranks/dtypes preserved."
+      "evidence": "H100 N128 production complex R4O4 mixer: three alternating rounds, 10 calls/round, T16 vs T32, calibration enabled: T32 uses its calibrated group; T16 uses generic light runtime tuning during warmup (~uncal:16). LM ratio 0.907683; large_balanced ratio 0.963201. Short fp64 output/input-gradient check passed. Only training chunks changed; inference and all other ranks/dtypes preserved."
     },
     "rank|real|R2O2|T|fwd_only": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+      "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
       "value": 32,
       "kernel_width": 32
     },
     "rank|real|R2O2|T|train_bwd": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+      "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
       "value": 32,
       "kernel_width": 32
     },
     "rank|real|R2O2|T|train_fwd": {
-      "evidence": "tools/calibrate_rank.py screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+      "evidence": "the per-rank screen over 18 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
       "value": 32,
       "kernel_width": 32
     },
     "rank|real|R4O4|T|fwd_only": {
-      "evidence": "tools/calibrate_rank.py screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (16)",
+      "evidence": "the per-rank screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (16)",
       "value": 16,
       "kernel_width": 16
     },
     "rank|real|R4O4|T|train_bwd": {
-      "evidence": "tools/calibrate_rank.py screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+      "evidence": "the per-rank screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
       "value": 16,
       "kernel_width": 16
     },
     "rank|real|R4O4|T|train_fwd": {
-      "evidence": "tools/calibrate_rank.py screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
+      "evidence": "the per-rank screen over 6 shapes (calibration off), decision rule geomean >= 1.015 and worst shape >= 0.97 vs the fixed rule (32)",
       "value": 16,
       "kernel_width": 16
     },
     "real_r1o1|T|fwd_only": {
-      "evidence": "tools/calibrate_real.py (screen: (T_fwd, T_bwd) in {32,64}^2)",
+      "evidence": "the real-decay screen (screen: (T_fwd, T_bwd) in {32,64}^2)",
       "value": 32
     },
     "real_r1o1|T|fwd_only|fp32": {
-      "evidence": "tools/calibrate_real.py --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
+      "evidence": "the real-decay screen at --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
       "value": 32
     },
     "real_r1o1|T|train_bwd": {
-      "evidence": "tools/calibrate_real.py (screen: (T_fwd, T_bwd) in {32,64}^2)",
+      "evidence": "the real-decay screen (screen: (T_fwd, T_bwd) in {32,64}^2)",
       "value": 32
     },
     "real_r1o1|T|train_bwd|fp32": {
-      "evidence": "tools/calibrate_real.py --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
+      "evidence": "the real-decay screen at --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
       "value": 64
     },
     "real_r1o1|T|train_fwd": {
-      "evidence": "tools/calibrate_real.py (screen: (T_fwd, T_bwd) in {32,64}^2)",
+      "evidence": "the real-decay screen (screen: (T_fwd, T_bwd) in {32,64}^2)",
       "value": 32
     },
     "real_r1o1|T|train_fwd|fp32": {
-      "evidence": "tools/calibrate_real.py --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
+      "evidence": "the real-decay screen at --dtype fp32 (screen: (T_fwd, T_bwd) in {32,64}^2)",
       "value": 64
     }
   }

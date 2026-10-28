@@ -1,8 +1,0 @@
-% TABLE 1a_m1_rest: HybridMamba m1exact (mh\_scan, P=1) vs official Mamba-1, N=16; bf16 kernel / bf16 mixer; ratio = ours / official (< 1: ours faster / leaner); copied official weights, outputs gated before timing; kernel = the aligned scope (METHOD.md); group = geomean (min--max) over its shapes; memory = full mixer, one layer. canary details are retained per record; per-group spread <=1.15; whole-run spread recorded, not gated.
-\begin{tabular}{l c c c c c c }
-\toprule
-set & kernel fwd & kernel f+b & mixer eager f+b & mixer graph f+b & saved for backward & peak \\
-\midrule
-Small+medium & 1.22 (0.73--2.34) & 1.22 (0.70--2.38) & 1.44 (0.90--2.28) & 0.99 (0.88--1.16) & 1.04 (0.99--1.06) & 1.07 (0.86--1.50) \\
-\bottomrule
-\end{tabular}

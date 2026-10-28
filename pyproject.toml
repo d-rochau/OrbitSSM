@@ -1,25 +1,38 @@
 [build-system]
+# SPDX license strings below require setuptools' PEP 639 support.
 requires = ["setuptools>=77.0.3", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "orbit-ssm"
 version = "0.1.0"
-description = "SSD-MIMO and HybridMamba selective state-space models"
-readme = "README.txt"
+description = "OrbitSSM: SSD-MIMO and HybridMamba selective SSMs"
+readme = "README.md"
 license = "Apache-2.0"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
-    "torch>=2.14",
-    "triton>=3.8",
+    # supported stack: the tested torch / Triton minors only; a new minor is
+    # admitted after a GPU gate run on it.  GPUs: sm_80 minimum, validated on sm_80 / sm_90 / sm_120
+    # (orbit_ssm.kernels.input_checks); see docs/environment.md for the install.
+    "torch>=2.14,<2.15",
+    "triton>=3.8,<3.9",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest"]
-fast = ["causal-conv1d>=1.4.0"]
+# the optional compiled causal-conv1d package: an explicit opt-in (conv_kernel="causal_conv1d"), the default conv is plain Triton
+conv-package = ["causal-conv1d>=1.4.0"]
+fast = ["causal-conv1d>=1.4.0"]       # older name of conv-package, kept so `pip install .[fast]` still works
+# the CPU / GPU test suite (tests/)
+test = ["pytest>=9.0", "PyYAML>=6.0", "numpy", "pytest-timeout"]
+# the official reference implementations the benchmarks and parity tests compare against
+# (source builds against the installed torch; see docs/environment.md)
+baselines = ["mamba-ssm", "causal-conv1d>=1.4.0", "lightning", "torchmetrics"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+# `orbit_ssm` is the only production package.  `benchmarks`
+# and `tests` are repo-root packages run in place (`python -m benchmarks.
+# bench_kernels`, `pytest tests/`) and are deliberately NOT installed.
 include = ["orbit_ssm*"]
 exclude = ["benchmarks*", "tests*", "tests_old*", "tools*"]
 
@@ -27,7 +40,8 @@ exclude = ["benchmarks*", "tests*", "tests_old*", "tools*"]
 orbit_ssm = ["kernels/calibration_data/**/*.json"]
 
 [tool.pytest.ini_options]
-pythonpath = ["src"]
+pythonpath = ["src", "."]
+# Collect correctness tests only; benchmark entry points are not tests.
 testpaths = ["tests"]
 markers = [
     "gpu: requires CUDA GPU",
@@ -37,14 +51,14 @@ markers = [
     "kernel_ssd: SSD-MIMO kernel tests",
     "ssm: SSM-level tests",
     "contract: contract parity tests",
-    "legacy: tests for deprecated/legacy code",
+    "contract_cells: the generated cells of the contract suite (tests/test_contract.py)",
     "smoke: quick smoke tests",
     "step: step/decode function tests",
     "nonpow2: non-power-of-2 shape tests",
     "oracle: sequential-vs-torch reference cross-validation (skippable via SSD_SKIP_SEQ_ORACLE=1)",
-    "tier1: A10 T1 -- values/gradients vs an oracle, ABI/State (tests/_tiers.py)",
-    "tier2: A10 T2 -- envelope: served, or refused by name (tests/_tiers.py)",
-    "tier3: A10 T3 -- defaults, configuration, recipes (tests/_tiers.py)",
+    "tier1: A10 T1 -- values/gradients vs an oracle, ABI/State (deep suite)",
+    "tier2: A10 T2 -- envelope: served, or refused by name (deep suite)",
+    "tier3: A10 T3 -- defaults, configuration, recipes (deep suite)",
 ]
 addopts = "-v --tb=short"
 filterwarnings = ["ignore::DeprecationWarning"]

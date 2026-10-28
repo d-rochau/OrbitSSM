@@ -1,2 +1,0 @@
-task: based_triviaqa
-class: !function task.BasedTriviaQA

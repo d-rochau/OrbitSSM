@@ -1,1606 +1,1475 @@
 {
-  "family": "mh",
-  "kernels": {},
-  "p1_cells": {
-    "B128|H1024|N128|L1024|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_batch_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 60.1051025390625,
-        "fwd": 12.4246244430542,
-        "fwd_trn": 12.989839553833008
-      },
-      "ms_tuner": {
-        "fb": 62.00360107421875,
-        "fwd": 13.126336097717285,
-        "fwd_trn": 14.846639633178711
-      },
-      "ratio": {
-        "fb": 0.9693808343021282,
-        "fwd": 0.9465416968269527,
-        "fwd_trn": 0.8749346569175023
-      }
-    },
-    "B128|H1024|N128|L1024|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_batch_n128_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=4,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 61.37724685668945,
-        "fwd": 14.97107219696045,
-        "fwd_trn": 15.853551864624023
-      },
-      "ms_tuner": {
-        "fb": 66.3721923828125,
-        "fwd": 18.331327438354492,
-        "fwd_trn": 20.883535385131836
-      },
-      "ratio": {
-        "fb": 0.9247434001077759,
-        "fwd": 0.8166932944330366,
-        "fwd_trn": 0.7591411881300069
-      }
-    },
-    "B128|H1024|N16|L1024|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_batch_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 8.643274943033854,
-        "fwd": 1.9723766033466046,
-        "fwd_trn": 2.089735984802246
-      },
-      "ms_tuner": {
-        "fb": 8.837589263916016,
-        "fwd": 2.045584042867025,
-        "fwd_trn": 2.292613809758967
-      },
-      "ratio": {
-        "fb": 0.9780127458881179,
-        "fwd": 0.9642119619696411,
-        "fwd_trn": 0.9115080681739197
-      }
-    },
-    "B128|H1024|N16|L1024|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_batch_n16_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 9.582602818806967,
-        "fwd": 2.5287424087524415,
-        "fwd_trn": 2.603068733215332
-      },
-      "ms_tuner": {
-        "fb": 10.210784276326498,
-        "fwd": 2.9935359954833984,
-        "fwd_trn": 3.2572600841522217
-      },
-      "ratio": {
-        "fb": 0.9384786280348751,
-        "fwd": 0.844734258271078,
-        "fwd_trn": 0.7991590066388087
-      }
-    },
-    "B16|H4096|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_balanced_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 60.895599365234375,
-        "fwd": 11.851797739664713,
-        "fwd_trn": 12.488495826721191
-      },
-      "ms_tuner": {
-        "fb": 62.5063362121582,
-        "fwd": 12.330762227376303,
-        "fwd_trn": 14.156880378723145
-      },
-      "ratio": {
-        "fb": 0.9742308229127894,
-        "fwd": 0.9611569440007358,
-        "fwd_trn": 0.8821502684652598
-      }
-    },
-    "B16|H4096|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_balanced_n128_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=4,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 61.993072509765625,
-        "fwd": 14.728048324584961,
-        "fwd_trn": 15.90345573425293
-      },
-      "ms_tuner": {
-        "fb": 66.26507568359375,
-        "fwd": 18.15675163269043,
-        "fwd_trn": 20.2435359954834
-      },
-      "ratio": {
-        "fb": 0.935531603491614,
-        "fwd": 0.8111609732033653,
-        "fwd_trn": 0.7856066122934848
-      }
-    },
-    "B16|H4096|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_balanced_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 8.700096130371094,
-        "fwd": 1.9188480377197266,
-        "fwd_trn": 2.0232186317443848
-      },
-      "ms_tuner": {
-        "fb": 8.854901631673178,
-        "fwd": 1.914574696467473,
-        "fwd_trn": 2.1576719284057617
-      },
-      "ratio": {
-        "fb": 0.9825175357399388,
-        "fwd": 1.0022320054997793,
-        "fwd_trn": 0.9376859406236423
-      }
-    },
-    "B16|H4096|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_balanced_n16_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 9.682432174682617,
-        "fwd": 2.4922752380371094,
-        "fwd_trn": 2.59866886138916
-      },
-      "ms_tuner": {
-        "fb": 10.181290944417318,
-        "fwd": 2.93902587890625,
-        "fwd_trn": 3.1421000957489014
-      },
-      "ratio": {
-        "fb": 0.9510024050527464,
-        "fwd": 0.8479936348721783,
-        "fwd_trn": 0.8270484014513173
-      }
-    },
-    "B1|H1024|N128|L32768|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "medium_long_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
-      "ms_cal": {
-        "fb": 20.81710433959961,
-        "fwd": 5.30511360168457,
-        "fwd_trn": 5.294060897827149
-      },
-      "ms_tuner": {
-        "fb": 21.27120018005371,
-        "fwd": 5.75164794921875,
-        "fwd_trn": 5.7474113464355465
-      },
-      "ratio": {
-        "fb": 0.9786520818472709,
-        "fwd": 0.9223641030402716,
-        "fwd_trn": 0.9211209323151094
-      }
-    },
-    "B1|H1024|N128|L32768|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "medium_long_n128_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=2",
-      "ms_cal": {
-        "fb": 20.06438446044922,
-        "fwd": 5.90643196105957,
-        "fwd_trn": 6.038694381713867
-      },
-      "ms_tuner": {
-        "fb": 20.634912490844727,
-        "fwd": 6.6212477684021,
-        "fwd_trn": 6.618639945983887
-      },
-      "ratio": {
-        "fb": 0.972351322999376,
-        "fwd": 0.8920421297698945,
-        "fwd_trn": 0.9123769280391323
-      }
-    },
-    "B1|H1024|N16|L32768|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=128,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=32",
-      "cell": "medium_long_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
-      "ms_cal": {
-        "fb": 3.0429561138153076,
-        "fwd": 0.7936091423034668,
-        "fwd_trn": 0.79991700914171
-      },
-      "ms_tuner": {
-        "fb": 3.1493160724639893,
-        "fwd": 0.8411852029653696,
-        "fwd_trn": 0.841031367962177
-      },
-      "ratio": {
-        "fb": 0.9662276011040496,
-        "fwd": 0.943441633906319,
-        "fwd_trn": 0.9511143574584058
-      }
-    },
-    "B1|H1024|N16|L32768|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "medium_long_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=2",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
-      "ms_cal": {
-        "fb": 3.1441519260406494,
-        "fwd": 0.9736584373142408,
-        "fwd_trn": 1.0054981925270774
-      },
-      "ms_tuner": {
-        "fb": 3.187131881713867,
-        "fwd": 1.0505112239292689,
-        "fwd_trn": 1.050051007952009
-      },
-      "ratio": {
-        "fb": 0.9865145349272132,
-        "fwd": 0.9268424888145673,
-        "fwd_trn": 0.9575708083821317
-      }
-    },
-    "B1|H128|N128|L32768|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=8,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "small_long_n128_bf16_m1",
-      "fwd": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=16",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=16",
-      "ms_cal": {
-        "fb": 4.177893320719401,
-        "fwd": 1.448091983795166,
-        "fwd_trn": 1.4754639863967896
-      },
-      "ms_tuner": {
-        "fb": 5.278028869628907,
-        "fwd": 1.9208123133732722,
-        "fwd_trn": 1.9202264639047475
-      },
-      "ratio": {
-        "fb": 0.7915631808609537,
-        "fwd": 0.753895616824775,
-        "fwd_trn": 0.7683801958423482
-      }
-    },
-    "B1|H128|N128|L32768|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=8,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "small_long_n128_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=16",
-      "fwd_trn": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=16",
-      "ms_cal": {
-        "fb": 4.400458653767903,
-        "fwd": 1.633418655395508,
-        "fwd_trn": 1.8261883075420673
-      },
-      "ms_tuner": {
-        "fb": 6.139167785644531,
-        "fwd": 3.7861121041434154,
-        "fwd_trn": 3.7848548889160156
-      },
-      "ratio": {
-        "fb": 0.716784229950137,
-        "fwd": 0.4314237430022054,
-        "fwd_trn": 0.4824988965600973
-      }
-    },
-    "B1|H128|N16|L32768|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=168,NP=1,NS=2,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "small_long_n16_bf16_m1",
-      "fwd": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=16",
-      "fwd_trn": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=16",
-      "ms_cal": {
-        "fb": 0.667907573558666,
-        "fwd": 0.21557531356811524,
-        "fwd_trn": 0.21935528867384968
-      },
-      "ms_tuner": {
-        "fb": 0.8046387892503005,
-        "fwd": 0.28651011192192466,
-        "fwd_trn": 0.28640976598707296
-      },
-      "ratio": {
-        "fb": 0.8300713096133112,
-        "fwd": 0.7524178191199776,
-        "fwd_trn": 0.7658792217432636
-      }
-    },
-    "B1|H128|N16|L32768|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=16,TS=32",
-      "cell": "small_long_n16_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=16",
-      "fwd_trn": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=16",
-      "ms_cal": {
-        "fb": 0.6269109002475081,
-        "fwd": 0.23997800052165985,
-        "fwd_trn": 0.24319399893283844
-      },
-      "ms_tuner": {
-        "fb": 0.8873786926269531,
-        "fwd": 0.48956801251667303,
-        "fwd_trn": 0.48645920753479005
-      },
-      "ratio": {
-        "fb": 0.7064750432440869,
-        "fwd": 0.4901831704404646,
-        "fwd_trn": 0.49992680818040836
-      }
-    },
-    "B1|H4096|N128|L1024|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=8,HP=4,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=1",
-      "cell": "small_wide_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.25891789523038,
-        "fwd": 0.3990900119145711,
-        "fwd_trn": 0.4294400109185113
-      },
-      "ms_tuner": {
-        "fb": 2.3263884457674893,
-        "fwd": 0.4496123573996804,
-        "fwd_trn": 0.4530575161888486
-      },
-      "ratio": {
-        "fb": 0.9709977279762277,
-        "fwd": 0.887631323619965,
-        "fwd_trn": 0.9478708454745229
-      }
-    },
-    "B1|H4096|N128|L1024|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=8,HP=4,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=1",
-      "cell": "small_wide_n128_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=0",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.5089344024658202,
-        "fwd": 0.4799960136413574,
-        "fwd_trn": 0.5227402134945518
-      },
-      "ms_tuner": {
-        "fb": 2.64664183722602,
-        "fwd": 0.6284108315744708,
-        "fwd_trn": 0.6286758654045336
-      },
-      "ratio": {
-        "fb": 0.9479689949643763,
-        "fwd": 0.7638251753852444,
-        "fwd_trn": 0.8314940055129754
-      }
-    },
-    "B1|H4096|N128|L32768|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "lm_b1_d4096_l32768_n128_bf16_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 74.06289672851562,
-        "fwd": 15.01478385925293,
-        "fwd_trn": 16.567855834960938
-      },
-      "ms_tuner": {
-        "fb": 73.95448303222656,
-        "fwd": 15.936736106872559,
-        "fwd_trn": 16.49420738220215
-      },
-      "ratio": {
-        "fb": 1.0014659516481486,
-        "fwd": 0.9421492430170789,
-        "fwd_trn": 1.0044651101475939
-      }
-    },
-    "B1|H4096|N128|L32768|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "lm_b1_d4096_l32768_n128_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 73.95999908447266,
-        "fwd": 18.22216033935547,
-        "fwd_trn": 18.813392639160156
-      },
-      "ms_tuner": {
-        "fb": 79.05496215820312,
-        "fwd": 22.588768005371094,
-        "fwd_trn": 24.001583099365234
-      },
-      "ratio": {
-        "fb": 0.9355516347786679,
-        "fwd": 0.8066911986976295,
-        "fwd_trn": 0.7838396559624315
-      }
-    },
-    "B1|H4096|N16|L1024|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=1",
-      "cell": "small_wide_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 0.46590318177875717,
-        "fwd": 0.10710016250610352,
-        "fwd_trn": 0.12520832061767578
-      },
-      "ms_tuner": {
-        "fb": 0.4659931182861328,
-        "fwd": 0.10878687858581543,
-        "fwd_trn": 0.1266108798980713
-      },
-      "ratio": {
-        "fb": 0.9998070003529098,
-        "fwd": 0.984495224960597,
-        "fwd_trn": 0.988922284707881
-      }
-    },
-    "B1|H4096|N16|L1024|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=8,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "small_wide_n16_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=0",
-      "ms_cal": {
-        "fb": 0.48131110933091903,
-        "fwd": 0.11078816413879394,
-        "fwd_trn": 0.13209183692932128
-      },
-      "ms_tuner": {
-        "fb": 0.4744222429063585,
-        "fwd": 0.11323904037475586,
-        "fwd_trn": 0.1337980842590332
-      },
-      "ratio": {
-        "fb": 1.0145205384603357,
-        "fwd": 0.978356614221995,
-        "fwd_trn": 0.9872475952166204
-      }
-    },
-    "B1|H4096|N16|L32768|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "lm_b1_d4096_l32768_n16_bf16_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=2",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 10.623658498128256,
-        "fwd": 2.1607099012895064,
-        "fwd_trn": 2.5900586446126304
-      },
-      "ms_tuner": {
-        "fb": 10.615658442179361,
-        "fwd": 2.496691131591797,
-        "fwd_trn": 2.582424799601237
-      },
-      "ratio": {
-        "fb": 1.0007536090193998,
-        "fwd": 0.865429397312722,
-        "fwd_trn": 1.0029560764025238
-      }
-    },
-    "B1|H4096|N16|L32768|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "lm_b1_d4096_l32768_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
-      "ms_cal": {
-        "fb": 11.45974349975586,
-        "fwd": 3.2245359420776367,
-        "fwd_trn": 3.3258719444274902
-      },
-      "ms_tuner": {
-        "fb": 11.94485346476237,
-        "fwd": 3.5972663334437778,
-        "fwd_trn": 3.692306246076311
-      },
-      "ratio": {
-        "fb": 0.9593875331800765,
-        "fwd": 0.8963851000130663,
-        "fwd_trn": 0.900757337764651
-      }
-    },
-    "B2|H2048|N128|L16384|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "lm_b2_d2048_l16384_n128_bf16_m1",
-      "fwd": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 37.83185577392578,
-        "fwd": 7.59555196762085,
-        "fwd_trn": 8.284554799397787
-      },
-      "ms_tuner": {
-        "fb": 37.85580825805664,
-        "fwd": 7.588624000549316,
-        "fwd_trn": 8.28500239054362
-      },
-      "ratio": {
-        "fb": 0.9993672705660495,
-        "fwd": 1.0009129411433524,
-        "fwd_trn": 0.9999459757372741
-      }
-    },
-    "B2|H2048|N128|L16384|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "lm_b2_d2048_l16384_n128_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 37.392784118652344,
-        "fwd": 9.112885157267252,
-        "fwd_trn": 9.407029469807943
-      },
-      "ms_tuner": {
-        "fb": 39.64708709716797,
-        "fwd": 11.58294423421224,
-        "fwd_trn": 11.50814946492513
-      },
-      "ratio": {
-        "fb": 0.9431407666093923,
-        "fwd": 0.786750326428298,
-        "fwd_trn": 0.8174232962892043
-      }
-    },
-    "B2|H2048|N128|L32768|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "large_long_n128_bf16_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 74.58870697021484,
-        "fwd": 14.891488075256348,
-        "fwd_trn": 16.4649600982666
-      },
-      "ms_tuner": {
-        "fb": 74.55083465576172,
-        "fwd": 15.79423999786377,
-        "fwd_trn": 16.426816940307617
-      },
-      "ratio": {
-        "fb": 1.0005080065787058,
-        "fwd": 0.9428429653639857,
-        "fwd_trn": 1.002322005419406
-      }
-    },
-    "B2|H2048|N128|L32768|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "large_long_n128_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
-      "ms_cal": {
-        "fb": 76.33577728271484,
-        "fwd": 18.591327667236328,
-        "fwd_trn": 19.187952041625977
-      },
-      "ms_tuner": {
-        "fb": 80.96376037597656,
-        "fwd": 23.032320022583008,
-        "fwd_trn": 23.3494873046875
-      },
-      "ratio": {
-        "fb": 0.9428388321914588,
-        "fwd": 0.8071843239850643,
-        "fwd_trn": 0.8217718783818402
-      }
-    },
-    "B2|H2048|N16|L16384|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "lm_b2_d2048_l16384_n16_bf16_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 5.503212738037109,
-        "fwd": 1.1473024368286133,
-        "fwd_trn": 1.2725084092881944
-      },
-      "ms_tuner": {
-        "fb": 5.874911880493164,
-        "fwd": 1.1833984375,
-        "fwd_trn": 1.272448009914822
-      },
-      "ratio": {
-        "fb": 0.936731111884379,
-        "fwd": 0.9694980156069484,
-        "fwd_trn": 1.0000474670657675
-      }
-    },
-    "B2|H2048|N16|L16384|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "lm_b2_d2048_l16384_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 5.766636657714844,
-        "fwd": 1.6148202260335287,
-        "fwd_trn": 1.6602833611624581
-      },
-      "ms_tuner": {
-        "fb": 5.988236618041992,
-        "fwd": 1.8173317542442908,
-        "fwd_trn": 1.855667701134315
-      },
-      "ratio": {
-        "fb": 0.9629941208970452,
-        "fwd": 0.8885665604324547,
-        "fwd_trn": 0.894709413839329
-      }
-    },
-    "B2|H2048|N16|L32768|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "large_long_n16_bf16_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=2",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 10.862965901692709,
-        "fwd": 2.21761738170277,
-        "fwd_trn": 2.569977569580078
-      },
-      "ms_tuner": {
-        "fb": 10.835829416910807,
-        "fwd": 2.4742431640625,
-        "fwd_trn": 2.563193511962891
-      },
-      "ratio": {
-        "fb": 1.0025043292707758,
-        "fwd": 0.896281098767038,
-        "fwd_trn": 1.0026467208135184
-      }
-    },
-    "B2|H2048|N16|L32768|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "large_long_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=2",
-      "ms_cal": {
-        "fb": 11.559135437011719,
-        "fwd": 3.2168080806732178,
-        "fwd_trn": 3.3322761058807373
-      },
-      "ms_tuner": {
-        "fb": 12.032789866129557,
-        "fwd": 3.6431405203683034,
-        "fwd_trn": 3.7303589412144254
-      },
-      "ratio": {
-        "fb": 0.9606363582853631,
-        "fwd": 0.8829766688077172,
-        "fwd_trn": 0.8932856484839791
-      }
-    },
-    "B2|H8192|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_wide_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 17.32268714904785,
-        "fwd": 2.8793563842773438,
-        "fwd_trn": 3.0156679153442383
-      },
-      "ms_tuner": {
-        "fb": 17.75542449951172,
-        "fwd": 3.137324094772339,
-        "fwd_trn": 3.469933646065848
-      },
-      "ratio": {
-        "fb": 0.9756278792165308,
-        "fwd": 0.9177746057779489,
-        "fwd_trn": 0.8690851822954457
-      }
-    },
-    "B2|H8192|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_wide_n128_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 16.95307159423828,
-        "fwd": 3.71310179574149,
-        "fwd_trn": 3.850747517177037
-      },
-      "ms_tuner": {
-        "fb": 18.331472396850586,
-        "fwd": 5.179033660888672,
-        "fwd_trn": 5.315955352783203
-      },
-      "ratio": {
-        "fb": 0.9248068691498497,
-        "fwd": 0.7169487666748159,
-        "fwd_trn": 0.7243754436652582
-      }
-    },
-    "B2|H8192|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=8,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_wide_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.455292892456055,
-        "fwd": 0.4699070340111142,
-        "fwd_trn": 0.4955463886260986
-      },
-      "ms_tuner": {
-        "fb": 2.5138431549072267,
-        "fwd": 0.48080685025169734,
-        "fwd_trn": 0.5430248662045127
-      },
-      "ratio": {
-        "fb": 0.9767088641402003,
-        "fwd": 0.9773301561014008,
-        "fwd_trn": 0.9125666603257669
-      }
-    },
-    "B2|H8192|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_wide_n16_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.6634203592936196,
-        "fwd": 0.6420109868049622,
-        "fwd_trn": 0.6680700182914734
-      },
-      "ms_tuner": {
-        "fb": 2.781582302517361,
-        "fwd": 0.7282515558703192,
-        "fwd_trn": 0.785750495062934
-      },
-      "ratio": {
-        "fb": 0.9575198824364091,
-        "fwd": 0.881578599633347,
-        "fwd_trn": 0.8502317497591457
-      }
-    },
-    "B32|H128|N128|L1024|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=1",
-      "cell": "small_batch_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.4797183990478517,
-        "fwd": 0.43303892347547746,
-        "fwd_trn": 0.43407344818115234
-      },
-      "ms_tuner": {
-        "fb": 2.5062719345092774,
-        "fwd": 0.4339889950222439,
-        "fwd_trn": 0.4763443810599191
-      },
-      "ratio": {
-        "fb": 0.9894051658577804,
-        "fwd": 0.9978108395427913,
-        "fwd_trn": 0.9112597218325338
-      }
-    },
-    "B32|H128|N128|L1024|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "small_batch_n128_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.608611636691623,
-        "fwd": 0.5182652724416632,
-        "fwd_trn": 0.6314508376582977
-      },
-      "ms_tuner": {
-        "fb": 2.8352461920844183,
-        "fwd": 0.764100745872215,
-        "fwd_trn": 0.8376013437906901
-      },
-      "ratio": {
-        "fb": 0.920065299434834,
-        "fwd": 0.6782682457011182,
-        "fwd_trn": 0.7538799243093052
-      }
-    },
-    "B32|H128|N16|L1024|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "small_batch_n16_bf16_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=0",
-      "ms_cal": {
-        "fb": 0.47598060808683695,
-        "fwd": 0.10793536186218261,
-        "fwd_trn": 0.12993151664733887
-      },
-      "ms_tuner": {
-        "fb": 0.4766231336091694,
-        "fwd": 0.1096947193145752,
-        "fwd_trn": 0.13107040405273437
-      },
-      "ratio": {
-        "fb": 0.9986519212412813,
-        "fwd": 0.9839613295572851,
-        "fwd_trn": 0.9913108728577865
-      }
-    },
-    "B32|H128|N16|L1024|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=2,TS=1",
-      "cell": "small_batch_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=0",
-      "fwd_trn": "BLOCK_L=128,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 0.4679221591433963,
-        "fwd": 0.10811424255371094,
-        "fwd_trn": 0.13039327621459962
-      },
-      "ms_tuner": {
-        "fb": 0.4686209704424884,
-        "fwd": 0.11193696022033692,
-        "fwd_trn": 0.13252618140781047
-      },
-      "ratio": {
-        "fb": 0.9985087920874897,
-        "fwd": 0.965849370403651,
-        "fwd_trn": 0.9839057824608447
-      }
-    },
-    "B32|H2048|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b32_d2048_l2048_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 62.846046447753906,
-        "fwd": 12.535072326660156,
-        "fwd_trn": 13.231743812561035
-      },
-      "ms_tuner": {
-        "fb": 64.90290832519531,
-        "fwd": 12.795408248901367,
-        "fwd_trn": 15.317119598388672
-      },
-      "ratio": {
-        "fb": 0.9683086331488333,
-        "fwd": 0.9796539573277341,
-        "fwd_trn": 0.8638532674219627
-      }
-    },
-    "B32|H2048|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b32_d2048_l2048_n128_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 61.71913528442383,
-        "fwd": 14.73697566986084,
-        "fwd_trn": 15.862064361572266
-      },
-      "ms_tuner": {
-        "fb": 65.89894104003906,
-        "fwd": 18.005935668945312,
-        "fwd_trn": 20.01425552368164
-      },
-      "ratio": {
-        "fb": 0.9365724897904557,
-        "fwd": 0.818450978655754,
-        "fwd_trn": 0.792538315642251
-      }
-    },
-    "B32|H2048|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b32_d2048_l2048_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 9.128725051879883,
-        "fwd": 1.9781489739051232,
-        "fwd_trn": 2.1258959770202637
-      },
-      "ms_tuner": {
-        "fb": 9.32924779256185,
-        "fwd": 1.9775926149808443,
-        "fwd_trn": 2.302149859341708
-      },
-      "ratio": {
-        "fb": 0.9785060119378711,
-        "fwd": 1.0002813314127816,
-        "fwd_trn": 0.9234394400493791
-      }
-    },
-    "B32|H2048|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b32_d2048_l2048_n16_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 9.718591690063477,
-        "fwd": 2.4997280120849608,
-        "fwd_trn": 2.618195152282715
-      },
-      "ms_tuner": {
-        "fb": 10.212095896402994,
-        "fwd": 2.8517049153645835,
-        "fwd_trn": 3.1302719116210938
-      },
-      "ratio": {
-        "fb": 0.9516745424890355,
-        "fwd": 0.8765731680780782,
-        "fwd_trn": 0.836411412875252
-      }
-    },
-    "B4|H512|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=168,NP=1,NS=2,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "small_balanced_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 2.576857566833496,
-        "fwd": 0.40843408004097315,
-        "fwd_trn": 0.4934547619941907
-      },
-      "ms_tuner": {
-        "fb": 2.5718303680419923,
-        "fwd": 0.4080939597271858,
-        "fwd_trn": 0.49373998641967776
-      },
-      "ratio": {
-        "fb": 1.0019547163195415,
-        "fwd": 1.0008334362851503,
-        "fwd_trn": 0.9994223185617285
-      }
-    },
-    "B4|H512|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=0,NP=1,NS=2,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=1",
-      "cell": "small_balanced_n128_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
-      "fwd_trn": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.7111892700195312,
-        "fwd": 0.5380682192350689,
-        "fwd_trn": 0.611029307047526
-      },
-      "ms_tuner": {
-        "fb": 2.748288048638238,
-        "fwd": 0.6406689882278442,
-        "fwd_trn": 0.6412839022549716
-      },
-      "ratio": {
-        "fb": 0.9865011316273457,
-        "fwd": 0.8398536984339142,
-        "fwd_trn": 0.9528218389685752
-      }
-    },
-    "B4|H512|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=0,NP=1,NS=2,NUM_WARPS=1,PU=0,THS=0,TP_P=16,TS=1",
-      "cell": "small_balanced_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 0.4956664461078066,
-        "fwd": 0.10955360412597656,
-        "fwd_trn": 0.13270655632019043
-      },
-      "ms_tuner": {
-        "fb": 0.49196422801298256,
-        "fwd": 0.11140095710754394,
-        "fwd_trn": 0.13408224105834962
-      },
-      "ratio": {
-        "fb": 1.0075253806761053,
-        "fwd": 0.9834170815984643,
-        "fwd_trn": 0.9897399929528287
-      }
-    },
-    "B4|H512|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=0,NP=1,NS=2,NUM_WARPS=1,PU=0,THS=0,TP_P=16,TS=1",
-      "cell": "small_balanced_n16_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=4,PF=1",
-      "fwd_trn": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 0.47449689441257054,
-        "fwd": 0.10774751663208008,
-        "fwd_trn": 0.12984640121459962
-      },
-      "ms_tuner": {
-        "fb": 0.4731920030381944,
-        "fwd": 0.10971584320068359,
-        "fwd_trn": 0.13075360298156738
-      },
-      "ratio": {
-        "fb": 1.002757636151917,
-        "fwd": 0.9820597781397605,
-        "fwd_trn": 0.9930617455559091
-      }
-    },
-    "B4|H8192|N128|L4096|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_wide_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=4",
-      "ms_cal": {
-        "fb": 61.39931106567383,
-        "fwd": 11.86123784383138,
-        "fwd_trn": 12.583359718322754
-      },
-      "ms_tuner": {
-        "fb": 63.1336784362793,
-        "fwd": 12.606863975524902,
-        "fwd_trn": 14.220208168029785
-      },
-      "ratio": {
-        "fb": 0.9725286501030356,
-        "fwd": 0.940855542413951,
-        "fwd_trn": 0.8848927926816829
-      }
-    },
-    "B4|H8192|N128|L4096|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_wide_n128_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 63.55595016479492,
-        "fwd": 15.492447853088379,
-        "fwd_trn": 16.52003288269043
-      },
-      "ms_tuner": {
-        "fb": 68.75894165039062,
-        "fwd": 19.738880157470703,
-        "fwd_trn": 21.84721565246582
-      },
-      "ratio": {
-        "fb": 0.9243299655185117,
-        "fwd": 0.7848696445540174,
-        "fwd_trn": 0.7561619359410622
-      }
-    },
-    "B4|H8192|N16|L4096|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_wide_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=4",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
-      "ms_cal": {
-        "fb": 8.958346684773764,
-        "fwd": 1.9605218447171724,
-        "fwd_trn": 2.055181344350179
-      },
-      "ms_tuner": {
-        "fb": 9.111637115478516,
-        "fwd": 1.9942827224731445,
-        "fwd_trn": 2.2079417488791724
-      },
-      "ratio": {
-        "fb": 0.9831764117949399,
-        "fwd": 0.9830711677057982,
-        "fwd_trn": 0.9308132089052894
-      }
-    },
-    "B4|H8192|N16|L4096|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "large_wide_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=4",
-      "fwd_trn": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 10.087263743082682,
-        "fwd": 2.6280704498291017,
-        "fwd_trn": 2.901646296183268
-      },
-      "ms_tuner": {
-        "fb": 10.419637044270834,
-        "fwd": 3.1964359283447266,
-        "fwd_trn": 3.333728075027466
-      },
-      "ratio": {
-        "fb": 0.9681012592112405,
-        "fwd": 0.8221877455838907,
-        "fwd_trn": 0.8703908149915203
-      }
-    },
-    "B64|H512|N128|L1024|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_batch_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 15.652976036071777,
-        "fwd": 3.1383919715881348,
-        "fwd_trn": 3.2939798831939697
-      },
-      "ms_tuner": {
-        "fb": 16.09404754638672,
-        "fwd": 3.4378719329833984,
-        "fwd_trn": 3.7461120060511996
-      },
-      "ratio": {
-        "fb": 0.9725941215816797,
-        "fwd": 0.9128879820908937,
-        "fwd_trn": 0.8793062988701651
-      }
-    },
-    "B64|H512|N128|L1024|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_batch_n128_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 15.748208045959473,
-        "fwd": 3.8178787231445312,
-        "fwd_trn": 4.056310926164899
-      },
-      "ms_tuner": {
-        "fb": 16.81540870666504,
-        "fwd": 4.701157251993815,
-        "fwd_trn": 5.224076843261718
-      },
-      "ratio": {
-        "fb": 0.9365343608756553,
-        "fwd": 0.8121146599649107,
-        "fwd_trn": 0.7764646363111861
-      }
-    },
-    "B64|H512|N16|L1024|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_batch_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.2455040324818003,
-        "fwd": 0.5078907478146437,
-        "fwd_trn": 0.5312352791810647
-      },
-      "ms_tuner": {
-        "fb": 2.2958545684814453,
-        "fwd": 0.5360927092723358,
-        "fwd_trn": 0.5842302110460069
-      },
-      "ratio": {
-        "fb": 0.9780689349008075,
-        "fwd": 0.9473934993520581,
-        "fwd_trn": 0.9092910108670006
-      }
-    },
-    "B64|H512|N16|L1024|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_batch_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.493235206604004,
-        "fwd": 0.6721145875992314,
-        "fwd_trn": 0.7078627309491557
-      },
-      "ms_tuner": {
-        "fb": 2.6082098219129772,
-        "fwd": 0.7704110638848667,
-        "fwd_trn": 0.8114915777135778
-      },
-      "ratio": {
-        "fb": 0.9559181878915533,
-        "fwd": 0.8724103522216223,
-        "fwd_trn": 0.8722983089283538
-      }
-    },
-    "B6|H2048|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b6_d2048_l2048_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 12.2785275777181,
-        "fwd": 2.445033645629883,
-        "fwd_trn": 2.508355140686035
-      },
-      "ms_tuner": {
-        "fb": 12.63203239440918,
-        "fwd": 2.457446479797363,
-        "fwd_trn": 2.792352040608724
-      },
-      "ratio": {
-        "fb": 0.9720152066070114,
-        "fwd": 0.9949488893168067,
-        "fwd_trn": 0.8982947365545003
-      }
-    },
-    "B6|H2048|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b6_d2048_l2048_n128_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 11.97604242960612,
-        "fwd": 2.898787604437934,
-        "fwd_trn": 2.9773936801486545
-      },
-      "ms_tuner": {
-        "fb": 12.972895622253418,
-        "fwd": 3.4589669363839284,
-        "fwd_trn": 3.965435300554548
-      },
-      "ratio": {
-        "fb": 0.9231587749047083,
-        "fwd": 0.8380501050606697,
-        "fwd_trn": 0.7508365297833203
-      }
-    },
-    "B6|H2048|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b6_d2048_l2048_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 1.7758005582369292,
-        "fwd": 0.3708597689258809,
-        "fwd_trn": 0.4048465381969105
-      },
-      "ms_tuner": {
-        "fb": 1.811081812931941,
-        "fwd": 0.36970776927714444,
-        "fwd_trn": 0.43951997756958006
-      },
-      "ratio": {
-        "fb": 0.9805192374838686,
-        "fwd": 1.0031159735998756,
-        "fwd_trn": 0.9211106635825662
-      }
-    },
-    "B6|H2048|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b6_d2048_l2048_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 1.9133680661519368,
-        "fwd": 0.5064184188842773,
-        "fwd_trn": 0.5283410423680356
-      },
-      "ms_tuner": {
-        "fb": 1.9763545989990234,
-        "fwd": 0.557321496911951,
-        "fwd_trn": 0.5975167955671038
-      },
-      "ratio": {
-        "fb": 0.9681299434428479,
-        "fwd": 0.9086647862863333,
-        "fwd_trn": 0.8842279351605281
-      }
-    },
-    "B6|H4096|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b6_d4096_l2048_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 24.1900634765625,
-        "fwd": 4.375466664632161,
-        "fwd_trn": 4.6327253977457685
-      },
-      "ms_tuner": {
-        "fb": 24.839248657226562,
-        "fwd": 4.679637273152669,
-        "fwd_trn": 5.267859268188476
-      },
-      "ratio": {
-        "fb": 0.9738645403642194,
-        "fwd": 0.9350012424540785,
-        "fwd_trn": 0.8794322630678174
-      }
-    },
-    "B6|H4096|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b6_d4096_l2048_n128_fp32_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 24.1026554107666,
-        "fwd": 5.54664306640625,
-        "fwd_trn": 5.80206069946289
-      },
-      "ms_tuner": {
-        "fb": 25.9454402923584,
-        "fwd": 6.849679946899414,
-        "fwd_trn": 7.79095983505249
-      },
-      "ratio": {
-        "fb": 0.9289746151606244,
-        "fwd": 0.8097667496007607,
-        "fwd_trn": 0.744717059553908
-      }
-    },
-    "B6|H4096|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b6_d4096_l2048_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 3.425979341779436,
-        "fwd": 0.7080891472952706,
-        "fwd_trn": 0.7407288727936922
-      },
-      "ms_tuner": {
-        "fb": 3.490016119820731,
-        "fwd": 0.7134819030761719,
-        "fwd_trn": 0.8128516857440655
-      },
-      "ratio": {
-        "fb": 0.9816514377462005,
-        "fwd": 0.9924416362101821,
-        "fwd_trn": 0.9112718664237575
-      }
-    },
-    "B6|H4096|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "lm_b6_d4096_l2048_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 3.779058183942522,
-        "fwd": 0.9752439657847086,
-        "fwd_trn": 1.0086413673732593
-      },
-      "ms_tuner": {
-        "fb": 3.9339793069022044,
-        "fwd": 1.0919390178862072,
-        "fwd_trn": 1.1689279556274415
-      },
-      "ratio": {
-        "fb": 0.9606197412660835,
-        "fwd": 0.8931304311046613,
-        "fwd_trn": 0.8628772735885628
-      }
-    },
-    "B8|H2048|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=128,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_balanced_n128_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 17.680240631103516,
-        "fwd": 3.1798079013824463,
-        "fwd_trn": 3.2673280239105225
-      },
-      "ms_tuner": {
-        "fb": 18.144655227661133,
-        "fwd": 3.207240104675293,
-        "fwd_trn": 3.681033270699637
-      },
-      "ratio": {
-        "fb": 0.9744048817279467,
-        "fwd": 0.9914467883920328,
-        "fwd_trn": 0.8876116523906116
-      }
-    },
-    "B8|H2048|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_balanced_n128_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 17.306095123291016,
-        "fwd": 3.7741075243268694,
-        "fwd_trn": 3.9376822880336215
-      },
-      "ms_tuner": {
-        "fb": 18.353647232055664,
-        "fwd": 4.607749303181966,
-        "fwd_trn": 5.241574478149414
-      },
-      "ratio": {
-        "fb": 0.9429240359956881,
-        "fwd": 0.8190783126418336,
-        "fwd_trn": 0.7512403581116063
-      }
-    },
-    "B8|H2048|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_balanced_n16_bf16_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=1,NUM_WARPS=1,PF=0,TS=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.4870655059814455,
-        "fwd": 0.48334780193510507,
-        "fwd_trn": 0.5221941664412215
-      },
-      "ms_tuner": {
-        "fb": 2.5283071517944338,
-        "fwd": 0.48283504304431735,
-        "fwd_trn": 0.5675031344095866
-      },
-      "ratio": {
-        "fb": 0.9836880397289872,
-        "fwd": 1.0010619753022787,
-        "fwd_trn": 0.920160849833009
-      }
-    },
-    "B8|H2048|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
-      "cell": "medium_balanced_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
-      "ms_cal": {
-        "fb": 2.6970880296495228,
-        "fwd": 0.6609114285173088,
-        "fwd_trn": 0.6939385937106225
-      },
-      "ms_tuner": {
-        "fb": 2.7891413370768228,
-        "fwd": 0.7392936282687717,
-        "fwd_trn": 0.792401772958261
-      },
-      "ratio": {
-        "fb": 0.9669958254880776,
-        "fwd": 0.8939769034192638,
-        "fwd_trn": 0.8757408392966519
-      }
-    },
-    "B8|H512|N128|L8192|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "lm_b8_d512_l8192_n128_bf16_m1",
-      "fwd": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 19.694896697998047,
-        "fwd": 3.931675502232143,
-        "fwd_trn": 4.162618637084961
-      },
-      "ms_tuner": {
-        "fb": 19.696399688720703,
-        "fwd": 3.9303131103515625,
-        "fwd_trn": 4.1660105387369795
-      },
-      "ratio": {
-        "fb": 0.9999236921088925,
-        "fwd": 1.0003466369834484,
-        "fwd_trn": 0.9991858153932931
-      }
-    },
-    "B8|H512|N128|L8192|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=16",
-      "cell": "lm_b8_d512_l8192_n128_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
-      "ms_cal": {
-        "fb": 19.04662322998047,
-        "fwd": 4.65068785349528,
-        "fwd_trn": 4.842944145202637
-      },
-      "ms_tuner": {
-        "fb": 20.258928298950195,
-        "fwd": 5.516025543212891,
-        "fwd_trn": 5.916966247558594
-      },
-      "ratio": {
-        "fb": 0.9401594669234035,
-        "fwd": 0.8431229727022653,
-        "fwd_trn": 0.8184843283838047
-      }
-    },
-    "B8|H512|N16|L8192|bf16|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=4,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=32,TS=1",
-      "cell": "lm_b8_d512_l8192_n16_bf16_m1",
-      "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=4",
-      "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
-      "ms_cal": {
-        "fb": 2.9136034647623696,
-        "fwd": 0.6083666120256697,
-        "fwd_trn": 0.648455023765564
-      },
-      "ms_tuner": {
-        "fb": 2.9110399881998696,
-        "fwd": 0.6237317814546472,
-        "fwd_trn": 0.6472640037536621
-      },
-      "ratio": {
-        "fb": 1.0008806050665369,
-        "fwd": 0.975365742317726,
-        "fwd_trn": 1.0018400838065995
-      }
-    },
-    "B8|H512|N16|L8192|fp32|sp1.db1.ds1.z0.h0": {
-      "bwd": "AGX=1,BCS=1,HP=8,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
-      "cell": "lm_b8_d512_l8192_n16_fp32_m1",
-      "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
-      "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=2",
-      "ms_cal": {
-        "fb": 2.9326292673746743,
-        "fwd": 0.8239679689760562,
-        "fwd_trn": 0.8447692577655499
-      },
-      "ms_tuner": {
-        "fb": 3.022887945175171,
-        "fwd": 0.9097792053222656,
-        "fwd_trn": 0.9350213209788004
-      },
-      "ratio": {
-        "fb": 0.9701415734101033,
-        "fwd": 0.9056790528468794,
-        "fwd_trn": 0.9034759302399942
-      }
-    }
+ "family": "mh",
+ "kernels": {},
+ "p1_cells": {
+  "B128|H1024|N128|L1024|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "large_batch_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 60.06779098510742,
+    "fwd": 12.346304575602213,
+    "fwd_trn": 13.336576461791992
+   },
+   "ms_tuner": {
+    "fb": 61.78905487060547,
+    "fwd": 13.05247974395752,
+    "fwd_trn": 15.06708812713623
+   },
+   "ratio": {
+    "fb": 0.9721428999180745,
+    "fwd": 0.9458972408149324,
+    "fwd_trn": 0.8851462438699392
+   }
   },
-  "provenance": {
-    "code_hash": "ebdc3495bcd659d3",
-    "driver": "610.57.04",
-    "dropped_shapes": {},
-    "fixed_basis": "p1 per-cell table (tools/calibrate_mh_p1.py)",
-    "gpu": "NVIDIA RTX PRO 5000 Blackwell",
-    "notes": null,
-    "rounds": 5,
-    "shapes": [
-      "large_balanced_n128_bf16_m1",
-      "large_balanced_n128_fp32_m1",
-      "large_balanced_n16_bf16_m1",
-      "large_balanced_n16_fp32_m1",
-      "large_batch_n128_bf16_m1",
-      "large_batch_n128_fp32_m1",
-      "large_batch_n16_bf16_m1",
-      "large_batch_n16_fp32_m1",
-      "large_long_n128_bf16_m1",
-      "large_long_n128_fp32_m1",
-      "large_long_n16_bf16_m1",
-      "large_long_n16_fp32_m1",
-      "large_wide_n128_bf16_m1",
-      "large_wide_n128_fp32_m1",
-      "large_wide_n16_bf16_m1",
-      "large_wide_n16_fp32_m1",
-      "lm_b1_d4096_l32768_n128_bf16_m1",
-      "lm_b1_d4096_l32768_n128_fp32_m1",
-      "lm_b1_d4096_l32768_n16_bf16_m1",
-      "lm_b1_d4096_l32768_n16_fp32_m1",
-      "lm_b2_d2048_l16384_n128_bf16_m1",
-      "lm_b2_d2048_l16384_n128_fp32_m1",
-      "lm_b2_d2048_l16384_n16_bf16_m1",
-      "lm_b2_d2048_l16384_n16_fp32_m1",
-      "lm_b32_d2048_l2048_n128_bf16_m1",
-      "lm_b32_d2048_l2048_n128_fp32_m1",
-      "lm_b32_d2048_l2048_n16_bf16_m1",
-      "lm_b32_d2048_l2048_n16_fp32_m1",
-      "lm_b6_d2048_l2048_n128_bf16_m1",
-      "lm_b6_d2048_l2048_n128_fp32_m1",
-      "lm_b6_d2048_l2048_n16_bf16_m1",
-      "lm_b6_d2048_l2048_n16_fp32_m1",
-      "lm_b6_d4096_l2048_n128_bf16_m1",
-      "lm_b6_d4096_l2048_n128_fp32_m1",
-      "lm_b6_d4096_l2048_n16_bf16_m1",
-      "lm_b6_d4096_l2048_n16_fp32_m1",
-      "lm_b8_d512_l8192_n128_bf16_m1",
-      "lm_b8_d512_l8192_n128_fp32_m1",
-      "lm_b8_d512_l8192_n16_bf16_m1",
-      "lm_b8_d512_l8192_n16_fp32_m1",
-      "medium_balanced_n128_bf16_m1",
-      "medium_balanced_n128_fp32_m1",
-      "medium_balanced_n16_bf16_m1",
-      "medium_balanced_n16_fp32_m1",
-      "medium_batch_n128_bf16_m1",
-      "medium_batch_n128_fp32_m1",
-      "medium_batch_n16_bf16_m1",
-      "medium_batch_n16_fp32_m1",
-      "medium_long_n128_bf16_m1",
-      "medium_long_n128_fp32_m1",
-      "medium_long_n16_bf16_m1",
-      "medium_long_n16_fp32_m1",
-      "medium_wide_n128_bf16_m1",
-      "medium_wide_n128_fp32_m1",
-      "medium_wide_n16_bf16_m1",
-      "medium_wide_n16_fp32_m1",
-      "small_balanced_n128_bf16_m1",
-      "small_balanced_n128_fp32_m1",
-      "small_balanced_n16_bf16_m1",
-      "small_balanced_n16_fp32_m1",
-      "small_batch_n128_bf16_m1",
-      "small_batch_n128_fp32_m1",
-      "small_batch_n16_bf16_m1",
-      "small_batch_n16_fp32_m1",
-      "small_long_n128_bf16_m1",
-      "small_long_n128_fp32_m1",
-      "small_long_n16_bf16_m1",
-      "small_long_n16_fp32_m1",
-      "small_wide_n128_bf16_m1",
-      "small_wide_n128_fp32_m1",
-      "small_wide_n16_bf16_m1",
-      "small_wide_n16_fp32_m1"
-    ],
-    "sms": 110,
-    "torch": "2.14.0+cu130",
-    "triton": "3.8.0"
+  "B128|H1024|N16|L1024|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "large_batch_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 8.577407836914062,
+    "fwd": 1.9564357170691857,
+    "fwd_trn": 2.0673786799112954
+   },
+   "ms_tuner": {
+    "fb": 8.788351694742838,
+    "fwd": 2.0298372904459634,
+    "fwd_trn": 2.2807768041437324
+   },
+   "ratio": {
+    "fb": 0.9759973354326544,
+    "fwd": 0.9638386910506255,
+    "fwd_trn": 0.9064362089947892
+   }
   },
-  "schema": 1,
-  "thresholds": {}
+  "B128|H1024|N16|L1024|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "large_batch_n16_fp32_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 9.48852284749349,
+    "fwd": 2.5106592178344727,
+    "fwd_trn": 2.588995170593262
+   },
+   "ms_tuner": {
+    "fb": 10.094922383626303,
+    "fwd": 2.9786169264051647,
+    "fwd_trn": 3.225764036178589
+   },
+   "ratio": {
+    "fb": 0.9399302428400662,
+    "fwd": 0.8428942962009347,
+    "fwd_trn": 0.8025990560860499
+   }
+  },
+  "B16|H4096|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "large_balanced_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 60.7355842590332,
+    "fwd": 11.835797627766928,
+    "fwd_trn": 12.811535835266113
+   },
+   "ms_tuner": {
+    "fb": 62.24964904785156,
+    "fwd": 12.42801570892334,
+    "fwd_trn": 14.309712409973145
+   },
+   "ratio": {
+    "fb": 0.9756775369503772,
+    "fwd": 0.9523481386709869,
+    "fwd_trn": 0.8953035161165868
+   }
+  },
+  "B16|H4096|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "large_balanced_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 8.630709330240885,
+    "fwd": 1.90955323439378,
+    "fwd_trn": 2.00601593653361
+   },
+   "ms_tuner": {
+    "fb": 8.792682647705078,
+    "fwd": 1.912681873028095,
+    "fwd_trn": 2.1476133664449057
+   },
+   "ratio": {
+    "fb": 0.9815786235038895,
+    "fwd": 0.9983642660714079,
+    "fwd_trn": 0.9340675411488558
+   }
+  },
+  "B16|H4096|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "large_balanced_n16_fp32_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 9.618133544921875,
+    "fwd": 2.4728832244873047,
+    "fwd_trn": 2.5828256607055664
+   },
+   "ms_tuner": {
+    "fb": 10.084159851074219,
+    "fwd": 2.9053512149386935,
+    "fwd_trn": 3.094655990600586
+   },
+   "ratio": {
+    "fb": 0.9537863031690538,
+    "fwd": 0.8511477757911914,
+    "fwd_trn": 0.8346083275654533
+   }
+  },
+  "B1|H1024|N128|L32768|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=128,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=32",
+   "cell": "medium_long_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=4",
+   "ms_cal": {
+    "fb": 20.142112731933594,
+    "fwd": 5.309983825683593,
+    "fwd_trn": 5.294118499755859
+   },
+   "ms_tuner": {
+    "fb": 21.210128784179688,
+    "fwd": 5.724505615234375,
+    "fwd_trn": 5.720518493652344
+   },
+   "ratio": {
+    "fb": 0.9496459421291816,
+    "fwd": 0.9275881940883012,
+    "fwd_trn": 0.925461303137184
+   }
+  },
+  "B1|H1024|N16|L32768|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=128,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=32",
+   "cell": "medium_long_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=2",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=4",
+   "ms_cal": {
+    "fb": 3.008676052093506,
+    "fwd": 0.7822921187789352,
+    "fwd_trn": 0.7951715257432725
+   },
+   "ms_tuner": {
+    "fb": 3.1374239921569824,
+    "fwd": 0.8286633858313928,
+    "fwd_trn": 0.8345390466543344
+   },
+   "ratio": {
+    "fb": 0.9589638058530424,
+    "fwd": 0.9440408881998165,
+    "fwd_trn": 0.9528272271155122
+   }
+  },
+  "B1|H1024|N16|L32768|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "medium_long_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
+   "ms_cal": {
+    "fb": 3.1555280685424805,
+    "fwd": 0.984965531722359,
+    "fwd_trn": 1.0163345336914062
+   },
+   "ms_tuner": {
+    "fb": 3.2027080059051514,
+    "fwd": 1.065407980056036,
+    "fwd_trn": 1.0646308717273532
+   },
+   "ratio": {
+    "fb": 0.985268735933566,
+    "fwd": 0.924496108683693,
+    "fwd_trn": 0.9546356025186583
+   }
+  },
+  "B1|H128|N128|L32768|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=8,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "small_long_n128_bf16_m1",
+   "fwd": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=16",
+   "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=16",
+   "ms_cal": {
+    "fb": 4.175306638081868,
+    "fwd": 1.3722898819867302,
+    "fwd_trn": 1.3818804797004252
+   },
+   "ms_tuner": {
+    "fb": 5.310841751098633,
+    "fwd": 1.8699937967153697,
+    "fwd_trn": 1.9153477595402644
+   },
+   "ratio": {
+    "fb": 0.7861854737468197,
+    "fwd": 0.7338472910429689,
+    "fwd_trn": 0.7214775869381099
+   }
+  },
+  "B1|H128|N128|L32768|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=8,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "small_long_n128_fp32_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=16",
+   "fwd_trn": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=16",
+   "ms_cal": {
+    "fb": 4.39303461710612,
+    "fwd": 1.6310997009277344,
+    "fwd_trn": 1.8115100860595703
+   },
+   "ms_tuner": {
+    "fb": 6.152400016784668,
+    "fwd": 3.7858924865722656,
+    "fwd_trn": 3.785609109061105
+   },
+   "ratio": {
+    "fb": 0.7140359217738222,
+    "fwd": 0.43083624448208424,
+    "fwd_trn": 0.4785253928419608
+   }
+  },
+  "B1|H128|N16|L32768|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=168,NP=1,NS=2,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "small_long_n16_bf16_m1",
+   "fwd": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=16",
+   "fwd_trn": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=16",
+   "ms_cal": {
+    "fb": 0.7335869824444806,
+    "fwd": 0.21741087045242538,
+    "fwd_trn": 0.21978633587176982
+   },
+   "ms_tuner": {
+    "fb": 0.7847199806800256,
+    "fwd": 0.37349732716878253,
+    "fwd_trn": 0.2864463411528489
+   },
+   "ratio": {
+    "fb": 0.9348391789498798,
+    "fwd": 0.5820948495146203,
+    "fwd_trn": 0.7672862393256787
+   }
+  },
+  "B1|H128|N16|L32768|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "small_long_n16_fp32_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=16",
+   "fwd_trn": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=16",
+   "ms_cal": {
+    "fb": 0.7020777293613979,
+    "fwd": 0.23986770857625933,
+    "fwd_trn": 0.2429485775175549
+   },
+   "ms_tuner": {
+    "fb": 0.9930661808360707,
+    "fwd": 0.48606202660537345,
+    "fwd_trn": 0.47980799674987795
+   },
+   "ratio": {
+    "fb": 0.7069797994432887,
+    "fwd": 0.493491973136598,
+    "fwd_trn": 0.5063454114213171
+   }
+  },
+  "B1|H4096|N128|L1024|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=8,HP=4,LWS=1,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=16,TS=1",
+   "cell": "small_wide_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=2,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.2520523071289062,
+    "fwd": 0.41723590426974827,
+    "fwd_trn": 0.4286872690374201
+   },
+   "ms_tuner": {
+    "fb": 2.3296159744262694,
+    "fwd": 0.4501315326225467,
+    "fwd_trn": 0.4505324696385583
+   },
+   "ratio": {
+    "fb": 0.9667053848579205,
+    "fwd": 0.926919964568706,
+    "fwd_trn": 0.9515124833984472
+   }
+  },
+  "B1|H4096|N128|L1024|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=8,HP=4,LWS=1,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=16,TS=1",
+   "cell": "small_wide_n128_fp32_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=0",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.4954303741455077,
+    "fwd": 0.4791640770144579,
+    "fwd_trn": 0.5181170513755397
+   },
+   "ms_tuner": {
+    "fb": 2.6086756388346353,
+    "fwd": 0.6225129961967468,
+    "fwd_trn": 0.6212916518702651
+   },
+   "ratio": {
+    "fb": 0.9565889821627203,
+    "fwd": 0.7697254192955304,
+    "fwd_trn": 0.8339353181647613
+   }
+  },
+  "B1|H4096|N128|L32768|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "lm_b1_d4096_l32768_n128_bf16_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 72.67160034179688,
+    "fwd": 14.646592140197754,
+    "fwd_trn": 16.26495933532715
+   },
+   "ms_tuner": {
+    "fb": 72.63751983642578,
+    "fwd": 15.701151847839355,
+    "fwd_trn": 16.171695709228516
+   },
+   "ratio": {
+    "fb": 1.0004691859723163,
+    "fwd": 0.9328355194662536,
+    "fwd_trn": 1.0057670900921918
+   }
+  },
+  "B1|H4096|N128|L32768|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "lm_b1_d4096_l32768_n128_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 73.55022430419922,
+    "fwd": 18.24095916748047,
+    "fwd_trn": 18.795312881469727
+   },
+   "ms_tuner": {
+    "fb": 78.54093170166016,
+    "fwd": 22.57022476196289,
+    "fwd_trn": 23.770111083984375
+   },
+   "ratio": {
+    "fb": 0.9364572422387568,
+    "fwd": 0.8081868638819034,
+    "fwd_trn": 0.7907120339094029
+   }
+  },
+  "B1|H4096|N16|L1024|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=2,TS=1",
+   "cell": "small_wide_n16_bf16_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 0.548251451764788,
+    "fwd": 0.10836000442504883,
+    "fwd_trn": 0.1297878360748291
+   },
+   "ms_tuner": {
+    "fb": 0.5457160949707032,
+    "fwd": 0.10983488082885742,
+    "fwd_trn": 0.1308569622039795
+   },
+   "ratio": {
+    "fb": 1.0046459263662013,
+    "fwd": 0.9865718759589067,
+    "fwd_trn": 0.991829810877897
+   }
+  },
+  "B1|H4096|N16|L1024|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=2,TS=1",
+   "cell": "small_wide_n16_fp32_m1",
+   "fwd": "BLOCK_L=128,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=0",
+   "ms_cal": {
+    "fb": 0.5358327048165458,
+    "fwd": 0.11067968368530273,
+    "fwd_trn": 0.12920031547546387
+   },
+   "ms_tuner": {
+    "fb": 0.534960447038923,
+    "fwd": 0.11199392318725586,
+    "fwd_trn": 0.13030112266540528
+   },
+   "ratio": {
+    "fb": 1.0016305089141653,
+    "fwd": 0.9882650820281053,
+    "fwd_trn": 0.9915518211399597
+   }
+  },
+  "B1|H4096|N16|L32768|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "lm_b1_d4096_l32768_n16_bf16_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 10.50937589009603,
+    "fwd": 2.137998580932617,
+    "fwd_trn": 2.5468063354492188
+   },
+   "ms_tuner": {
+    "fb": 10.484095891316732,
+    "fwd": 2.4541439056396483,
+    "fwd_trn": 2.541321563720703
+   },
+   "ratio": {
+    "fb": 1.0024112712284743,
+    "fwd": 0.8711789785511249,
+    "fwd_trn": 1.002158236016573
+   }
+  },
+  "B1|H4096|N16|L32768|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "lm_b1_d4096_l32768_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
+   "ms_cal": {
+    "fb": 11.33346176147461,
+    "fwd": 3.2116200923919678,
+    "fwd_trn": 3.311880111694336
+   },
+   "ms_tuner": {
+    "fb": 11.808619181315104,
+    "fwd": 3.6304092407226562,
+    "fwd_trn": 3.7117576599121094
+   },
+   "ratio": {
+    "fb": 0.9597618135918601,
+    "fwd": 0.8846440936649539,
+    "fwd_trn": 0.8922673340082116
+   }
+  },
+  "B2|H2048|N128|L16384|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "lm_b2_d2048_l16384_n128_bf16_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 36.787601470947266,
+    "fwd": 7.243319988250732,
+    "fwd_trn": 8.100760459899902
+   },
+   "ms_tuner": {
+    "fb": 36.78327941894531,
+    "fwd": 7.370296001434326,
+    "fwd_trn": 8.077336311340332
+   },
+   "ratio": {
+    "fb": 1.0001175004532012,
+    "fwd": 0.9827719248780669,
+    "fwd_trn": 1.0028999843087731
+   }
+  },
+  "B2|H2048|N128|L16384|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "lm_b2_d2048_l16384_n128_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
+   "ms_cal": {
+    "fb": 37.06846237182617,
+    "fwd": 9.117792129516602,
+    "fwd_trn": 9.399701436360678
+   },
+   "ms_tuner": {
+    "fb": 39.30622482299805,
+    "fwd": 11.53433609008789,
+    "fwd_trn": 11.488800048828125
+   },
+   "ratio": {
+    "fb": 0.9430684971337526,
+    "fwd": 0.790491282576033,
+    "fwd_trn": 0.8181621576153605
+   }
+  },
+  "B2|H2048|N128|L32768|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "large_long_n128_bf16_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 73.92689514160156,
+    "fwd": 14.762399673461914,
+    "fwd_trn": 16.34337615966797
+   },
+   "ms_tuner": {
+    "fb": 73.92049407958984,
+    "fwd": 15.730879783630371,
+    "fwd_trn": 16.287647247314453
+   },
+   "ratio": {
+    "fb": 1.0000865938748302,
+    "fwd": 0.9384344598973885,
+    "fwd_trn": 1.0034215446532773
+   }
+  },
+  "B2|H2048|N16|L16384|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "lm_b2_d2048_l16384_n16_bf16_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=2",
+   "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 5.355199813842773,
+    "fwd": 1.082674298967634,
+    "fwd_trn": 1.2220664777253802
+   },
+   "ms_tuner": {
+    "fb": 5.468627166748047,
+    "fwd": 1.152132797241211,
+    "fwd_trn": 1.2202391373483759
+   },
+   "ratio": {
+    "fb": 0.9792585324530866,
+    "fwd": 0.9397131142869156,
+    "fwd_trn": 1.0014975264446733
+   }
+  },
+  "B2|H2048|N16|L16384|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=16",
+   "cell": "lm_b2_d2048_l16384_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=2",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
+   "ms_cal": {
+    "fb": 5.807648086547852,
+    "fwd": 1.5986068725585938,
+    "fwd_trn": 1.6449623107910156
+   },
+   "ms_tuner": {
+    "fb": 6.010079956054687,
+    "fwd": 1.790688001192533,
+    "fwd_trn": 1.8244012685922475
+   },
+   "ratio": {
+    "fb": 0.9663179406951315,
+    "fwd": 0.8927333357312831,
+    "fwd_trn": 0.9016450158798172
+   }
+  },
+  "B2|H2048|N16|L32768|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "large_long_n16_bf16_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
+   "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 10.77285385131836,
+    "fwd": 2.210914958607067,
+    "fwd_trn": 2.5369951248168947
+   },
+   "ms_tuner": {
+    "fb": 10.739861806233725,
+    "fwd": 2.470572853088379,
+    "fwd_trn": 2.533919906616211
+   },
+   "ratio": {
+    "fb": 1.0030719245442699,
+    "fwd": 0.8948997216751886,
+    "fwd_trn": 1.0012136209170046
+   }
+  },
+  "B2|H2048|N16|L32768|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "large_long_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=8",
+   "ms_cal": {
+    "fb": 11.377663930257162,
+    "fwd": 3.221940040588379,
+    "fwd_trn": 3.3207759857177734
+   },
+   "ms_tuner": {
+    "fb": 11.821088155110678,
+    "fwd": 3.597357613699777,
+    "fwd_trn": 3.677494866507394
+   },
+   "ratio": {
+    "fb": 0.9624887134724727,
+    "fwd": 0.8956407415037917,
+    "fwd_trn": 0.9029994891254858
+   }
+  },
+  "B2|H8192|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_wide_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 17.250688552856445,
+    "fwd": 2.861760033501519,
+    "fwd_trn": 2.9798577626546225
+   },
+   "ms_tuner": {
+    "fb": 17.676544189453125,
+    "fwd": 3.1078920364379883,
+    "fwd_trn": 3.432732105255127
+   },
+   "ratio": {
+    "fb": 0.9759084336829384,
+    "fwd": 0.9208041978129442,
+    "fwd_trn": 0.8680717490574914
+   }
+  },
+  "B2|H8192|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=8,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_wide_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.4407615661621094,
+    "fwd": 0.46325560978480745,
+    "fwd_trn": 0.48851510955066213
+   },
+   "ms_tuner": {
+    "fb": 2.4955392837524415,
+    "fwd": 0.4747746165205793,
+    "fwd_trn": 0.5361498782509252
+   },
+   "ratio": {
+    "fb": 0.9780497474245466,
+    "fwd": 0.9757379473650262,
+    "fwd_trn": 0.9111540063094645
+   }
+  },
+  "B2|H8192|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=16,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_wide_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.6268338097466364,
+    "fwd": 0.6332941055297852,
+    "fwd_trn": 0.6617376732103752
+   },
+   "ms_tuner": {
+    "fb": 2.814399931165907,
+    "fwd": 0.7244543711344401,
+    "fwd_trn": 0.8258732282198392
+   },
+   "ratio": {
+    "fb": 0.9333548443694111,
+    "fwd": 0.8741670017645073,
+    "fwd_trn": 0.8012581720765348
+   }
+  },
+  "B32|H128|N128|L1024|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=1",
+   "cell": "small_batch_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.44967041015625,
+    "fwd": 0.4297294616699219,
+    "fwd_trn": 0.43204689025878906
+   },
+   "ms_tuner": {
+    "fb": 2.4663679122924806,
+    "fwd": 0.43347488750110974,
+    "fwd_trn": 0.4713607881127334
+   },
+   "ratio": {
+    "fb": 0.9932299224081657,
+    "fwd": 0.9913595321454964,
+    "fwd_trn": 0.9165948911207654
+   }
+  },
+  "B32|H128|N128|L1024|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=16,TS=1",
+   "cell": "small_batch_n128_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.5781728744506838,
+    "fwd": 0.5365936881617496,
+    "fwd_trn": 0.6216106414794922
+   },
+   "ms_tuner": {
+    "fb": 2.8341937594943576,
+    "fwd": 0.7772930286548756,
+    "fwd_trn": 0.8369563176081731
+   },
+   "ratio": {
+    "fb": 0.909667119904551,
+    "fwd": 0.6903364218901306,
+    "fwd_trn": 0.7427038047289147
+   }
+  },
+  "B32|H128|N16|L1024|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=16,TS=1",
+   "cell": "small_batch_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=2,PF=1",
+   "ms_cal": {
+    "fb": 0.5450488726298014,
+    "fwd": 0.10867648124694824,
+    "fwd_trn": 0.1285529613494873
+   },
+   "ms_tuner": {
+    "fb": 0.542103131612142,
+    "fwd": 0.11020352363586426,
+    "fwd_trn": 0.1302639961242676
+   },
+   "ratio": {
+    "fb": 1.0054339125636467,
+    "fwd": 0.9861434340887167,
+    "fwd_trn": 0.9868648680703145
+   }
+  },
+  "B32|H128|N16|L1024|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=1",
+   "cell": "small_batch_n16_fp32_m1",
+   "fwd": "BLOCK_L=128,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 0.5284639994303385,
+    "fwd": 0.10855680465698242,
+    "fwd_trn": 0.12839712142944337
+   },
+   "ms_tuner": {
+    "fb": 0.5294328795539008,
+    "fwd": 0.11407423973083496,
+    "fwd_trn": 0.1300696556014244
+   },
+   "ratio": {
+    "fb": 0.9981699660882817,
+    "fwd": 0.9516329445905468,
+    "fwd_trn": 0.9871412424039454
+   }
+  },
+  "B32|H2048|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b32_d2048_l2048_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 60.80409622192383,
+    "fwd": 12.08620834350586,
+    "fwd_trn": 12.800288200378418
+   },
+   "ms_tuner": {
+    "fb": 62.88310241699219,
+    "fwd": 12.380000114440918,
+    "fwd_trn": 14.858400344848633
+   },
+   "ratio": {
+    "fb": 0.9669385555871275,
+    "fwd": 0.9762688394007074,
+    "fwd_trn": 0.8614849447650159
+   }
+  },
+  "B32|H2048|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b32_d2048_l2048_n128_fp32_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 61.738670349121094,
+    "fwd": 14.891216278076172,
+    "fwd_trn": 15.765151977539062
+   },
+   "ms_tuner": {
+    "fb": 65.8584976196289,
+    "fwd": 18.41209602355957,
+    "fwd_trn": 19.911216735839844
+   },
+   "ratio": {
+    "fb": 0.9374442567107709,
+    "fwd": 0.8087735507691147,
+    "fwd_trn": 0.7917724058099405
+   }
+  },
+  "B32|H2048|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b32_d2048_l2048_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 8.70956802368164,
+    "fwd": 1.9101587442251353,
+    "fwd_trn": 2.0425732930501304
+   },
+   "ms_tuner": {
+    "fb": 8.919520060221354,
+    "fwd": 1.9074215522179236,
+    "fwd_trn": 2.236692428588867
+   },
+   "ratio": {
+    "fb": 0.976461509686374,
+    "fwd": 1.0014350220610797,
+    "fwd_trn": 0.913211520253052
+   }
+  },
+  "B32|H2048|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b32_d2048_l2048_n16_fp32_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 9.64692242940267,
+    "fwd": 2.4851871490478517,
+    "fwd_trn": 2.58441276550293
+   },
+   "ms_tuner": {
+    "fb": 10.14142926534017,
+    "fwd": 2.836636437310113,
+    "fwd_trn": 3.1046559810638428
+   },
+   "ratio": {
+    "fb": 0.95123894048864,
+    "fwd": 0.8761035134289085,
+    "fwd_trn": 0.8324312842601498
+   }
+  },
+  "B4|H512|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=168,NP=1,NS=2,NUM_WARPS=1,PU=0,THS=0,TP_P=32,TS=1",
+   "cell": "small_balanced_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
+   "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 2.531894493103027,
+    "fwd": 0.40162520712994515,
+    "fwd_trn": 0.49215922355651853
+   },
+   "ms_tuner": {
+    "fb": 2.5289472579956054,
+    "fwd": 0.4018685299417247,
+    "fwd_trn": 0.49209442138671877
+   },
+   "ratio": {
+    "fb": 1.0011653999893053,
+    "fwd": 0.9993945213579805,
+    "fwd_trn": 1.0001316864548417
+   }
+  },
+  "B4|H512|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=0,NP=1,NS=2,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=1",
+   "cell": "small_balanced_n128_fp32_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
+   "fwd_trn": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.6981724633110895,
+    "fwd": 0.532700639022024,
+    "fwd_trn": 0.6001357454242129
+   },
+   "ms_tuner": {
+    "fb": 2.7372303009033203,
+    "fwd": 0.6167311234907671,
+    "fwd_trn": 0.6170146044562844
+   },
+   "ratio": {
+    "fb": 0.98573089097423,
+    "fwd": 0.8637485911313814,
+    "fwd_trn": 0.9726443119657674
+   }
+  },
+  "B4|H512|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=168,NP=1,NS=2,NUM_WARPS=1,PU=0,THS=0,TP_P=2,TS=1",
+   "cell": "small_balanced_n16_bf16_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=2,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
+   "ms_cal": {
+    "fb": 0.5740567409630978,
+    "fwd": 0.10948672294616699,
+    "fwd_trn": 0.1315014362335205
+   },
+   "ms_tuner": {
+    "fb": 0.5685614383581913,
+    "fwd": 0.11047840118408203,
+    "fwd_trn": 0.13176735877990722
+   },
+   "ratio": {
+    "fb": 1.0096652749099113,
+    "fwd": 0.9910237817773749,
+    "fwd_trn": 0.9979818784496478
+   }
+  },
+  "B4|H512|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=4,LWS=1,MAXNREG=0,NP=1,NS=2,NUM_WARPS=1,PU=0,THS=0,TP_P=8,TS=1",
+   "cell": "small_balanced_n16_fp32_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=256,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 0.5482608332778468,
+    "fwd": 0.10895359992980957,
+    "fwd_trn": 0.13096927642822265
+   },
+   "ms_tuner": {
+    "fb": 0.5481411989997415,
+    "fwd": 0.11135968208312988,
+    "fwd_trn": 0.13247615814208985
+   },
+   "ratio": {
+    "fb": 1.000218254490492,
+    "fwd": 0.9783935971411614,
+    "fwd_trn": 0.9886252610658367
+   }
+  },
+  "B4|H8192|N128|L4096|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "large_wide_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=4",
+   "ms_cal": {
+    "fb": 60.86635208129883,
+    "fwd": 11.744341532389322,
+    "fwd_trn": 12.3920529683431
+   },
+   "ms_tuner": {
+    "fb": 62.52360153198242,
+    "fwd": 12.472960472106934,
+    "fwd_trn": 13.989871978759766
+   },
+   "ratio": {
+    "fb": 0.973494018097536,
+    "fwd": 0.9415841218011547,
+    "fwd_trn": 0.8857874458863836
+   }
+  },
+  "B4|H8192|N16|L4096|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "large_wide_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=4",
+   "ms_cal": {
+    "fb": 8.89857037862142,
+    "fwd": 1.9253710233248198,
+    "fwd_trn": 2.022143999735514
+   },
+   "ms_tuner": {
+    "fb": 9.058090845743815,
+    "fwd": 1.9719467163085938,
+    "fwd_trn": 2.183287187056108
+   },
+   "ratio": {
+    "fb": 0.9823891734098307,
+    "fwd": 0.9763808562378593,
+    "fwd_trn": 0.9261924000305817
+   }
+  },
+  "B4|H8192|N16|L4096|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "large_wide_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=4",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 10.026133219401041,
+    "fwd": 2.609385681152344,
+    "fwd_trn": 2.900753868950738
+   },
+   "ms_tuner": {
+    "fb": 10.44050153096517,
+    "fwd": 3.1640679836273193,
+    "fwd_trn": 3.3189480304718018
+   },
+   "ratio": {
+    "fb": 0.9603114553132178,
+    "fwd": 0.8246933045227802,
+    "fwd_trn": 0.8739979783709912
+   }
+  },
+  "B64|H512|N128|L1024|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_batch_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 15.526304244995117,
+    "fwd": 3.1202681064605713,
+    "fwd_trn": 3.2699360847473145
+   },
+   "ms_tuner": {
+    "fb": 15.94979190826416,
+    "fwd": 3.4085640907287598,
+    "fwd_trn": 3.683972494942801
+   },
+   "ratio": {
+    "fb": 0.9734487029232263,
+    "fwd": 0.9154201075308078,
+    "fwd_trn": 0.8876114274023875
+   }
+  },
+  "B64|H512|N128|L1024|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_batch_n128_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 15.496399879455566,
+    "fwd": 3.7430812290736606,
+    "fwd_trn": 3.9701758793422153
+   },
+   "ms_tuner": {
+    "fb": 16.64214324951172,
+    "fwd": 4.599168141682942,
+    "fwd_trn": 5.1754497528076175
+   },
+   "ratio": {
+    "fb": 0.9311540975895777,
+    "fwd": 0.8138604881934106,
+    "fwd_trn": 0.7671170756103746
+   }
+  },
+  "B64|H512|N16|L1024|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_batch_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.2318226207386362,
+    "fwd": 0.5044064044952392,
+    "fwd_trn": 0.5267905699901092
+   },
+   "ms_tuner": {
+    "fb": 2.281245144930753,
+    "fwd": 0.5330404134897085,
+    "fwd_trn": 0.5782302220662435
+   },
+   "ratio": {
+    "fb": 0.9783352857530719,
+    "fwd": 0.9462817297341336,
+    "fwd_trn": 0.9110394958390098
+   }
+  },
+  "B64|H512|N16|L1024|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_batch_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.4673183441162108,
+    "fwd": 0.6663839817047119,
+    "fwd_trn": 0.7030358468332598
+   },
+   "ms_tuner": {
+    "fb": 2.5820640563964843,
+    "fwd": 0.7661428780391298,
+    "fwd_trn": 0.8103881412082248
+   },
+   "ratio": {
+    "fb": 0.9555604703159797,
+    "fwd": 0.8697907411346806,
+    "fwd_trn": 0.8675297812047063
+   }
+  },
+  "B6|H2048|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b6_d2048_l2048_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 12.144735972086588,
+    "fwd": 2.428553581237793,
+    "fwd_trn": 2.4913055419921877
+   },
+   "ms_tuner": {
+    "fb": 12.472784042358398,
+    "fwd": 2.4378240585327147,
+    "fwd_trn": 2.784327189127604
+   },
+   "ratio": {
+    "fb": 0.9736988895856982,
+    "fwd": 0.9961972328304524,
+    "fwd_trn": 0.8947603398481243
+   }
+  },
+  "B6|H2048|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b6_d2048_l2048_n128_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 11.894111633300781,
+    "fwd": 2.8680604298909507,
+    "fwd_trn": 2.9627022213406033
+   },
+   "ms_tuner": {
+    "fb": 12.790335655212402,
+    "fwd": 3.427164077758789,
+    "fwd_trn": 3.8440044948032925
+   },
+   "ratio": {
+    "fb": 0.9299295932435998,
+    "fwd": 0.8368611379022545,
+    "fwd_trn": 0.770733287472967
+   }
+  },
+  "B6|H2048|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b6_d2048_l2048_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 1.7645514561579778,
+    "fwd": 0.370015983581543,
+    "fwd_trn": 0.4010191378386124
+   },
+   "ms_tuner": {
+    "fb": 1.807396962092473,
+    "fwd": 0.36953857421875,
+    "fwd_trn": 0.4427287361838601
+   },
+   "ratio": {
+    "fb": 0.9762943576684494,
+    "fwd": 1.0012919067077157,
+    "fwd_trn": 0.9057897196717627
+   }
+  },
+  "B6|H2048|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b6_d2048_l2048_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 1.9006187121073406,
+    "fwd": 0.5063130305363581,
+    "fwd_trn": 0.5290332593415913
+   },
+   "ms_tuner": {
+    "fb": 1.9668480555216472,
+    "fwd": 0.5579796868401605,
+    "fwd_trn": 0.5963885716029576
+   },
+   "ratio": {
+    "fb": 0.9663271683705423,
+    "fwd": 0.9074040551612358,
+    "fwd_trn": 0.887061363231139
+   }
+  },
+  "B6|H4096|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b6_d4096_l2048_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 23.816688537597656,
+    "fwd": 4.323845227559407,
+    "fwd_trn": 4.594319979349772
+   },
+   "ms_tuner": {
+    "fb": 24.488784790039062,
+    "fwd": 4.6347198486328125,
+    "fwd_trn": 5.244102478027344
+   },
+   "ratio": {
+    "fb": 0.9725549365473298,
+    "fwd": 0.9329248301458588,
+    "fwd_trn": 0.876092715312078
+   }
+  },
+  "B6|H4096|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b6_d4096_l2048_n128_fp32_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=4,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 23.817167282104492,
+    "fwd": 5.476185607910156,
+    "fwd_trn": 5.753523254394532
+   },
+   "ms_tuner": {
+    "fb": 25.617456436157227,
+    "fwd": 6.743639945983887,
+    "fwd_trn": 7.717879772186279
+   },
+   "ratio": {
+    "fb": 0.9297241254790716,
+    "fwd": 0.8120518965683285,
+    "fwd_trn": 0.7454797721945732
+   }
+  },
+  "B6|H4096|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b6_d4096_l2048_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 3.4020113263811385,
+    "fwd": 0.7114122390747071,
+    "fwd_trn": 0.7509947809679755
+   },
+   "ms_tuner": {
+    "fb": 3.4645622798374722,
+    "fwd": 0.7241482416788737,
+    "fwd_trn": 0.8149712880452474
+   },
+   "ratio": {
+    "fb": 0.9819454960240264,
+    "fwd": 0.9824124373006288,
+    "fwd_trn": 0.9214984527482888
+   }
+  },
+  "B6|H4096|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "lm_b6_d4096_l2048_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 3.7266924721854076,
+    "fwd": 0.9626719951629639,
+    "fwd_trn": 0.9962281766145126
+   },
+   "ms_tuner": {
+    "fb": 3.882267543247768,
+    "fwd": 1.0850621178036643,
+    "fwd_trn": 1.1586159706115722
+   },
+   "ratio": {
+    "fb": 0.9599267517425624,
+    "fwd": 0.8872045013529389,
+    "fwd_trn": 0.8598432974203319
+   }
+  },
+  "B8|H2048|N128|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_balanced_n128_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 17.596256256103516,
+    "fwd": 3.1542000770568848,
+    "fwd_trn": 3.2394518852233887
+   },
+   "ms_tuner": {
+    "fb": 18.035839080810547,
+    "fwd": 3.164828062057495,
+    "fwd_trn": 3.643277849469866
+   },
+   "ratio": {
+    "fb": 0.9756272595504175,
+    "fwd": 0.9966418444249698,
+    "fwd_trn": 0.8891586145961285
+   }
+  },
+  "B8|H2048|N128|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_balanced_n128_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,CKV=0,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 17.12499237060547,
+    "fwd": 3.7313600267682756,
+    "fwd_trn": 3.8872228349958147
+   },
+   "ms_tuner": {
+    "fb": 18.430944442749023,
+    "fwd": 4.543535868326823,
+    "fwd_trn": 5.2683265686035154
+   },
+   "ratio": {
+    "fb": 0.9291435077458913,
+    "fwd": 0.8212458611320186,
+    "fwd_trn": 0.7378477367294655
+   }
+  },
+  "B8|H2048|N16|L2048|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_balanced_n16_bf16_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=0,TS=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.4888479232788088,
+    "fwd": 0.4830681937081473,
+    "fwd_trn": 0.5168075561523438
+   },
+   "ms_tuner": {
+    "fb": 2.5347616195678713,
+    "fwd": 0.4816602071126302,
+    "fwd_trn": 0.5662826432122124
+   },
+   "ratio": {
+    "fb": 0.9818863849228986,
+    "fwd": 1.002923194764121,
+    "fwd_trn": 0.9126318144253486
+   }
+  },
+  "B8|H2048|N16|L2048|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=1",
+   "cell": "medium_balanced_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "ms_cal": {
+    "fb": 2.6894329918755426,
+    "fwd": 0.6584179997444153,
+    "fwd_trn": 0.6918039014262538
+   },
+   "ms_tuner": {
+    "fb": 2.78293334113227,
+    "fwd": 0.7331663329025795,
+    "fwd_trn": 0.7879714284624372
+   },
+   "ratio": {
+    "fb": 0.9664022318196506,
+    "fwd": 0.8980472372998386,
+    "fwd_trn": 0.8779555659475695
+   }
+  },
+  "B8|H512|N128|L8192|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "lm_b8_d512_l8192_n128_bf16_m1",
+   "fwd": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 18.98472023010254,
+    "fwd": 3.8304045540945872,
+    "fwd_trn": 4.035204478672573
+   },
+   "ms_tuner": {
+    "fb": 18.989280700683594,
+    "fwd": 3.829485757010324,
+    "fwd_trn": 4.036474545796712
+   },
+   "ratio": {
+    "fb": 0.9997598397404863,
+    "fwd": 1.000239927014373,
+    "fwd_trn": 0.9996853523762558
+   }
+  },
+  "B8|H512|N128|L8192|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=16",
+   "cell": "lm_b8_d512_l8192_n128_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=2",
+   "ms_cal": {
+    "fb": 18.92310333251953,
+    "fwd": 4.657045364379883,
+    "fwd_trn": 4.84661324818929
+   },
+   "ms_tuner": {
+    "fb": 20.134464263916016,
+    "fwd": 5.506067276000977,
+    "fwd_trn": 5.86945915222168
+   },
+   "ratio": {
+    "fb": 0.939836445831468,
+    "fwd": 0.8458024813242505,
+    "fwd_trn": 0.8257342154523339
+   }
+  },
+  "B8|H512|N16|L8192|bf16|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=168,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "lm_b8_d512_l8192_n16_bf16_m1",
+   "fwd": "BLOCK_L=256,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1",
+   "fwd_trn": "BLOCK_L=1024,BLOCK_P=1,CKV=0,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 2.7898631625705295,
+    "fwd": 0.5764242444719587,
+    "fwd_trn": 0.6302274068196615
+   },
+   "ms_tuner": {
+    "fb": 2.7702719370524087,
+    "fwd": 0.6167097958651456,
+    "fwd_trn": 0.6280959736217152
+   },
+   "ratio": {
+    "fb": 1.0070719503223087,
+    "fwd": 0.9346766474875388,
+    "fwd_trn": 1.0033934833010567
+   }
+  },
+  "B8|H512|N16|L8192|fp32|sp1.db1.ds1.z0.h0": {
+   "bwd": "AGX=1,BCS=1,HP=8,LWS=1,MAXNREG=0,NP=1,NS=1,NUM_WARPS=1,PU=0,THS=0,TP_P=4,TS=32",
+   "cell": "lm_b8_d512_l8192_n16_fp32_m1",
+   "fwd": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=16",
+   "fwd_trn": "BLOCK_L=512,BLOCK_P=2,FPACK=1,NUM_WARPS=1,PF=1,TS=1",
+   "ms_cal": {
+    "fb": 2.9162239498562283,
+    "fwd": 0.8144521360044126,
+    "fwd_trn": 0.83716553908128
+   },
+   "ms_tuner": {
+    "fb": 2.9935359954833984,
+    "fwd": 0.8853209686279296,
+    "fwd_trn": 0.9102306365966797
+   },
+   "ratio": {
+    "fb": 0.9741736709550788,
+    "fwd": 0.9199512548162622,
+    "fwd_trn": 0.919729028470644
+   }
+  }
+ },
+ "provenance": {
+  "code_hash": "c27474d1ffc9d614",
+  "date": "2026-10-14",
+  "driver": "610.57.04",
+  "dropped_shapes": {},
+  "fixed_basis": "p1 per-cell table (tools/calibrate_mh_p1.py)",
+  "gpu": "NVIDIA RTX PRO 5000 Blackwell",
+  "notes": null,
+  "rounds": 7,
+  "shapes": [
+   "large_balanced_n128_bf16_m1",
+   "large_balanced_n16_bf16_m1",
+   "large_balanced_n16_fp32_m1",
+   "large_batch_n128_bf16_m1",
+   "large_batch_n16_bf16_m1",
+   "large_batch_n16_fp32_m1",
+   "large_long_n128_bf16_m1",
+   "large_long_n16_bf16_m1",
+   "large_long_n16_fp32_m1",
+   "large_wide_n128_bf16_m1",
+   "large_wide_n16_bf16_m1",
+   "large_wide_n16_fp32_m1",
+   "lm_b1_d4096_l32768_n128_bf16_m1",
+   "lm_b1_d4096_l32768_n128_fp32_m1",
+   "lm_b1_d4096_l32768_n16_bf16_m1",
+   "lm_b1_d4096_l32768_n16_fp32_m1",
+   "lm_b2_d2048_l16384_n128_bf16_m1",
+   "lm_b2_d2048_l16384_n128_fp32_m1",
+   "lm_b2_d2048_l16384_n16_bf16_m1",
+   "lm_b2_d2048_l16384_n16_fp32_m1",
+   "lm_b32_d2048_l2048_n128_bf16_m1",
+   "lm_b32_d2048_l2048_n128_fp32_m1",
+   "lm_b32_d2048_l2048_n16_bf16_m1",
+   "lm_b32_d2048_l2048_n16_fp32_m1",
+   "lm_b6_d2048_l2048_n128_bf16_m1",
+   "lm_b6_d2048_l2048_n128_fp32_m1",
+   "lm_b6_d2048_l2048_n16_bf16_m1",
+   "lm_b6_d2048_l2048_n16_fp32_m1",
+   "lm_b6_d4096_l2048_n128_bf16_m1",
+   "lm_b6_d4096_l2048_n128_fp32_m1",
+   "lm_b6_d4096_l2048_n16_bf16_m1",
+   "lm_b6_d4096_l2048_n16_fp32_m1",
+   "lm_b8_d512_l8192_n128_bf16_m1",
+   "lm_b8_d512_l8192_n128_fp32_m1",
+   "lm_b8_d512_l8192_n16_bf16_m1",
+   "lm_b8_d512_l8192_n16_fp32_m1",
+   "medium_balanced_n128_bf16_m1",
+   "medium_balanced_n128_fp32_m1",
+   "medium_balanced_n16_bf16_m1",
+   "medium_balanced_n16_fp32_m1",
+   "medium_batch_n128_bf16_m1",
+   "medium_batch_n128_fp32_m1",
+   "medium_batch_n16_bf16_m1",
+   "medium_batch_n16_fp32_m1",
+   "medium_long_n128_bf16_m1",
+   "medium_long_n16_bf16_m1",
+   "medium_long_n16_fp32_m1",
+   "medium_wide_n128_bf16_m1",
+   "medium_wide_n16_bf16_m1",
+   "medium_wide_n16_fp32_m1",
+   "small_balanced_n128_bf16_m1",
+   "small_balanced_n128_fp32_m1",
+   "small_balanced_n16_bf16_m1",
+   "small_balanced_n16_fp32_m1",
+   "small_batch_n128_bf16_m1",
+   "small_batch_n128_fp32_m1",
+   "small_batch_n16_bf16_m1",
+   "small_batch_n16_fp32_m1",
+   "small_long_n128_bf16_m1",
+   "small_long_n128_fp32_m1",
+   "small_long_n16_bf16_m1",
+   "small_long_n16_fp32_m1",
+   "small_wide_n128_bf16_m1",
+   "small_wide_n128_fp32_m1",
+   "small_wide_n16_bf16_m1",
+   "small_wide_n16_fp32_m1"
+  ],
+  "sms": 110,
+  "torch": "2.14.0+cu130",
+  "triton": "3.8.0"
+ },
+ "schema": 1,
+ "thresholds": {}
 }

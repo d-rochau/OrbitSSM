@@ -1,1722 +1,1723 @@
 {
-  "family": "ssd_mimo_route",
-  "kernels": {},
-  "provenance": {
-    "code_hash": "8d5629e046cc6389",
-    "driver": null,
-    "dropped_shapes": {},
-    "fixed_basis": "pass1",
-    "gpu": "NVIDIA H100 PCIe",
-    "notes": "route timings: followup/route_ab (production module path), eligibility: elig_h100_9376150",
-    "rounds": 5,
-    "shapes": [
-      "small_balanced",
-      "small_long",
-      "small_wide",
-      "small_batch",
-      "medium_balanced",
-      "medium_long",
-      "medium_wide",
-      "medium_batch",
-      "large_balanced",
-      "large_long",
-      "large_wide",
-      "large_batch",
-      "lm_b6_d2048_l2048",
-      "lm_b32_d2048_l2048",
-      "lm_b2_d2048_l16384",
-      "lm_b6_d4096_l2048",
-      "lm_b1_d4096_l32768",
-      "lm_b8_d512_l8192"
+ "family": "ssd_mimo_route",
+ "kernels": {},
+ "provenance": {
+  "code_hash": "8d5629e046cc6389",
+  "date": "2026-10-05",
+  "driver": null,
+  "dropped_shapes": {},
+  "fixed_basis": "pass1",
+  "gpu": "NVIDIA H100 PCIe",
+  "notes": "route timings: followup/route_ab (production module path), eligibility: elig_h100_9376150",
+  "rounds": 5,
+  "shapes": [
+   "small_balanced",
+   "small_long",
+   "small_wide",
+   "small_batch",
+   "medium_balanced",
+   "medium_long",
+   "medium_wide",
+   "medium_batch",
+   "large_balanced",
+   "large_long",
+   "large_wide",
+   "large_batch",
+   "lm_b6_d2048_l2048",
+   "lm_b32_d2048_l2048",
+   "lm_b2_d2048_l16384",
+   "lm_b6_d4096_l2048",
+   "lm_b1_d4096_l32768",
+   "lm_b8_d512_l8192"
+  ],
+  "sms": 114,
+  "torch": "offline",
+  "triton": "3.8.0"
+ },
+ "schema": 1,
+ "thresholds": {
+  "route|grad|noth|alt": {
+   "evidence": {
+    "alt": "split64",
+    "candidates": [
+     "siso",
+     "split32",
+     "split64",
+     "inkernel32",
+     "inkernel64"
     ],
-    "sms": 114,
-    "torch": "offline",
-    "triton": "3.8.0"
+    "cells": 18,
+    "cost": 0.1215975945153226,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 1
   },
-  "schema": 1,
-  "thresholds": {
-    "route|grad|noth|alt": {
-      "evidence": {
-        "alt": "split64",
-        "candidates": [
-          "siso",
-          "split32",
-          "split64",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.1215975945153226,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 1
+  "route|grad|noth|eligible|inkernel32": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|grad|noth|eligible|inkernel64": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|grad|noth|eligible|siso": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|grad|noth|eligible|split32": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|grad|noth|eligible|split64": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|grad|noth|siso_L": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "split32",
+     "split64",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.1215975945153226,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 32768
+  },
+  "route|grad|noth|siso_L_dir": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "split32",
+     "split64",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.1215975945153226,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 0
+  },
+  "route|grad|noth|siso_occ": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "split32",
+     "split64",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.1215975945153226,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 15
+  },
+  "route|grad|noth|siso_occ_dir": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "split32",
+     "split64",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.1215975945153226,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 1
+  },
+  "route|grad|noth|table": {
+   "evidence": [
+    {
+     "B": 1,
+     "H": 64,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 2.378,
+     "chosen": "siso",
+     "chosen_ms": 2.378,
+     "occ": 0.561,
+     "siso_ms": 2.378,
+     "slowdown": 1.0
     },
-    "route|grad|noth|eligible|inkernel32": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
+    {
+     "B": 1,
+     "H": 2,
+     "L": 32768,
+     "best": "inkernel32",
+     "best_ms": 3.947,
+     "chosen": "inkernel32",
+     "chosen_ms": 3.947,
+     "occ": 0.018,
+     "siso_ms": 9.931,
+     "slowdown": 1.0
     },
-    "route|grad|noth|eligible|inkernel64": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
+    {
+     "B": 1,
+     "H": 16,
+     "L": 32768,
+     "best": "inkernel64",
+     "best_ms": 7.273,
+     "chosen": "inkernel64",
+     "chosen_ms": 7.273,
+     "occ": 0.14,
+     "siso_ms": 11.279,
+     "slowdown": 1.0
     },
-    "route|grad|noth|eligible|siso": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
+    {
+     "B": 1,
+     "H": 64,
+     "L": 32768,
+     "best": "siso",
+     "best_ms": 13.855,
+     "chosen": "siso",
+     "chosen_ms": 13.855,
+     "occ": 0.561,
+     "siso_ms": 13.855,
+     "slowdown": 1.0
     },
-    "route|grad|noth|eligible|split32": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
+    {
+     "B": 2,
+     "H": 128,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 3.634,
+     "chosen": "siso",
+     "chosen_ms": 3.634,
+     "occ": 2.246,
+     "siso_ms": 3.634,
+     "slowdown": 1.0
     },
-    "route|grad|noth|eligible|split64": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
+    {
+     "B": 2,
+     "H": 32,
+     "L": 16384,
+     "best": "siso",
+     "best_ms": 7.078,
+     "chosen": "siso",
+     "chosen_ms": 7.078,
+     "occ": 0.561,
+     "siso_ms": 7.078,
+     "slowdown": 1.0
     },
-    "route|grad|noth|siso_L": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "split32",
-          "split64",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.1215975945153226,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 32768
+    {
+     "B": 2,
+     "H": 32,
+     "L": 32768,
+     "best": "siso",
+     "best_ms": 13.766,
+     "chosen": "siso",
+     "chosen_ms": 13.766,
+     "occ": 0.561,
+     "siso_ms": 13.766,
+     "slowdown": 1.0
     },
-    "route|grad|noth|siso_L_dir": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "split32",
-          "split64",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.1215975945153226,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 0
+    {
+     "B": 4,
+     "H": 8,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 2.406,
+     "chosen": "siso",
+     "chosen_ms": 2.406,
+     "occ": 0.281,
+     "siso_ms": 2.406,
+     "slowdown": 1.0
     },
-    "route|grad|noth|siso_occ": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "split32",
-          "split64",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.1215975945153226,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 15
+    {
+     "B": 4,
+     "H": 128,
+     "L": 4096,
+     "best": "siso",
+     "best_ms": 10.244,
+     "chosen": "siso",
+     "chosen_ms": 10.244,
+     "occ": 4.491,
+     "siso_ms": 10.244,
+     "slowdown": 1.0
     },
-    "route|grad|noth|siso_occ_dir": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "split32",
-          "split64",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.1215975945153226,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 1
+    {
+     "B": 6,
+     "H": 32,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 2.132,
+     "chosen": "siso",
+     "chosen_ms": 2.132,
+     "occ": 1.684,
+     "siso_ms": 2.132,
+     "slowdown": 1.0
     },
-    "route|grad|noth|table": {
-      "evidence": [
-        {
-          "B": 1,
-          "H": 64,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 2.378,
-          "chosen": "siso",
-          "chosen_ms": 2.378,
-          "occ": 0.561,
-          "siso_ms": 2.378,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 2,
-          "L": 32768,
-          "best": "inkernel32",
-          "best_ms": 3.947,
-          "chosen": "inkernel32",
-          "chosen_ms": 3.947,
-          "occ": 0.018,
-          "siso_ms": 9.931,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 16,
-          "L": 32768,
-          "best": "inkernel64",
-          "best_ms": 7.273,
-          "chosen": "inkernel64",
-          "chosen_ms": 7.273,
-          "occ": 0.14,
-          "siso_ms": 11.279,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 64,
-          "L": 32768,
-          "best": "siso",
-          "best_ms": 13.855,
-          "chosen": "siso",
-          "chosen_ms": 13.855,
-          "occ": 0.561,
-          "siso_ms": 13.855,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 128,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 3.634,
-          "chosen": "siso",
-          "chosen_ms": 3.634,
-          "occ": 2.246,
-          "siso_ms": 3.634,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 32,
-          "L": 16384,
-          "best": "siso",
-          "best_ms": 7.078,
-          "chosen": "siso",
-          "chosen_ms": 7.078,
-          "occ": 0.561,
-          "siso_ms": 7.078,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 32,
-          "L": 32768,
-          "best": "siso",
-          "best_ms": 13.766,
-          "chosen": "siso",
-          "chosen_ms": 13.766,
-          "occ": 0.561,
-          "siso_ms": 13.766,
-          "slowdown": 1.0
-        },
-        {
-          "B": 4,
-          "H": 8,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 2.406,
-          "chosen": "siso",
-          "chosen_ms": 2.406,
-          "occ": 0.281,
-          "siso_ms": 2.406,
-          "slowdown": 1.0
-        },
-        {
-          "B": 4,
-          "H": 128,
-          "L": 4096,
-          "best": "siso",
-          "best_ms": 10.244,
-          "chosen": "siso",
-          "chosen_ms": 10.244,
-          "occ": 4.491,
-          "siso_ms": 10.244,
-          "slowdown": 1.0
-        },
-        {
-          "B": 6,
-          "H": 32,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 2.132,
-          "chosen": "siso",
-          "chosen_ms": 2.132,
-          "occ": 1.684,
-          "siso_ms": 2.132,
-          "slowdown": 1.0
-        },
-        {
-          "B": 6,
-          "H": 64,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 3.853,
-          "chosen": "siso",
-          "chosen_ms": 3.853,
-          "occ": 3.368,
-          "siso_ms": 3.853,
-          "slowdown": 1.0
-        },
-        {
-          "B": 8,
-          "H": 32,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 3.027,
-          "chosen": "siso",
-          "chosen_ms": 3.027,
-          "occ": 2.246,
-          "siso_ms": 3.027,
-          "slowdown": 1.0
-        },
-        {
-          "B": 8,
-          "H": 8,
-          "L": 8192,
-          "best": "siso",
-          "best_ms": 3.71,
-          "chosen": "siso",
-          "chosen_ms": 3.71,
-          "occ": 0.561,
-          "siso_ms": 3.71,
-          "slowdown": 1.0
-        },
-        {
-          "B": 16,
-          "H": 64,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 9.71,
-          "chosen": "siso",
-          "chosen_ms": 9.71,
-          "occ": 8.982,
-          "siso_ms": 9.71,
-          "slowdown": 1.0
-        },
-        {
-          "B": 32,
-          "H": 2,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 2.342,
-          "chosen": "siso",
-          "chosen_ms": 2.342,
-          "occ": 0.561,
-          "siso_ms": 2.342,
-          "slowdown": 1.0
-        },
-        {
-          "B": 32,
-          "H": 32,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 9.673,
-          "chosen": "siso",
-          "chosen_ms": 9.673,
-          "occ": 8.982,
-          "siso_ms": 9.673,
-          "slowdown": 1.0
-        },
-        {
-          "B": 64,
-          "H": 8,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 2.827,
-          "chosen": "siso",
-          "chosen_ms": 2.827,
-          "occ": 4.491,
-          "siso_ms": 2.827,
-          "slowdown": 1.0
-        },
-        {
-          "B": 128,
-          "H": 16,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 9.885,
-          "chosen": "siso",
-          "chosen_ms": 9.885,
-          "occ": 17.965,
-          "siso_ms": 9.885,
-          "slowdown": 1.0
-        }
-      ],
-      "value": [
-        [
-          -0.8329,
-          10.0,
-          -1
-        ],
-        [
-          -5.8329,
-          15.0,
-          2
-        ],
-        [
-          -2.8329,
-          15.0,
-          3
-        ],
-        [
-          -0.8329,
-          15.0,
-          -1
-        ],
-        [
-          1.1671,
-          11.0,
-          -1
-        ],
-        [
-          -0.8329,
-          14.0,
-          -1
-        ],
-        [
-          -0.8329,
-          15.0,
-          -1
-        ],
-        [
-          -1.8329,
-          11.0,
-          -1
-        ],
-        [
-          2.1671,
-          12.0,
-          -1
-        ],
-        [
-          0.7521,
-          11.0,
-          -1
-        ],
-        [
-          1.7521,
-          11.0,
-          -1
-        ],
-        [
-          1.1671,
-          11.0,
-          -1
-        ],
-        [
-          -0.8329,
-          13.0,
-          -1
-        ],
-        [
-          3.1671,
-          11.0,
-          -1
-        ],
-        [
-          -0.8329,
-          10.0,
-          -1
-        ],
-        [
-          3.1671,
-          11.0,
-          -1
-        ],
-        [
-          2.1671,
-          10.0,
-          -1
-        ],
-        [
-          4.1671,
-          10.0,
-          -1
-        ]
-      ]
+    {
+     "B": 6,
+     "H": 64,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 3.853,
+     "chosen": "siso",
+     "chosen_ms": 3.853,
+     "occ": 3.368,
+     "siso_ms": 3.853,
+     "slowdown": 1.0
     },
-    "route|grad|thh|alt": {
-      "evidence": {
-        "alt": "split64",
-        "candidates": [
-          "siso",
-          "split32",
-          "split64",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.0,
-        "form": "regions",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 1
+    {
+     "B": 8,
+     "H": 32,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 3.027,
+     "chosen": "siso",
+     "chosen_ms": 3.027,
+     "occ": 2.246,
+     "siso_ms": 3.027,
+     "slowdown": 1.0
     },
-    "route|grad|thh|eligible|inkernel32": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
+    {
+     "B": 8,
+     "H": 8,
+     "L": 8192,
+     "best": "siso",
+     "best_ms": 3.71,
+     "chosen": "siso",
+     "chosen_ms": 3.71,
+     "occ": 0.561,
+     "siso_ms": 3.71,
+     "slowdown": 1.0
     },
-    "route|grad|thh|eligible|inkernel64": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
+    {
+     "B": 16,
+     "H": 64,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 9.71,
+     "chosen": "siso",
+     "chosen_ms": 9.71,
+     "occ": 8.982,
+     "siso_ms": 9.71,
+     "slowdown": 1.0
     },
-    "route|grad|thh|eligible|siso": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
+    {
+     "B": 32,
+     "H": 2,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 2.342,
+     "chosen": "siso",
+     "chosen_ms": 2.342,
+     "occ": 0.561,
+     "siso_ms": 2.342,
+     "slowdown": 1.0
     },
-    "route|grad|thh|eligible|split32": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
+    {
+     "B": 32,
+     "H": 32,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 9.673,
+     "chosen": "siso",
+     "chosen_ms": 9.673,
+     "occ": 8.982,
+     "siso_ms": 9.673,
+     "slowdown": 1.0
     },
-    "route|grad|thh|eligible|split64": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
+    {
+     "B": 64,
+     "H": 8,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 2.827,
+     "chosen": "siso",
+     "chosen_ms": 2.827,
+     "occ": 4.491,
+     "siso_ms": 2.827,
+     "slowdown": 1.0
     },
-    "route|grad|thh|siso_L": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "split32",
-          "split64",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.0,
-        "form": "regions",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 32768
-    },
-    "route|grad|thh|siso_L_dir": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "split32",
-          "split64",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.0,
-        "form": "regions",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 0
-    },
-    "route|grad|thh|siso_occ": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "split32",
-          "split64",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.0,
-        "form": "regions",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 15
-    },
-    "route|grad|thh|siso_occ_dir": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "split32",
-          "split64",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.0,
-        "form": "regions",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 1
-    },
-    "route|grad|thh|table": {
-      "evidence": [
-        {
-          "B": 1,
-          "H": 64,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 2.65,
-          "chosen": "siso",
-          "chosen_ms": 2.65,
-          "occ": 0.561,
-          "official_ms": null,
-          "siso_ms": 2.65,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 2,
-          "L": 32768,
-          "best": "split64",
-          "best_ms": 5.379,
-          "chosen": "split64",
-          "chosen_ms": 5.379,
-          "occ": 0.018,
-          "official_ms": null,
-          "siso_ms": 10.825,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 16,
-          "L": 32768,
-          "best": "split64",
-          "best_ms": 8.311,
-          "chosen": "split64",
-          "chosen_ms": 8.311,
-          "occ": 0.14,
-          "official_ms": null,
-          "siso_ms": 12.2,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 64,
-          "L": 32768,
-          "best": "siso",
-          "best_ms": 15.128,
-          "chosen": "siso",
-          "chosen_ms": 15.128,
-          "occ": 0.561,
-          "official_ms": null,
-          "siso_ms": 15.128,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 128,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 4.555,
-          "chosen": "siso",
-          "chosen_ms": 4.555,
-          "occ": 2.246,
-          "official_ms": null,
-          "siso_ms": 4.555,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 32,
-          "L": 16384,
-          "best": "siso",
-          "best_ms": 7.937,
-          "chosen": "siso",
-          "chosen_ms": 7.937,
-          "occ": 0.561,
-          "official_ms": null,
-          "siso_ms": 7.937,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 32,
-          "L": 32768,
-          "best": "siso",
-          "best_ms": 14.942,
-          "chosen": "siso",
-          "chosen_ms": 14.942,
-          "occ": 0.561,
-          "official_ms": null,
-          "siso_ms": 14.942,
-          "slowdown": 1.0
-        },
-        {
-          "B": 4,
-          "H": 8,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 2.389,
-          "chosen": "siso",
-          "chosen_ms": 2.389,
-          "occ": 0.281,
-          "official_ms": null,
-          "siso_ms": 2.389,
-          "slowdown": 1.0
-        },
-        {
-          "B": 4,
-          "H": 128,
-          "L": 4096,
-          "best": "siso",
-          "best_ms": 11.874,
-          "chosen": "siso",
-          "chosen_ms": 11.874,
-          "occ": 4.491,
-          "official_ms": null,
-          "siso_ms": 11.874,
-          "slowdown": 1.0
-        },
-        {
-          "B": 6,
-          "H": 32,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 2.925,
-          "chosen": "siso",
-          "chosen_ms": 2.925,
-          "occ": 1.684,
-          "official_ms": null,
-          "siso_ms": 2.925,
-          "slowdown": 1.0
-        },
-        {
-          "B": 6,
-          "H": 64,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 4.64,
-          "chosen": "siso",
-          "chosen_ms": 4.64,
-          "occ": 3.368,
-          "official_ms": null,
-          "siso_ms": 4.64,
-          "slowdown": 1.0
-        },
-        {
-          "B": 8,
-          "H": 32,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 3.847,
-          "chosen": "siso",
-          "chosen_ms": 3.847,
-          "occ": 2.246,
-          "official_ms": null,
-          "siso_ms": 3.847,
-          "slowdown": 1.0
-        },
-        {
-          "B": 8,
-          "H": 8,
-          "L": 8192,
-          "best": "siso",
-          "best_ms": 4.325,
-          "chosen": "siso",
-          "chosen_ms": 4.325,
-          "occ": 0.561,
-          "official_ms": null,
-          "siso_ms": 4.325,
-          "slowdown": 1.0
-        },
-        {
-          "B": 16,
-          "H": 64,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 11.091,
-          "chosen": "siso",
-          "chosen_ms": 11.091,
-          "occ": 8.982,
-          "official_ms": null,
-          "siso_ms": 11.091,
-          "slowdown": 1.0
-        },
-        {
-          "B": 32,
-          "H": 2,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 2.382,
-          "chosen": "siso",
-          "chosen_ms": 2.382,
-          "occ": 0.561,
-          "official_ms": null,
-          "siso_ms": 2.382,
-          "slowdown": 1.0
-        },
-        {
-          "B": 32,
-          "H": 32,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 10.939,
-          "chosen": "siso",
-          "chosen_ms": 10.939,
-          "occ": 8.982,
-          "official_ms": null,
-          "siso_ms": 10.939,
-          "slowdown": 1.0
-        },
-        {
-          "B": 64,
-          "H": 8,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 3.567,
-          "chosen": "siso",
-          "chosen_ms": 3.567,
-          "occ": 4.491,
-          "official_ms": null,
-          "siso_ms": 3.567,
-          "slowdown": 1.0
-        },
-        {
-          "B": 128,
-          "H": 16,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 10.982,
-          "chosen": "siso",
-          "chosen_ms": 10.982,
-          "occ": 17.965,
-          "official_ms": null,
-          "siso_ms": 10.982,
-          "slowdown": 1.0
-        }
-      ],
-      "value": null
-    },
-    "route|nograd|noth|alt": {
-      "evidence": {
-        "alt": "inkernel64",
-        "candidates": [
-          "siso",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.04471219770548537,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 3
-    },
-    "route|nograd|noth|eligible|inkernel32": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
-    },
-    "route|nograd|noth|eligible|inkernel64": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
-    },
-    "route|nograd|noth|eligible|siso": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
-    },
-    "route|nograd|noth|siso_L": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.04471219770548537,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 4096
-    },
-    "route|nograd|noth|siso_L_dir": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.04471219770548537,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 0
-    },
-    "route|nograd|noth|siso_occ": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.04471219770548537,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 1797
-    },
-    "route|nograd|noth|siso_occ_dir": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.04471219770548537,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 0
-    },
-    "route|nograd|noth|table": {
-      "evidence": [
-        {
-          "B": 1,
-          "H": 64,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 0.627,
-          "chosen": "siso",
-          "chosen_ms": 0.627,
-          "occ": 0.561,
-          "siso_ms": 0.627,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 2,
-          "L": 32768,
-          "best": "inkernel64",
-          "best_ms": 1.987,
-          "chosen": "inkernel64",
-          "chosen_ms": 1.987,
-          "occ": 0.018,
-          "siso_ms": 4.574,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 16,
-          "L": 32768,
-          "best": "inkernel64",
-          "best_ms": 2.703,
-          "chosen": "inkernel64",
-          "chosen_ms": 2.703,
-          "occ": 0.14,
-          "siso_ms": 4.707,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 64,
-          "L": 32768,
-          "best": "inkernel64",
-          "best_ms": 4.971,
-          "chosen": "inkernel64",
-          "chosen_ms": 4.971,
-          "occ": 0.561,
-          "siso_ms": 5.31,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 128,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 0.879,
-          "chosen": "siso",
-          "chosen_ms": 0.879,
-          "occ": 2.246,
-          "siso_ms": 0.879,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 32,
-          "L": 16384,
-          "best": "inkernel64",
-          "best_ms": 2.555,
-          "chosen": "inkernel64",
-          "chosen_ms": 2.555,
-          "occ": 0.561,
-          "siso_ms": 2.688,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 32,
-          "L": 32768,
-          "best": "inkernel64",
-          "best_ms": 4.984,
-          "chosen": "inkernel64",
-          "chosen_ms": 4.984,
-          "occ": 0.561,
-          "siso_ms": 5.24,
-          "slowdown": 1.0
-        },
-        {
-          "B": 4,
-          "H": 8,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 0.623,
-          "chosen": "siso",
-          "chosen_ms": 0.623,
-          "occ": 0.281,
-          "siso_ms": 0.623,
-          "slowdown": 1.0
-        },
-        {
-          "B": 4,
-          "H": 128,
-          "L": 4096,
-          "best": "siso",
-          "best_ms": 2.733,
-          "chosen": "siso",
-          "chosen_ms": 2.733,
-          "occ": 4.491,
-          "siso_ms": 2.733,
-          "slowdown": 1.0
-        },
-        {
-          "B": 6,
-          "H": 32,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 0.654,
-          "chosen": "siso",
-          "chosen_ms": 0.654,
-          "occ": 1.684,
-          "siso_ms": 0.654,
-          "slowdown": 1.0
-        },
-        {
-          "B": 6,
-          "H": 64,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 1.018,
-          "chosen": "siso",
-          "chosen_ms": 1.018,
-          "occ": 3.368,
-          "siso_ms": 1.018,
-          "slowdown": 1.0
-        },
-        {
-          "B": 8,
-          "H": 32,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 0.869,
-          "chosen": "siso",
-          "chosen_ms": 0.869,
-          "occ": 2.246,
-          "siso_ms": 0.869,
-          "slowdown": 1.0
-        },
-        {
-          "B": 8,
-          "H": 8,
-          "L": 8192,
-          "best": "inkernel64",
-          "best_ms": 1.35,
-          "chosen": "inkernel64",
-          "chosen_ms": 1.35,
-          "occ": 0.561,
-          "siso_ms": 1.364,
-          "slowdown": 1.0
-        },
-        {
-          "B": 16,
-          "H": 64,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 2.632,
-          "chosen": "siso",
-          "chosen_ms": 2.632,
-          "occ": 8.982,
-          "siso_ms": 2.632,
-          "slowdown": 1.0
-        },
-        {
-          "B": 32,
-          "H": 2,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 0.623,
-          "chosen": "siso",
-          "chosen_ms": 0.623,
-          "occ": 0.561,
-          "siso_ms": 0.623,
-          "slowdown": 1.0
-        },
-        {
-          "B": 32,
-          "H": 32,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 2.701,
-          "chosen": "siso",
-          "chosen_ms": 2.701,
-          "occ": 8.982,
-          "siso_ms": 2.701,
-          "slowdown": 1.0
-        },
-        {
-          "B": 64,
-          "H": 8,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 0.773,
-          "chosen": "siso",
-          "chosen_ms": 0.773,
-          "occ": 4.491,
-          "siso_ms": 0.773,
-          "slowdown": 1.0
-        },
-        {
-          "B": 128,
-          "H": 16,
-          "L": 1024,
-          "best": "inkernel32",
-          "best_ms": 2.789,
-          "chosen": "inkernel32",
-          "chosen_ms": 2.789,
-          "occ": 17.965,
-          "siso_ms": 2.917,
-          "slowdown": 1.0
-        }
-      ],
-      "value": [
-        [
-          -0.8329,
-          10.0,
-          -1
-        ],
-        [
-          -5.8329,
-          15.0,
-          3
-        ],
-        [
-          -2.8329,
-          15.0,
-          3
-        ],
-        [
-          -0.8329,
-          15.0,
-          3
-        ],
-        [
-          1.1671,
-          11.0,
-          -1
-        ],
-        [
-          -0.8329,
-          14.0,
-          3
-        ],
-        [
-          -0.8329,
-          15.0,
-          3
-        ],
-        [
-          -1.8329,
-          11.0,
-          -1
-        ],
-        [
-          2.1671,
-          12.0,
-          -1
-        ],
-        [
-          0.7521,
-          11.0,
-          -1
-        ],
-        [
-          1.7521,
-          11.0,
-          -1
-        ],
-        [
-          1.1671,
-          11.0,
-          -1
-        ],
-        [
-          -0.8329,
-          13.0,
-          3
-        ],
-        [
-          3.1671,
-          11.0,
-          -1
-        ],
-        [
-          -0.8329,
-          10.0,
-          -1
-        ],
-        [
-          3.1671,
-          11.0,
-          -1
-        ],
-        [
-          2.1671,
-          10.0,
-          -1
-        ],
-        [
-          4.1671,
-          10.0,
-          2
-        ]
-      ]
-    },
-    "route|nograd|thh|alt": {
-      "evidence": {
-        "alt": "inkernel64",
-        "candidates": [
-          "siso",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.13560066970183624,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 3
-    },
-    "route|nograd|thh|eligible|inkernel32": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
-    },
-    "route|nograd|thh|eligible|inkernel64": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
-    },
-    "route|nograd|thh|eligible|siso": {
-      "evidence": {
-        "c10_noth": true,
-        "c10_thh": true,
-        "eligible": true,
-        "stress": true
-      },
-      "value": 1
-    },
-    "route|nograd|thh|siso_L": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.13560066970183624,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 2048
-    },
-    "route|nograd|thh|siso_L_dir": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.13560066970183624,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 0
-    },
-    "route|nograd|thh|siso_occ": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.13560066970183624,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 169
-    },
-    "route|nograd|thh|siso_occ_dir": {
-      "evidence": {
-        "candidates": [
-          "siso",
-          "inkernel32",
-          "inkernel64"
-        ],
-        "cells": 18,
-        "cost": 0.13560066970183624,
-        "form": "table",
-        "gate": 1.02,
-        "passed": true,
-        "tool": "tools/calibrate_routes.py",
-        "worst_misroute": 1.0
-      },
-      "value": 0
-    },
-    "route|nograd|thh|table": {
-      "evidence": [
-        {
-          "B": 1,
-          "H": 64,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 0.745,
-          "chosen": "siso",
-          "chosen_ms": 0.745,
-          "occ": 0.561,
-          "siso_ms": 0.745,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 2,
-          "L": 32768,
-          "best": "inkernel64",
-          "best_ms": 2.622,
-          "chosen": "inkernel64",
-          "chosen_ms": 2.622,
-          "occ": 0.018,
-          "siso_ms": 5.462,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 16,
-          "L": 32768,
-          "best": "inkernel64",
-          "best_ms": 3.168,
-          "chosen": "inkernel64",
-          "chosen_ms": 3.168,
-          "occ": 0.14,
-          "siso_ms": 5.748,
-          "slowdown": 1.0
-        },
-        {
-          "B": 1,
-          "H": 64,
-          "L": 32768,
-          "best": "inkernel64",
-          "best_ms": 5.307,
-          "chosen": "inkernel64",
-          "chosen_ms": 5.307,
-          "occ": 0.561,
-          "siso_ms": 6.293,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 128,
-          "L": 2048,
-          "best": "inkernel64",
-          "best_ms": 1.404,
-          "chosen": "inkernel64",
-          "chosen_ms": 1.404,
-          "occ": 2.246,
-          "siso_ms": 1.47,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 32,
-          "L": 16384,
-          "best": "inkernel64",
-          "best_ms": 2.952,
-          "chosen": "inkernel64",
-          "chosen_ms": 2.952,
-          "occ": 0.561,
-          "siso_ms": 3.354,
-          "slowdown": 1.0
-        },
-        {
-          "B": 2,
-          "H": 32,
-          "L": 32768,
-          "best": "inkernel64",
-          "best_ms": 5.332,
-          "chosen": "inkernel64",
-          "chosen_ms": 5.332,
-          "occ": 0.561,
-          "siso_ms": 6.242,
-          "slowdown": 1.0
-        },
-        {
-          "B": 4,
-          "H": 8,
-          "L": 2048,
-          "best": "inkernel32",
-          "best_ms": 0.779,
-          "chosen": "inkernel32",
-          "chosen_ms": 0.779,
-          "occ": 0.281,
-          "siso_ms": 0.791,
-          "slowdown": 1.0
-        },
-        {
-          "B": 4,
-          "H": 128,
-          "L": 4096,
-          "best": "inkernel64",
-          "best_ms": 3.422,
-          "chosen": "inkernel64",
-          "chosen_ms": 3.422,
-          "occ": 4.491,
-          "siso_ms": 3.827,
-          "slowdown": 1.0
-        },
-        {
-          "B": 6,
-          "H": 32,
-          "L": 2048,
-          "best": "siso",
-          "best_ms": 1.139,
-          "chosen": "siso",
-          "chosen_ms": 1.139,
-          "occ": 1.684,
-          "siso_ms": 1.139,
-          "slowdown": 1.0
-        },
-        {
-          "B": 6,
-          "H": 64,
-          "L": 2048,
-          "best": "inkernel64",
-          "best_ms": 1.666,
-          "chosen": "inkernel64",
-          "chosen_ms": 1.666,
-          "occ": 3.368,
-          "siso_ms": 1.791,
-          "slowdown": 1.0
-        },
-        {
-          "B": 8,
-          "H": 32,
-          "L": 2048,
-          "best": "inkernel64",
-          "best_ms": 1.4,
-          "chosen": "inkernel64",
-          "chosen_ms": 1.4,
-          "occ": 2.246,
-          "siso_ms": 1.46,
-          "slowdown": 1.0
-        },
-        {
-          "B": 8,
-          "H": 8,
-          "L": 8192,
-          "best": "inkernel64",
-          "best_ms": 1.839,
-          "chosen": "inkernel64",
-          "chosen_ms": 1.839,
-          "occ": 0.561,
-          "siso_ms": 1.879,
-          "slowdown": 1.0
-        },
-        {
-          "B": 16,
-          "H": 64,
-          "L": 2048,
-          "best": "inkernel32",
-          "best_ms": 3.321,
-          "chosen": "inkernel32",
-          "chosen_ms": 3.321,
-          "occ": 8.982,
-          "siso_ms": 3.67,
-          "slowdown": 1.0
-        },
-        {
-          "B": 32,
-          "H": 2,
-          "L": 1024,
-          "best": "siso",
-          "best_ms": 0.726,
-          "chosen": "siso",
-          "chosen_ms": 0.726,
-          "occ": 0.561,
-          "siso_ms": 0.726,
-          "slowdown": 1.0
-        },
-        {
-          "B": 32,
-          "H": 32,
-          "L": 2048,
-          "best": "inkernel32",
-          "best_ms": 3.321,
-          "chosen": "inkernel32",
-          "chosen_ms": 3.321,
-          "occ": 8.982,
-          "siso_ms": 3.663,
-          "slowdown": 1.0
-        },
-        {
-          "B": 64,
-          "H": 8,
-          "L": 1024,
-          "best": "inkernel32",
-          "best_ms": 1.265,
-          "chosen": "inkernel32",
-          "chosen_ms": 1.265,
-          "occ": 4.491,
-          "siso_ms": 1.346,
-          "slowdown": 1.0
-        },
-        {
-          "B": 128,
-          "H": 16,
-          "L": 1024,
-          "best": "inkernel32",
-          "best_ms": 3.275,
-          "chosen": "inkernel32",
-          "chosen_ms": 3.275,
-          "occ": 17.965,
-          "siso_ms": 3.668,
-          "slowdown": 1.0
-        }
-      ],
-      "value": [
-        [
-          -0.8329,
-          10.0,
-          -1
-        ],
-        [
-          -5.8329,
-          15.0,
-          3
-        ],
-        [
-          -2.8329,
-          15.0,
-          3
-        ],
-        [
-          -0.8329,
-          15.0,
-          3
-        ],
-        [
-          1.1671,
-          11.0,
-          3
-        ],
-        [
-          -0.8329,
-          14.0,
-          3
-        ],
-        [
-          -0.8329,
-          15.0,
-          3
-        ],
-        [
-          -1.8329,
-          11.0,
-          2
-        ],
-        [
-          2.1671,
-          12.0,
-          3
-        ],
-        [
-          0.7521,
-          11.0,
-          -1
-        ],
-        [
-          1.7521,
-          11.0,
-          3
-        ],
-        [
-          1.1671,
-          11.0,
-          3
-        ],
-        [
-          -0.8329,
-          13.0,
-          3
-        ],
-        [
-          3.1671,
-          11.0,
-          2
-        ],
-        [
-          -0.8329,
-          10.0,
-          -1
-        ],
-        [
-          3.1671,
-          11.0,
-          2
-        ],
-        [
-          2.1671,
-          10.0,
-          2
-        ],
-        [
-          4.1671,
-          10.0,
-          2
-        ]
-      ]
+    {
+     "B": 128,
+     "H": 16,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 9.885,
+     "chosen": "siso",
+     "chosen_ms": 9.885,
+     "occ": 17.965,
+     "siso_ms": 9.885,
+     "slowdown": 1.0
     }
+   ],
+   "value": [
+    [
+     -0.8329,
+     10.0,
+     -1
+    ],
+    [
+     -5.8329,
+     15.0,
+     2
+    ],
+    [
+     -2.8329,
+     15.0,
+     3
+    ],
+    [
+     -0.8329,
+     15.0,
+     -1
+    ],
+    [
+     1.1671,
+     11.0,
+     -1
+    ],
+    [
+     -0.8329,
+     14.0,
+     -1
+    ],
+    [
+     -0.8329,
+     15.0,
+     -1
+    ],
+    [
+     -1.8329,
+     11.0,
+     -1
+    ],
+    [
+     2.1671,
+     12.0,
+     -1
+    ],
+    [
+     0.7521,
+     11.0,
+     -1
+    ],
+    [
+     1.7521,
+     11.0,
+     -1
+    ],
+    [
+     1.1671,
+     11.0,
+     -1
+    ],
+    [
+     -0.8329,
+     13.0,
+     -1
+    ],
+    [
+     3.1671,
+     11.0,
+     -1
+    ],
+    [
+     -0.8329,
+     10.0,
+     -1
+    ],
+    [
+     3.1671,
+     11.0,
+     -1
+    ],
+    [
+     2.1671,
+     10.0,
+     -1
+    ],
+    [
+     4.1671,
+     10.0,
+     -1
+    ]
+   ]
+  },
+  "route|grad|thh|alt": {
+   "evidence": {
+    "alt": "split64",
+    "candidates": [
+     "siso",
+     "split32",
+     "split64",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.0,
+    "form": "regions",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 1
+  },
+  "route|grad|thh|eligible|inkernel32": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|grad|thh|eligible|inkernel64": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|grad|thh|eligible|siso": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|grad|thh|eligible|split32": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|grad|thh|eligible|split64": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|grad|thh|siso_L": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "split32",
+     "split64",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.0,
+    "form": "regions",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 32768
+  },
+  "route|grad|thh|siso_L_dir": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "split32",
+     "split64",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.0,
+    "form": "regions",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 0
+  },
+  "route|grad|thh|siso_occ": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "split32",
+     "split64",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.0,
+    "form": "regions",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 15
+  },
+  "route|grad|thh|siso_occ_dir": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "split32",
+     "split64",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.0,
+    "form": "regions",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 1
+  },
+  "route|grad|thh|table": {
+   "evidence": [
+    {
+     "B": 1,
+     "H": 64,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 2.65,
+     "chosen": "siso",
+     "chosen_ms": 2.65,
+     "occ": 0.561,
+     "official_ms": null,
+     "siso_ms": 2.65,
+     "slowdown": 1.0
+    },
+    {
+     "B": 1,
+     "H": 2,
+     "L": 32768,
+     "best": "split64",
+     "best_ms": 5.379,
+     "chosen": "split64",
+     "chosen_ms": 5.379,
+     "occ": 0.018,
+     "official_ms": null,
+     "siso_ms": 10.825,
+     "slowdown": 1.0
+    },
+    {
+     "B": 1,
+     "H": 16,
+     "L": 32768,
+     "best": "split64",
+     "best_ms": 8.311,
+     "chosen": "split64",
+     "chosen_ms": 8.311,
+     "occ": 0.14,
+     "official_ms": null,
+     "siso_ms": 12.2,
+     "slowdown": 1.0
+    },
+    {
+     "B": 1,
+     "H": 64,
+     "L": 32768,
+     "best": "siso",
+     "best_ms": 15.128,
+     "chosen": "siso",
+     "chosen_ms": 15.128,
+     "occ": 0.561,
+     "official_ms": null,
+     "siso_ms": 15.128,
+     "slowdown": 1.0
+    },
+    {
+     "B": 2,
+     "H": 128,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 4.555,
+     "chosen": "siso",
+     "chosen_ms": 4.555,
+     "occ": 2.246,
+     "official_ms": null,
+     "siso_ms": 4.555,
+     "slowdown": 1.0
+    },
+    {
+     "B": 2,
+     "H": 32,
+     "L": 16384,
+     "best": "siso",
+     "best_ms": 7.937,
+     "chosen": "siso",
+     "chosen_ms": 7.937,
+     "occ": 0.561,
+     "official_ms": null,
+     "siso_ms": 7.937,
+     "slowdown": 1.0
+    },
+    {
+     "B": 2,
+     "H": 32,
+     "L": 32768,
+     "best": "siso",
+     "best_ms": 14.942,
+     "chosen": "siso",
+     "chosen_ms": 14.942,
+     "occ": 0.561,
+     "official_ms": null,
+     "siso_ms": 14.942,
+     "slowdown": 1.0
+    },
+    {
+     "B": 4,
+     "H": 8,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 2.389,
+     "chosen": "siso",
+     "chosen_ms": 2.389,
+     "occ": 0.281,
+     "official_ms": null,
+     "siso_ms": 2.389,
+     "slowdown": 1.0
+    },
+    {
+     "B": 4,
+     "H": 128,
+     "L": 4096,
+     "best": "siso",
+     "best_ms": 11.874,
+     "chosen": "siso",
+     "chosen_ms": 11.874,
+     "occ": 4.491,
+     "official_ms": null,
+     "siso_ms": 11.874,
+     "slowdown": 1.0
+    },
+    {
+     "B": 6,
+     "H": 32,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 2.925,
+     "chosen": "siso",
+     "chosen_ms": 2.925,
+     "occ": 1.684,
+     "official_ms": null,
+     "siso_ms": 2.925,
+     "slowdown": 1.0
+    },
+    {
+     "B": 6,
+     "H": 64,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 4.64,
+     "chosen": "siso",
+     "chosen_ms": 4.64,
+     "occ": 3.368,
+     "official_ms": null,
+     "siso_ms": 4.64,
+     "slowdown": 1.0
+    },
+    {
+     "B": 8,
+     "H": 32,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 3.847,
+     "chosen": "siso",
+     "chosen_ms": 3.847,
+     "occ": 2.246,
+     "official_ms": null,
+     "siso_ms": 3.847,
+     "slowdown": 1.0
+    },
+    {
+     "B": 8,
+     "H": 8,
+     "L": 8192,
+     "best": "siso",
+     "best_ms": 4.325,
+     "chosen": "siso",
+     "chosen_ms": 4.325,
+     "occ": 0.561,
+     "official_ms": null,
+     "siso_ms": 4.325,
+     "slowdown": 1.0
+    },
+    {
+     "B": 16,
+     "H": 64,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 11.091,
+     "chosen": "siso",
+     "chosen_ms": 11.091,
+     "occ": 8.982,
+     "official_ms": null,
+     "siso_ms": 11.091,
+     "slowdown": 1.0
+    },
+    {
+     "B": 32,
+     "H": 2,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 2.382,
+     "chosen": "siso",
+     "chosen_ms": 2.382,
+     "occ": 0.561,
+     "official_ms": null,
+     "siso_ms": 2.382,
+     "slowdown": 1.0
+    },
+    {
+     "B": 32,
+     "H": 32,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 10.939,
+     "chosen": "siso",
+     "chosen_ms": 10.939,
+     "occ": 8.982,
+     "official_ms": null,
+     "siso_ms": 10.939,
+     "slowdown": 1.0
+    },
+    {
+     "B": 64,
+     "H": 8,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 3.567,
+     "chosen": "siso",
+     "chosen_ms": 3.567,
+     "occ": 4.491,
+     "official_ms": null,
+     "siso_ms": 3.567,
+     "slowdown": 1.0
+    },
+    {
+     "B": 128,
+     "H": 16,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 10.982,
+     "chosen": "siso",
+     "chosen_ms": 10.982,
+     "occ": 17.965,
+     "official_ms": null,
+     "siso_ms": 10.982,
+     "slowdown": 1.0
+    }
+   ],
+   "value": null
+  },
+  "route|nograd|noth|alt": {
+   "evidence": {
+    "alt": "inkernel64",
+    "candidates": [
+     "siso",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.04471219770548537,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 3
+  },
+  "route|nograd|noth|eligible|inkernel32": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|nograd|noth|eligible|inkernel64": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|nograd|noth|eligible|siso": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|nograd|noth|siso_L": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.04471219770548537,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 4096
+  },
+  "route|nograd|noth|siso_L_dir": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.04471219770548537,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 0
+  },
+  "route|nograd|noth|siso_occ": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.04471219770548537,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 1797
+  },
+  "route|nograd|noth|siso_occ_dir": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.04471219770548537,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 0
+  },
+  "route|nograd|noth|table": {
+   "evidence": [
+    {
+     "B": 1,
+     "H": 64,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 0.627,
+     "chosen": "siso",
+     "chosen_ms": 0.627,
+     "occ": 0.561,
+     "siso_ms": 0.627,
+     "slowdown": 1.0
+    },
+    {
+     "B": 1,
+     "H": 2,
+     "L": 32768,
+     "best": "inkernel64",
+     "best_ms": 1.987,
+     "chosen": "inkernel64",
+     "chosen_ms": 1.987,
+     "occ": 0.018,
+     "siso_ms": 4.574,
+     "slowdown": 1.0
+    },
+    {
+     "B": 1,
+     "H": 16,
+     "L": 32768,
+     "best": "inkernel64",
+     "best_ms": 2.703,
+     "chosen": "inkernel64",
+     "chosen_ms": 2.703,
+     "occ": 0.14,
+     "siso_ms": 4.707,
+     "slowdown": 1.0
+    },
+    {
+     "B": 1,
+     "H": 64,
+     "L": 32768,
+     "best": "inkernel64",
+     "best_ms": 4.971,
+     "chosen": "inkernel64",
+     "chosen_ms": 4.971,
+     "occ": 0.561,
+     "siso_ms": 5.31,
+     "slowdown": 1.0
+    },
+    {
+     "B": 2,
+     "H": 128,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 0.879,
+     "chosen": "siso",
+     "chosen_ms": 0.879,
+     "occ": 2.246,
+     "siso_ms": 0.879,
+     "slowdown": 1.0
+    },
+    {
+     "B": 2,
+     "H": 32,
+     "L": 16384,
+     "best": "inkernel64",
+     "best_ms": 2.555,
+     "chosen": "inkernel64",
+     "chosen_ms": 2.555,
+     "occ": 0.561,
+     "siso_ms": 2.688,
+     "slowdown": 1.0
+    },
+    {
+     "B": 2,
+     "H": 32,
+     "L": 32768,
+     "best": "inkernel64",
+     "best_ms": 4.984,
+     "chosen": "inkernel64",
+     "chosen_ms": 4.984,
+     "occ": 0.561,
+     "siso_ms": 5.24,
+     "slowdown": 1.0
+    },
+    {
+     "B": 4,
+     "H": 8,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 0.623,
+     "chosen": "siso",
+     "chosen_ms": 0.623,
+     "occ": 0.281,
+     "siso_ms": 0.623,
+     "slowdown": 1.0
+    },
+    {
+     "B": 4,
+     "H": 128,
+     "L": 4096,
+     "best": "siso",
+     "best_ms": 2.733,
+     "chosen": "siso",
+     "chosen_ms": 2.733,
+     "occ": 4.491,
+     "siso_ms": 2.733,
+     "slowdown": 1.0
+    },
+    {
+     "B": 6,
+     "H": 32,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 0.654,
+     "chosen": "siso",
+     "chosen_ms": 0.654,
+     "occ": 1.684,
+     "siso_ms": 0.654,
+     "slowdown": 1.0
+    },
+    {
+     "B": 6,
+     "H": 64,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 1.018,
+     "chosen": "siso",
+     "chosen_ms": 1.018,
+     "occ": 3.368,
+     "siso_ms": 1.018,
+     "slowdown": 1.0
+    },
+    {
+     "B": 8,
+     "H": 32,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 0.869,
+     "chosen": "siso",
+     "chosen_ms": 0.869,
+     "occ": 2.246,
+     "siso_ms": 0.869,
+     "slowdown": 1.0
+    },
+    {
+     "B": 8,
+     "H": 8,
+     "L": 8192,
+     "best": "inkernel64",
+     "best_ms": 1.35,
+     "chosen": "inkernel64",
+     "chosen_ms": 1.35,
+     "occ": 0.561,
+     "siso_ms": 1.364,
+     "slowdown": 1.0
+    },
+    {
+     "B": 16,
+     "H": 64,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 2.632,
+     "chosen": "siso",
+     "chosen_ms": 2.632,
+     "occ": 8.982,
+     "siso_ms": 2.632,
+     "slowdown": 1.0
+    },
+    {
+     "B": 32,
+     "H": 2,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 0.623,
+     "chosen": "siso",
+     "chosen_ms": 0.623,
+     "occ": 0.561,
+     "siso_ms": 0.623,
+     "slowdown": 1.0
+    },
+    {
+     "B": 32,
+     "H": 32,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 2.701,
+     "chosen": "siso",
+     "chosen_ms": 2.701,
+     "occ": 8.982,
+     "siso_ms": 2.701,
+     "slowdown": 1.0
+    },
+    {
+     "B": 64,
+     "H": 8,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 0.773,
+     "chosen": "siso",
+     "chosen_ms": 0.773,
+     "occ": 4.491,
+     "siso_ms": 0.773,
+     "slowdown": 1.0
+    },
+    {
+     "B": 128,
+     "H": 16,
+     "L": 1024,
+     "best": "inkernel32",
+     "best_ms": 2.789,
+     "chosen": "inkernel32",
+     "chosen_ms": 2.789,
+     "occ": 17.965,
+     "siso_ms": 2.917,
+     "slowdown": 1.0
+    }
+   ],
+   "value": [
+    [
+     -0.8329,
+     10.0,
+     -1
+    ],
+    [
+     -5.8329,
+     15.0,
+     3
+    ],
+    [
+     -2.8329,
+     15.0,
+     3
+    ],
+    [
+     -0.8329,
+     15.0,
+     3
+    ],
+    [
+     1.1671,
+     11.0,
+     -1
+    ],
+    [
+     -0.8329,
+     14.0,
+     3
+    ],
+    [
+     -0.8329,
+     15.0,
+     3
+    ],
+    [
+     -1.8329,
+     11.0,
+     -1
+    ],
+    [
+     2.1671,
+     12.0,
+     -1
+    ],
+    [
+     0.7521,
+     11.0,
+     -1
+    ],
+    [
+     1.7521,
+     11.0,
+     -1
+    ],
+    [
+     1.1671,
+     11.0,
+     -1
+    ],
+    [
+     -0.8329,
+     13.0,
+     3
+    ],
+    [
+     3.1671,
+     11.0,
+     -1
+    ],
+    [
+     -0.8329,
+     10.0,
+     -1
+    ],
+    [
+     3.1671,
+     11.0,
+     -1
+    ],
+    [
+     2.1671,
+     10.0,
+     -1
+    ],
+    [
+     4.1671,
+     10.0,
+     2
+    ]
+   ]
+  },
+  "route|nograd|thh|alt": {
+   "evidence": {
+    "alt": "inkernel64",
+    "candidates": [
+     "siso",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.13560066970183624,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 3
+  },
+  "route|nograd|thh|eligible|inkernel32": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|nograd|thh|eligible|inkernel64": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|nograd|thh|eligible|siso": {
+   "evidence": {
+    "c10_noth": true,
+    "c10_thh": true,
+    "eligible": true,
+    "stress": true
+   },
+   "value": 1
+  },
+  "route|nograd|thh|siso_L": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.13560066970183624,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 2048
+  },
+  "route|nograd|thh|siso_L_dir": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.13560066970183624,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 0
+  },
+  "route|nograd|thh|siso_occ": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.13560066970183624,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 169
+  },
+  "route|nograd|thh|siso_occ_dir": {
+   "evidence": {
+    "candidates": [
+     "siso",
+     "inkernel32",
+     "inkernel64"
+    ],
+    "cells": 18,
+    "cost": 0.13560066970183624,
+    "form": "table",
+    "gate": 1.02,
+    "passed": true,
+    "tool": "tools/calibrate_routes.py",
+    "worst_misroute": 1.0
+   },
+   "value": 0
+  },
+  "route|nograd|thh|table": {
+   "evidence": [
+    {
+     "B": 1,
+     "H": 64,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 0.745,
+     "chosen": "siso",
+     "chosen_ms": 0.745,
+     "occ": 0.561,
+     "siso_ms": 0.745,
+     "slowdown": 1.0
+    },
+    {
+     "B": 1,
+     "H": 2,
+     "L": 32768,
+     "best": "inkernel64",
+     "best_ms": 2.622,
+     "chosen": "inkernel64",
+     "chosen_ms": 2.622,
+     "occ": 0.018,
+     "siso_ms": 5.462,
+     "slowdown": 1.0
+    },
+    {
+     "B": 1,
+     "H": 16,
+     "L": 32768,
+     "best": "inkernel64",
+     "best_ms": 3.168,
+     "chosen": "inkernel64",
+     "chosen_ms": 3.168,
+     "occ": 0.14,
+     "siso_ms": 5.748,
+     "slowdown": 1.0
+    },
+    {
+     "B": 1,
+     "H": 64,
+     "L": 32768,
+     "best": "inkernel64",
+     "best_ms": 5.307,
+     "chosen": "inkernel64",
+     "chosen_ms": 5.307,
+     "occ": 0.561,
+     "siso_ms": 6.293,
+     "slowdown": 1.0
+    },
+    {
+     "B": 2,
+     "H": 128,
+     "L": 2048,
+     "best": "inkernel64",
+     "best_ms": 1.404,
+     "chosen": "inkernel64",
+     "chosen_ms": 1.404,
+     "occ": 2.246,
+     "siso_ms": 1.47,
+     "slowdown": 1.0
+    },
+    {
+     "B": 2,
+     "H": 32,
+     "L": 16384,
+     "best": "inkernel64",
+     "best_ms": 2.952,
+     "chosen": "inkernel64",
+     "chosen_ms": 2.952,
+     "occ": 0.561,
+     "siso_ms": 3.354,
+     "slowdown": 1.0
+    },
+    {
+     "B": 2,
+     "H": 32,
+     "L": 32768,
+     "best": "inkernel64",
+     "best_ms": 5.332,
+     "chosen": "inkernel64",
+     "chosen_ms": 5.332,
+     "occ": 0.561,
+     "siso_ms": 6.242,
+     "slowdown": 1.0
+    },
+    {
+     "B": 4,
+     "H": 8,
+     "L": 2048,
+     "best": "inkernel32",
+     "best_ms": 0.779,
+     "chosen": "inkernel32",
+     "chosen_ms": 0.779,
+     "occ": 0.281,
+     "siso_ms": 0.791,
+     "slowdown": 1.0
+    },
+    {
+     "B": 4,
+     "H": 128,
+     "L": 4096,
+     "best": "inkernel64",
+     "best_ms": 3.422,
+     "chosen": "inkernel64",
+     "chosen_ms": 3.422,
+     "occ": 4.491,
+     "siso_ms": 3.827,
+     "slowdown": 1.0
+    },
+    {
+     "B": 6,
+     "H": 32,
+     "L": 2048,
+     "best": "siso",
+     "best_ms": 1.139,
+     "chosen": "siso",
+     "chosen_ms": 1.139,
+     "occ": 1.684,
+     "siso_ms": 1.139,
+     "slowdown": 1.0
+    },
+    {
+     "B": 6,
+     "H": 64,
+     "L": 2048,
+     "best": "inkernel64",
+     "best_ms": 1.666,
+     "chosen": "inkernel64",
+     "chosen_ms": 1.666,
+     "occ": 3.368,
+     "siso_ms": 1.791,
+     "slowdown": 1.0
+    },
+    {
+     "B": 8,
+     "H": 32,
+     "L": 2048,
+     "best": "inkernel64",
+     "best_ms": 1.4,
+     "chosen": "inkernel64",
+     "chosen_ms": 1.4,
+     "occ": 2.246,
+     "siso_ms": 1.46,
+     "slowdown": 1.0
+    },
+    {
+     "B": 8,
+     "H": 8,
+     "L": 8192,
+     "best": "inkernel64",
+     "best_ms": 1.839,
+     "chosen": "inkernel64",
+     "chosen_ms": 1.839,
+     "occ": 0.561,
+     "siso_ms": 1.879,
+     "slowdown": 1.0
+    },
+    {
+     "B": 16,
+     "H": 64,
+     "L": 2048,
+     "best": "inkernel32",
+     "best_ms": 3.321,
+     "chosen": "inkernel32",
+     "chosen_ms": 3.321,
+     "occ": 8.982,
+     "siso_ms": 3.67,
+     "slowdown": 1.0
+    },
+    {
+     "B": 32,
+     "H": 2,
+     "L": 1024,
+     "best": "siso",
+     "best_ms": 0.726,
+     "chosen": "siso",
+     "chosen_ms": 0.726,
+     "occ": 0.561,
+     "siso_ms": 0.726,
+     "slowdown": 1.0
+    },
+    {
+     "B": 32,
+     "H": 32,
+     "L": 2048,
+     "best": "inkernel32",
+     "best_ms": 3.321,
+     "chosen": "inkernel32",
+     "chosen_ms": 3.321,
+     "occ": 8.982,
+     "siso_ms": 3.663,
+     "slowdown": 1.0
+    },
+    {
+     "B": 64,
+     "H": 8,
+     "L": 1024,
+     "best": "inkernel32",
+     "best_ms": 1.265,
+     "chosen": "inkernel32",
+     "chosen_ms": 1.265,
+     "occ": 4.491,
+     "siso_ms": 1.346,
+     "slowdown": 1.0
+    },
+    {
+     "B": 128,
+     "H": 16,
+     "L": 1024,
+     "best": "inkernel32",
+     "best_ms": 3.275,
+     "chosen": "inkernel32",
+     "chosen_ms": 3.275,
+     "occ": 17.965,
+     "siso_ms": 3.668,
+     "slowdown": 1.0
+    }
+   ],
+   "value": [
+    [
+     -0.8329,
+     10.0,
+     -1
+    ],
+    [
+     -5.8329,
+     15.0,
+     3
+    ],
+    [
+     -2.8329,
+     15.0,
+     3
+    ],
+    [
+     -0.8329,
+     15.0,
+     3
+    ],
+    [
+     1.1671,
+     11.0,
+     3
+    ],
+    [
+     -0.8329,
+     14.0,
+     3
+    ],
+    [
+     -0.8329,
+     15.0,
+     3
+    ],
+    [
+     -1.8329,
+     11.0,
+     2
+    ],
+    [
+     2.1671,
+     12.0,
+     3
+    ],
+    [
+     0.7521,
+     11.0,
+     -1
+    ],
+    [
+     1.7521,
+     11.0,
+     3
+    ],
+    [
+     1.1671,
+     11.0,
+     3
+    ],
+    [
+     -0.8329,
+     13.0,
+     3
+    ],
+    [
+     3.1671,
+     11.0,
+     2
+    ],
+    [
+     -0.8329,
+     10.0,
+     -1
+    ],
+    [
+     3.1671,
+     11.0,
+     2
+    ],
+    [
+     2.1671,
+     10.0,
+     2
+    ],
+    [
+     4.1671,
+     10.0,
+     2
+    ]
+   ]
   }
+ }
 }

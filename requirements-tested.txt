@@ -1,4 +1,0 @@
-torch==2.14.0+cu130
-triton==3.8.0
-causal-conv1d==1.6.0
-mamba-ssm==2.3.2.post1

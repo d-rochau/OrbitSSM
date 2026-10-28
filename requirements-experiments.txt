@@ -1,8 +1,0 @@
-pytest>=9
-PyYAML>=6
-numpy
-datasets
-transformers
-lightning
-torchmetrics
-lm-eval
